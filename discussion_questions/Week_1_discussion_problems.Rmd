@@ -1,0 +1,73 @@
+---
+title: ARE100B Week 1 Discussion problems
+output:
+     pdf_document:
+         number_sections: FALSE
+         fig_width: 6
+         fig_height: 3.75
+         toc: false
+         latex_engine: xelatex
+         includes:
+             in_header: ["~/Documents/template_header.tex"]
+---
+
+# Question 1
+
+**Question 1 (a):** Describe in words the trade-off monopolists make when setting prices to maximize profits. 
+
+\vspace{12pt}
+
+**Question 1 (b):** Describe in words how monopolists use this trade-off to find the optimal price to maximize profits.
+
+\vspace{12pt}
+
+**Question 1 (c):** Describe in words why monopoly power makes society worse off compared to a competitive market.
+
+\vspace{12pt}
+\vspace{12pt}
+
+# Question 2
+
+There is a strong demand for boba tea in Davis - let demand be represented by $Q_{D} = 1,000 - 100 P$.
+
+Boba tea is relatively cheap to make, assume there is a constant marginal cost of making boba tea of \$2. This means the total cost of supplying boba tea is $TC = 2Q_{S}$.
+
+**Question 2 (a):** By my count, there are 14 boba tea stores in downtown Davis, more than enough to assume that the market for boba tea works perfectly competitively. Find the quantity of tea that will be bought/sold; the price for which it sells; consumer surplus and producer suruplus.
+
+\vspace{12pt}
+
+**Question 2 (b):** Uh oh, Davis health inspectors have shutdown all but one boba tea store, which now operates as a monopoly. Setup the optimization function of the last remaining tea shop.
+
+\vspace{12pt}
+
+**Question 2 (c):** Under this monopoly condition, find the quantity of tea that will be bought/sold; the price for which it sells; consumer surplus and producer suruplus. 
+
+\vspace{12pt}
+
+**Question 2 (d):** How much worse off is Davis from having the boba tea market run as a monopoly, rather than perfectly competitively?
+
+\newpage
+
+# Extra practice questions
+
+# Question A
+
+In Question 2 above, under perfect competition, the producer surplus is zero because: 1) marginal costs are constant; and 2) every sells at marginal cost.
+
+In this question, we will see a problem where marginal costs are increasing. This makes the math of calculate producer surplus slightly harder, but does not fundamentally change how we approach the question.
+
+Let the total cost of supplying boba tea be $TC = 2Q_{S} + 0.05Q_{S} ^{2}$. Let total demand be  $Q_{D} = 2,500 - 200 P$
+
+**Question A (a):** Assuming perfect competition, find the quantity of tea that will be bought/sold; the price for which it sells; consumer surplus and producer suruplus.
+
+\vspace{12pt}
+
+**Question A (b):** Assuming one firm operates as a monopoly, find the quantity of tea that will be bought/sold; the price for which it sells; consumer surplus and producer suruplus.
+
+\vspace{12pt}
+
+**Question A (c):** How much worse off is Davis from having the boba tea market run as a monopoly, rather than perfectly competitively?
+
+
+
+ 

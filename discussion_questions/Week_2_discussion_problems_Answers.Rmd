@@ -1,0 +1,327 @@
+---
+title: ARE100B Week 2 Discussion problems
+output:
+     pdf_document:
+         number_sections: FALSE
+         fig_width: 6
+         fig_height: 3.75
+         toc: false
+         latex_engine: xelatex
+         includes:
+             in_header: ["~/Documents/template_header.tex"]
+---
+
+# Question 1
+
+Johnson and Johnson are aiming to create a brand new ozempic-like drug that they think will take the world by storm. The cost of developing this drug is \$150 million.
+
+The total cost of supplying the drug, once it's developed is $TC = Q + Q^{2}$.
+
+Demand for this drug is $Q_{D} = 20,000 - 0.2P$.
+
+For questions (a) - (d), let J&J operate as a monopolist.
+
+**Question 1 (a):** Write down J&J's profit function in terms of price
+
+\begin{equation*}\begin{aligned}
+    \pi&= P \times (20,000 - 0.2P) - Q - Q^{2}\\
+    &=P \times (20,000 - 0.2P) - (20,000 - 0.2P) - (20,000 - 0.2P)^{2}\\
+\end{aligned}\end{equation*}
+
+
+\vspace{12pt}
+
+**Question 1 (b):** Find the optimal price J&J would charge as a monopolist; find the quantity that it will sell.
+
+We solve for the price that gives the maximum profit:
+\begin{equation*}\begin{aligned}
+    \frac{d\pi}{dP} &= (20,000 - 0.2P) - 0.2P + 0.2 - 0.4 \times (20,000 - 0.2P) = 0\\
+    28,000.2 - 0.48P&=0\\
+    P = \$58,333.75\\
+\end{aligned}\end{equation*}
+
+And it will sell $Q = 20,000 - 0.2 \times 58,333.75 = 8,333.27$ units
+
+\vspace{12pt}
+
+Alternatively, we can find the intersection of marginal revenue and marginal cost to solve this.
+
+First, find the inverse demand curve showing the willingness to pay for the drug: $P = 100,000 - 5Q$.
+
+Marginal cost is: $MC=1 + 2Q$. Marginal revenue is: $\frac{d}{DQ} PQ = \frac{d}{DQ}(100,000 - 5Q)Q = 100,000 - 10Q$.
+
+The monopolist will sell the quantity at the intersection of marginal revenue and marginal cost:
+\begin{equation*}\begin{aligned}
+    MR &= MC\\
+    100,000 - 10Q &= 1 + 2Q\\
+    99,999 &=12Q\\
+    Q = 8,333.25
+\end{aligned}\end{equation*}
+
+With a price of:
+\begin{equation*}\begin{aligned}
+    P &= 100,000 - 5Q\\
+    &=100,000 - 5 \times 8,333.25\\
+    &=\$58,333.75\\
+\end{aligned}\end{equation*}
+
+
+\vspace{12pt}
+
+**Question 1 (c):** Find the consumer surplus and producer surplus/profit from J&J selling the drug as a monopolist.
+
+The inverse demand curve is:
+\begin{equation*}\begin{aligned}
+    P = 100,000 - 5Q
+\end{aligned}\end{equation*}
+
+The consumer surplus is:
+\begin{equation*}\begin{aligned}
+    CS &= \frac{1}{2} \times 8,333.27 \times (100,000 - 58,333.75)\\
+    &= \$173,607,639
+\end{aligned}\end{equation*}
+Consumers still benefit a lot from this life-saving drug, even if the monopolist exists, they get $173 million of value from it!
+
+The producer surplus/profit is:
+\begin{equation*}\begin{aligned}
+    \pi &=P \times Q- Q - Q^{2}\\
+    &=\$416,679,166\\
+\end{aligned}\end{equation*}
+And J&J benefit too! They get about \$416 million from selling the new drug.
+
+\vspace{12pt}
+
+**Question 1 (d):** If J&J can operate as a monopolist, will it develop this drug and bring it to market?
+
+Yes, the profit they would earn of \$416 million is greater than the cost of investment of \$150million. So it is profitable for them to committing to researching and developing this new drug!
+
+\vspace{12pt}
+\vspace{12pt}
+
+Now assume that if J&J develops the  new drug, it would sell it in a competitive market and would earn 10\% of  total market profits/
+
+**Question 1 (e):** Find the price and quantity of the drug sold in a competitive market.
+
+The marginal cost function of production is: $MC = 1 + 2Q$.
+
+In a competitive market, $P = MC$:
+\begin{equation*}\begin{aligned}
+    &100,000 - 5Q = 1 + 2Q\\
+    &99,999 = 7Q\\
+    &Q = 14,285.57\\
+\end{aligned}\end{equation*}
+
+So if we opened the market to competition, many more people would have access to the drug, and we'd sell 14,285.57 units.
+
+The price in the market would be $P = 100,000 - 5Q = \$28,572.15$ - about half of what J&J would have charged as a monopolist.
+
+
+
+
+\vspace{12pt}
+
+
+
+**Question 1 (f):** Find total industry profit (producer surplus) and J&J's profit.
+
+The total industry profit is:
+\begin{equation*}\begin{aligned}
+    \pi_{\text{Industry}} &= PQ - TC\\
+    &= 28,572.15 \times  14,285.57 - 14,285.57 - 14,285.57^{2}\\
+    &= \$204,077,653\\
+\end{aligned}\end{equation*}
+So total industry profits are lower than what J&J could have earnt as a monopolist.
+
+J&J only get s 10\% cut of these profits in this market, edged out by other drug companies, and they would only make a profit of $\sim \$20.4$ million.
+
+
+
+
+\vspace{12pt}
+
+
+
+
+**Question 1 (g):** Would J&J develop the drug if it new it would have to sell it in a competitive market?
+
+No. If J&J operated in a competitive market, it would only make about \$20 million in profit, less than the \$150 million investment cost it needs to recover.
+
+J&J would prefer not to innovate and make the new drug.
+
+Society is actually worse off than if J&J could be a monopolist because, in this case, no one gets access to this new drug.
+
+
+
+\vspace{12pt}
+
+
+
+
+
+**Question 1 (h):** If the government could subsidize J&J's drug development, how much would the government have to give J&J so that it would still develop the drug in a competitive market?
+
+If the government subsidized the R&D of J&J by \$129.6 million, then J&J would only need to earn $\$150 \text{ million} - \$129.6 \text{ million} = \$20.4 \text{ million}$ by selling the drug. Then J&J would still prefer to innovate to make the new drug, even if it sells it in a competitive market, where it's profit would be \$20.4 million.
+
+
+\newpage
+
+# Question 2
+
+A monopolist has a marginal cost of $2$.
+
+**Question 2 (a):** Would the monopolist prefer to face consumers with demand $Q^{A}_{D} = 8 - P$ or $Q^{B}_{D} = 7 - \frac{1}{2}P$. In both cases it will sell the same quantiy of 3 units.
+
+Because we are given the quantity of demand, we can use that to find the price that monopolist would charge.
+
+For demand system A, the price would be $P = 5$.
+
+For demand system B, the price would be $P = 8$.
+
+So the monopolist would prefer customers with demand $Q^{B}_{D} = 7 - \frac{1}{2}P$, because they can charge a higher price for the same number of goods sold.
+
+\vspace{12pt}
+
+**Question 2 (b):** Calculate the elasticities of demand when $Q = 3$ for both demand functions. Use this to justify your answer to part (a).
+
+In general, the price elasticity of demand is given by:
+\begin{equation*}\begin{aligned}
+    \varepsilon = \frac{dQ}{dP}\frac{P}{Q}\\
+\end{aligned}\end{equation*}
+
+For demand system A:
+\begin{equation*}\begin{aligned}
+    \varepsilon^{A} = -1 \times \frac{P}{8 - P}\\
+\end{aligned}\end{equation*}
+We can see that the elasticity depends on the price - higher the price, the more elastic consumption will be. We can use the prices we solved in part (a):
+\begin{equation*}\begin{aligned}
+    \varepsilon^{A} = -1 \times \frac{P}{8 - P} = -1\ times \frac{5}{8-5} = -1.67 \\
+\end{aligned}\end{equation*}
+
+For demand system B:
+\begin{equation*}\begin{aligned}
+    \varepsilon^{B} = -\frac{1}{2} \times \frac{P}{7 - \frac{1}{2}P} = -\frac{1}{2} \times \frac{8}{7 - \frac{1}{2}8} = -1.33 \\
+\end{aligned}\end{equation*}
+
+We can see that, for the same level of consumption, customers with demand system B are less elastic than customers for demand system A. This means that the monopolist is able to B customers are less sensitive to price increases than A customers. This means that the monopolist has been able to increase their prices and have a relatively smaller decrease in demand for B customers, rather than A customers.
+
+\vspace{12pt}
+
+## Question 3
+
+If you know that a monopolist has a marginal cost of \$5, and, at equilibrium, its customers have a price elasticity of -2, find the price the monopolist will charge.
+
+The relationship between a monopolist's price and its marginal costs is:
+\begin{equation*}\begin{aligned}
+    P = MC \times \frac{1}{1 + \frac{1}{\varepsilon}}
+\end{aligned}\end{equation*}
+
+So the price it will charge is:
+\begin{equation*}\begin{aligned}
+    P &= 5 \times \frac{1}{1 + \frac{1}{-2}}\\
+    &= 5 \times \frac{1}{\frac{1}{2}}\\
+    &=10\\
+\end{aligned}\end{equation*}
+
+So the monopolist will charge a price of \$10, a \$5 mark up over its marginal cost.
+
+\vspace{12pt}
+\vspace{12pt}
+
+# Extra practice problems
+
+## Question A
+
+Describe in words, why the monopolist will always charge prices within the elastic portion of demand?
+
+At lower prices, customers are less elastic, and become more elastic as prices increases.
+
+In the inelastic region of demand (low prices), raising prices leads to a proportionally smaller decrease in quantity demanded. This means that the profit gained from higher margins exceeds the decrease in sales. In this region, the monopolist should keep raising prices.
+
+Eventually, the price will rise to the elastic region of demand, here raising prices leads to a proportionally larger decrease in quantity demanded. Eventually the marginal profit of raising prices will go to zero because more customers will leave than compensate the monopolist for higher margins. It will depend on the demand function and cost function where exactly in the elastic region this is.
+
+
+\vspace{12pt}
+
+## Question B
+
+Let a monopolists profit function be:
+\begin{equation*}\begin{aligned}
+    \pi = \text{Revenue} - \text{Total cost}\\
+\end{aligned}\end{equation*}
+
+Find the first-order/optimal condition of the monopolist setting prices. Describe the optimal condition in terms of an economic trade-off the monopolist needs to make.
+
+Monopolists find the optimal price by continuing to raise prices as long as the extra profit gained from higher prices exceeds the profit lost from fewer sales. This is also equivalent to the marginal revenue from raising prices is equal to the marginal cost of raising prices. These are two equivalent ways of showing this trade-off.
+
+We can see this in terms of calculus:
+\begin{equation*}\begin{aligned}
+    \frac{d\pi}{dP} &= \frac{d\text{Revenue}}{dP} - \frac{dTC}{dP} = 0\\
+    &= \text{Marginal revenue} - \text{Marginal cost} = 0\\
+    & \text{Marginal revenue} = \text{Marginal cost}\\
+\end{aligned}\end{equation*}
+When we think of derivatives, we should think about increasing the price by just a little, small amount.
+
+That is, at the optimal, maximized profit, we must have that the marginal revenue is equal to the marginal cost. That is, from the last little bit of price increase, the additional revenue we earned is equal to the change in costs in that small. Another way of saying this, the last little bit of price increase did not change our profit.
+
+
+
+\vspace{12pt}
+
+## Question C
+
+PGE are looking  to build a new power grid that is connecting the [new techno-optimist city in Solano county](https://californiaforever.com/). It will cost \$2 million to build. 
+
+Once built, the demand for electricity will be $Q_{D} = 100,000 - 1,000P$. PGE has a constant marginal cost selling electricity of \$5.
+\vspace{12pt}
+
+**Question C (a):** If PGE can act like a monopolist in terms of selling electricty, what price would it charge?
+
+PGE's profit of selling electricity is:
+\begin{equation*}\begin{aligned}
+    \pi = P (100,000 - 1,000P) - 5 \times (100,000 - 1,000P)
+\end{aligned}\end{equation*}
+
+The price that maximizes its profits as a monopolists is found by maximizing the profit function:
+\begin{equation*}\begin{aligned}
+    \frac{d\pi}{dP} &= (100,000 - 1,000P) - 1,000P + 5,000 = 0\\
+    &105,000 - 2,000P = 0\\
+    &P = \$52.5\\1
+\end{aligned}\end{equation*}
+
+
+\vspace{12pt}
+
+**Question C (b):** If PGE can act like a monopolist, would it make the investment to build the new grid?
+
+If PGE can charge its monopolist price of \$52.5, its profit would be:
+\begin{equation*}\begin{aligned}
+    \pi &= PQ - 5Q\\
+    &= 52.5 \times (100,000 - 52,500) - 5 \times (100,000 - 52,500)\\
+    &=\$2,256,250\\
+\end{aligned}\end{equation*}
+So PGE would build this grid, because its profit of operating is greater than the cost of investment of \$1.5 million.
+
+\vspace{12pt}
+
+**Question C (c):** Suppose CPUC gets wind of PGE trying to charge to much and sets a price PGE has to charge of \$30. Would PGE still build the new grid at this price?
+
+If PGE had to charge a price of \$30, its profit would be:
+\begin{equation*}\begin{aligned}
+    \pi &= 30 \times (100,000 - 30,000) - 5 \times(100,000 - 30,000) \\
+    &= \$1,750,000\\
+\end{aligned}\end{equation*}
+
+Under this regulated pricing, its profit would be less than the cost of investment, so PGE would not want to build the new part of the grid and the new city wouldn't get any power!
+
+\vspace{12pt}
+
+**Question C (d):** What is the minimum price that CPUC should set so that PGE still build the new grid?
+
+For PGE to to build the grid, its profits of operating must be at least as much as the \$2 million investment it makes. So the minimum profit it can make is \$2 million. Knowing this, we can solve for the minimum price it will still build at:
+\begin{equation*}\begin{aligned}
+    &\pi_{\text{Minimum}} = 2,000,000\\
+    &P(100,000 - 1,000P) - 5(100,000 - 1,000P)= 2,000,000\\
+    &100,000P - 1,000P^{2} - 500,000 + 5,000P - 2,000,000 = 0\\
+    & - 1,000P^{2} + 105,000P - 2,500,000 = 0\\
+\end{aligned}\end{equation*}
+Using the quadratic formula we get $P = 36.49$ or $P = 68.50$. Given we want the minimum price, the CPUC should set a regulated price of \$36.49. This still allows PGE to build the grid, but diminishes PGE's pricing power, a win-win for society!

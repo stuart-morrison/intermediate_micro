@@ -1,0 +1,506 @@
+---
+title: ARE100B Week 4 Discussion problems
+output:
+     pdf_document:
+         number_sections: FALSE
+         fig_width: 6
+         fig_height: 3.75
+         toc: false
+         latex_engine: xelatex
+         includes:
+             in_header: ["~/Documents/template_header.tex"]
+---
+
+# Question 1
+
+**Question 1 (a):** Apple and Google are competing in the market for smart phones.
+
+Apple's total costs of making iPhones is $TC_{A} = 70q_{A}$
+
+Google's total costs of making its smartphones is $TC_{G} = 65q_{G}$.
+
+Say the market considers Apple's and Google's phones to be identical, the total market inverse demand is:
+\begin{equation*}\begin{aligned}
+    P = 700 - 0.1Q_{D}
+\end{aligned}\end{equation*}
+
+Find the output of both Apple and Google, and the resulting price, if they compete in a Cournot game (simultaneously choosing quantities).
+
+\begin{mybox}
+
+With identical products, we have total market demand is the total demanded/supplied from each firm $Q_D = q_A + q_G$, so:
+\begin{equation*}
+P = 700 - 0.1(q_A + q_G)
+\end{equation*}
+
+Apple's profit function is:
+\begin{equation*}\begin{aligned}
+\pi_A &= Pq_A - 70q_A\\
+&= [700 - 0.1(q_A + q_G)]q_A - 70q_A\\
+&= 700q_A - 0.1q_A^2 - 0.1q_Aq_G - 70q_A\\
+&= 630q_A - 0.1q_A^2 - 0.1q_Aq_G
+\end{aligned}\end{equation*}
+
+We maximise Apple's profit - yielding its best response function:
+\begin{equation*}\begin{aligned}
+\frac{d\pi_A}{dq_A} &= 630 - 0.2q_A - 0.1q_G = 0\\
+q_A &= BR_A = 3150 - 0.5q_G
+\end{aligned}\end{equation*}
+
+Google's profit function is:
+\begin{equation*}\begin{aligned}
+\pi_G &= [700 - 0.1(q_A + q_G)]q_G - 65q_G\\
+&= 635q_G - 0.1q_G^2 - 0.1q_Aq_G
+\end{aligned}\end{equation*}
+
+We maximise Googles's profit - yielding its best response function:
+\begin{equation*}\begin{aligned}
+\frac{d\pi_G}{dq_G} &= 635 - 0.2q_G - 0.1q_A = 0\\
+q_G &= BR_G = 3175 - 0.5q_A
+\end{aligned}\end{equation*}
+
+The Nash Equilibrium is at the intersection of Apple and Google's best response functions - ie, when they are both perfectly responding to one another. We find that mathematically by substituting Google's best reponse function into Apple's:
+\begin{equation*}\begin{aligned}
+q_A &= 3150 - 0.5(3175 - 0.5q_A)\\
+q_A &= 3150 - 1587.5 + 0.25q_A\\
+0.75q_A &= 1562.5\\
+q_A &= 2083.33
+\end{aligned}\end{equation*}
+
+Therefore: $q_G = 3175 - 0.5(2083.33) = 2133.33$
+
+Price: $P = 700 - 0.1(2083.33 + 2133.33) = 278.33$
+
+Google produces slightly more than Apple because it has lower costs.
+
+\end{mybox}
+
+**Question 1 (b):** Really, the market treats phones from Apple and Google very differently, they are differentiated goods.
+
+Let the inverse demand for Apple's iPhone be: $P_{A} = 850 - 0.1q_{A} - 0.12q_{G}$
+
+Let the inverse demand for Google's smartphones be: $P_{G} = 650 - 0.05q_{A} - 0.1q_{G}$
+
+Use the same cost curves as in part (a).
+
+Find the output of both Apple and Google, and the resulting price, if they compete in a Cournot game (simultaneously choosing quantities) in this differentiated market.
+
+\begin{mybox}
+
+Apple's profit function with differentiated profucts is:
+\begin{equation*}\begin{aligned}
+\pi_A &= P_Aq_A - 70q_A\\
+&= (850 - 0.1q_A - 0.12q_G)q_A - 70q_A\\
+&= 780q_A - 0.1q_A^2 - 0.12q_Aq_G
+\end{aligned}\end{equation*}
+
+First order condition:
+\begin{equation*}\begin{aligned}
+\frac{d\pi_A}{dq_A} &= 780 - 0.2q_A - 0.12q_G = 0\\
+q_A &= BR_A = 3900 - 0.6q_G
+\end{aligned}\end{equation*}
+
+Google's profit function with differentiated profucts is:
+\begin{equation*}\begin{aligned}
+\pi_G &= (650 - 0.05q_A - 0.1q_G)q_G - 65q_G\\
+&= 585q_G - 0.1q_G^2 - 0.05q_Aq_G
+\end{aligned}\end{equation*}
+
+First order condition:
+\begin{equation*}\begin{aligned}
+\frac{d\pi_G}{dq_G} &= 585 - 0.2q_G - 0.05q_A = 0\\
+q_G &= BR_G = 2925 - 0.25q_A
+\end{aligned}\end{equation*}
+
+Finding the Nash equilibrium:
+\begin{equation*}\begin{aligned}
+q_A &= 3900 - 0.6(2925 - 0.25q_A)\\
+q_A &= 3900 - 1755 + 0.15q_A\\
+0.85q_A &= 2145\\
+q_A &= 2523.53
+\end{aligned}\end{equation*}
+
+Therefore: $q_G = 2925 - 0.25(2523.53) = 2294.12$
+
+Prices:
+\begin{equation*}\begin{aligned}
+P_A &= 850 - 0.1(2523.53) - 0.12(2294.12) = 322.35\\
+P_G &= 650 - 0.05(2523.53) - 0.1(2294.12) = 294.59
+\end{aligned}\end{equation*}
+
+Apple can charge more due to stronger brand preference in the demand curve.
+
+\end{mybox}
+
+\newpage 
+
+# Question 2
+
+Two new apartment blocks are going to be built in Davis. Block 1 will be built first, and Block 2 has construction delays so will be built second. They will compete to rent out their apartments.
+
+Block 1 is a nicer apartment, and has inverse demand for rental apartments: $P_{1} = 2,000 - 0.1q_{1} - 0.1q_{2}$. Block 1 has a total cost of supplying rental apartments of $TC_{1} = 100q_{1}$.
+
+Block 2 is a bit dingy, and has inverse demand for rental apartments: $P_{2} = 1,500 - 0.1q_{1} - 0.1q_{2}$. Block 2 has a total cost of supplying rental apartments of $TC_{2} = 80q_{2}$.
+
+Find the number of units each block will rent out, and at what price, if they compete in a Stackelberg game (Block 1 moves first, and they choose quantities).
+
+\begin{mybox}
+
+In a Stackelberg game, we solve backwards. First, find Block 2's profit function:
+
+\begin{equation*}\begin{aligned}
+\pi_2 &= P_2q_2 - 80q_2\\
+&= (1500 - 0.1q_1 - 0.1q_2)q_2 - 80q_2\\
+&= 1420q_2 - 0.1q_1q_2 - 0.1q_2^2
+\end{aligned}\end{equation*}
+
+First order condition yielding Block 2's best response function:
+\begin{equation*}\begin{aligned}
+\frac{d\pi_2}{dq_2} &= 1420 - 0.1q_1 - 0.2q_2 = 0\\
+q_2 &= BR_2 = 7100 - 0.5q_1
+\end{aligned}\end{equation*}
+
+Now Block 1 maximizes profit knowing Block 2's response (that is, it uses Block 2's best response function within its profit maximisation):
+\begin{equation*}\begin{aligned}
+\pi_1 &= P_1q_1 - 100q_1\\
+&= [2000 - 0.1q_1 - 0.1(7100 - 0.5q_1)]q_1 - 100q_1\\
+&= [2000 - 0.1q_1 - 710 + 0.05q_1]q_1 - 100q_1\\
+&= 1190q_1 - 0.05q_1^2
+\end{aligned}\end{equation*}
+
+Maximising Block 1's profit::
+\begin{equation*}\begin{aligned}
+\frac{d\pi_1}{dq_1} &= 1190 - 0.1q_1 = 0\\
+q_1 &= 11,900
+\end{aligned}\end{equation*}
+
+Therefore: $q_2 = 7100 - 0.5(11,900) = 1,150$
+
+Prices:
+\begin{equation*}\begin{aligned}
+P_1 &= 2000 - 0.1(11,900) - 0.1(1,150) = 695\\
+P_2 &= 1500 - 0.1(11,900) - 0.1(1,150) = 195
+\end{aligned}\end{equation*}
+
+Block 1 leverages its first-mover advantage to capture most of the market, leaving Block 2 with a small share of units it rents out.
+
+\end{mybox}
+
+\newpage
+
+# Question 3
+
+Suppose there are only two mechanics in Davis. Mechanic 1 has quite premium service and has total costs of servicing cars of $TC_{1} = 250q_{1}$.
+
+Mechanic 2 does not pay all of its taxes, so has cheaper labour costs, and has total costs of servicing cars of $TC_{2} = 180q_{2}$.
+
+The demand for Mechanic 1's services are: $q_{1} = 500 - 0.1P_{1} - 0.1P_{2}$.
+
+The demand for Mechanic 2's services are $q_{2} = 1,000 - 0.2P_{1} - 0.2P_{2}$.
+
+These mechanics are competing with each other and want to show they are great value. Find the prices each mechanic would set, and the number of cars they would service, if they competed in a Bertrand game (simultaneous choosing prices).
+
+\begin{mybox}
+In Bertrand competition, firms choose prices. We express profits in terms of prices.
+
+For Mechanic 1:
+\begin{equation*}\begin{aligned}
+\pi_1 &= P_1q_1 - 250q_1\\
+&= P_1(500 - 0.1P_1 - 0.1P_2) - 250(500 - 0.1P_1 - 0.1P_2)\\
+&= 500P_1 - 0.1P_1^2 - 0.1P_1P_2 - 125,000 + 25P_1 + 25P_2\\
+&= 525P_1 - 0.1P_1^2 - 0.1P_1P_2 + 25P_2 - 125,000\\
+\end{aligned}\end{equation*}
+
+
+We find Mechanic 1's best response function - ie, its optimal price given Mechanic 2's price:
+
+\begin{equation*}\begin{aligned}
+\frac{d\pi_1}{dP_1} &= 525 - 0.2P_1 - 0.1P_2 = 0\\
+P_1 &= BR_1 = 2625 - 0.5P_2
+\end{aligned}\end{equation*}
+
+Mechanic 2's profit function is:
+
+\begin{equation*}\begin{aligned}
+\pi_2 &= P_2(1000 - 0.2P_1 - 0.2P_2) - 180(1000 - 0.2P_1 - 0.2P_2)\\
+&= 1000P_2 - 0.2P_1P_2 - 0.2P_2^2 - 180,000 + 36P_1 + 36P_2\\
+&= 1036P_2 - 0.2P_1P_2 - 0.2P_2^2 + 36P_1 - 180,000\\
+\end{aligned}\end{equation*}
+
+We find Mechanic 2's best response function - ie, its optimal price given Mechanic 1's price:
+\begin{equation*}\begin{aligned}
+\frac{d\pi_2}{dP_2} &= 1036 - 0.2P_1 - 0.4P_2 = 0\\
+P_2 &= BR_2 = 2590 - 0.5P_1\\
+\end{aligned}\end{equation*}
+
+The Nash Equilibrium set of prices that each mechanic charges is at the intersection of their best response functions:
+
+\begin{equation*}\begin{aligned}
+P_1 &= 2625 - 0.5(2590 - 0.5P_1)\\
+P_1 &= 2625 - 1295 + 0.25P_1\\
+0.75P_1 &= 1330\\
+P_1 &= 1773.33\\
+\end{aligned}\end{equation*}
+
+And finding Mechanic 2's price using their best response:
+\begin{equation*}\begin{aligned}
+ P_2​=2590−0.5(1773.33)=1703.33   
+\end{aligned}\end{equation*}
+
+
+Quantities:
+
+\begin{equation*}\begin{aligned}
+q_1 &= 500 - 0.1(1773.33) - 0.1(1703.33) = 152.34\\
+q_2 &= 1000 - 0.2(1773.33) - 0.2(1703.33) = 304.67\\
+\end{aligned}\end{equation*}
+
+Despite having lower demand for its services, Mechanic 1 charges slightly more due to its premium positioning. Mechanic 2 serves twice as many cars due to stronger market demand and lower prices.
+
+\end{mybox}
+
+\newpage
+
+# Extra practice questions
+
+# Question A
+
+**Question A (a):** Firm 1 and Firm 2 both have total cost curves $TC_{i} = 10q_{i}$. Market demand for their product is $Q_{D} = 500 - 10P$.
+
+If they compete in a Bertrand game with identical products (choosing prices), what will the price in the market be?
+
+\begin{mybox}
+
+With identical products and equal marginal costs in Bertrand competition, both firms will price at marginal cost.
+
+Since $TC_i = 10q_i$, we have $MC_i = 10$ for both firms.
+
+In equilibrium: $P_1 = P_2 = MC = 10$
+
+With identical products, price competition drives prices down to marginal cost, eliminating all profits.
+
+\end{mybox}
+
+**Question A (b):** Suppose now that Firm 1 has total costs $TC_{1} = 8q_{1}$ and Firm 2 has total costs $TC_{2} = 10q_{2}$. Market demand is the same.
+
+Now if they compete in a Bertrand game with identical products, what will the price be if they are required to set prices in whole dollars (eg, \$1, \$2, \$3, etc)?
+
+\begin{mybox}
+
+Now because Firm 1 has a lower marginal cost than Firm 2, it has an advantage in this Bertrand game. Firm 1 can undercut Firm 2, capturing the whole market while still having prices about its own marginal cost. 
+
+With different marginal costs and identical products:
+- Firm 1: $MC_1 = 8$
+- Firm 2: $MC_2 = 10$
+
+Firm 1 can undercut any price Firm 2 sets above $MC_1 = 8$. 
+
+With whole dollar pricing, Firm 1 will set $P_1 = 9$ (just below Firm 2's marginal cost).
+Firm 2 cannot profitably match or undercut this price.
+
+Result: $P_1 = 9$, Firm 1 captures the entire market.
+
+\end{mybox}
+
+\newpage
+
+# Question B
+
+**Question B (a):** Currently, Managerial Economics operates as a monopoly in this space.
+
+Let the inverse demand for the Managerial Economics major be: $P_{ME} = 1,200 - 0.12q_{ME}$. The total cost of educating Managerial Economics students is $TC_{ME} = 350q_{ME}$.
+
+Find the price and quantity of students enrolled in Managerial Economics.
+
+\begin{mybox}
+
+As a monopoly, Managerial Economics will choose quantity so that MR = MC.
+
+We have MC = 350.
+
+And $MR = \frac{d}{dq_{ME}} = 1,200q_{ME} - 0.12q_{ME}^{2} = 1,200 - 0.24q_{ME}$
+
+So we have:
+\begin{equation*}\begin{aligned}
+    &1,200 - 0.24q_{ME} = 350\\
+    &\frac{850}{0.24} = q_{ME}\\
+    &q_{ME} = 3,541.667\\
+\end{aligned}\end{equation*}
+
+
+And its monopolist price is: $P_{ME} = 1200 - 0.12(3541.67) = 775$
+
+\end{mybox}
+
+**Question B (b):** Now, when the new business major starts, supposed our departments compete in a Cournot game by competing on the number of students enrolled.
+
+Now let the inverse demand for the Managerial Economics major be: $P_{ME} = 1,200 - 0.12q_{ME} - 0.1q_{B}$. The total cost of educating Managerial Economics students is still $TC_{ME} = 350q_{ME}$.
+
+Let the inverse demand for the new business major is: $P_{B} = 1,000 - 0.1q_{ME} - 0.15q_{B}$. The total cost of educating business undergrands is $TC_{B} = 450q_{B}$, owing to their fancier building.
+
+Find the price and outcome from this competition. How many students does the Managerial Economics major lose compared to when it was a monopoly?
+
+\begin{mybox}
+
+ Managerial Economics' profit:
+\begin{equation*}\begin{aligned}
+\pi_{ME} &= (1200 - 0.12q_{ME} - 0.1q_B)q_{ME} - 350q_{ME}\\
+&= 850q_{ME} - 0.12q_{ME}^2 - 0.1q_{ME}q_B
+\end{aligned}\end{equation*}
+
+And so its best response is: $q_{ME} = BR_{ME} = 3541.67 - 0.417q_B$
+
+Business' profit:
+\begin{equation*}\begin{aligned}
+\pi_B &= (1000 - 0.1q_{ME} - 0.15q_B)q_B - 450q_B\\
+&= 550q_B - 0.15q_B^2 - 0.1q_{ME}q_B
+\end{aligned}\end{equation*}
+
+Business' best response is: $q_B = BR_B = 1833.33 - 0.333q_{ME}$
+
+Solving simultaneously:
+\begin{equation*}\begin{aligned}
+q_{ME} &= 3541.67 - 0.417(1833.33 - 0.333q_{ME})\\
+q_{ME} &= 3025.56
+\end{aligned}\end{equation*}
+
+Therefore: $q_B = 1833.33 - 0.333(3025.56) = 825.93$
+
+Managerial Economics loses $3541.67 - 3025.56 = 516.11$ students.
+
+\end{mybox}
+
+**Question B (c):** Perhaps a more accurate way to model this competition is by thinking of Managerial Economics as a first mover. Find the price and outcome if the two majors compete in a Stackelberg game (sequentially choosing quantity). How many fewer students does the new business major attract because it is the second entrant, compared to the original Cournot game?
+
+\begin{mybox}
+
+Business major's best response (from part b): $q_B = 1833.33 - 0.333q_{ME}$
+
+Managerial Economics maximizes knowing this response:
+\begin{equation*}\begin{aligned}
+\pi_{ME} &= [1200 - 0.12q_{ME} - 0.1(1833.33 - 0.333q_{ME})]q_{ME} - 350q_{ME}\\
+&= [1016.67 - 0.0867q_{ME}]q_{ME} - 350q_{ME}\\
+&= 666.67q_{ME} - 0.0867q_{ME}^2
+\end{aligned}\end{equation*}
+
+First order condition:
+\begin{equation*}\begin{aligned}
+\frac{d\pi_{ME}}{dq_{ME}} &= 666.67 - 0.1734q_{ME} = 0\\
+q_{ME} &= 3846.15
+\end{aligned}\end{equation*}
+
+Therefore: $q_B = 1833.33 - 0.333(3846.15) = 552.56$
+
+Business attracts $825.93 - 552.56 = 273.37$ fewer students as second mover.
+
+\end{mybox}
+
+\newpage
+
+# Question C
+
+Big Thief and Linkin Park are both playing in Sacramento on the same night in a few weeks time. There are enough millennials around that we could think of them as competing with differentiated goods.
+
+Linkin Park is playing at the Golden1 Centre, and is expecting demand $q_{LP} = 15,000 - 50P_{LP} + 10P_{BT}$, which yields inverse demand: $P_{LP} = 322.92 - \frac{1}{48}q_{LP} - \frac{1}{480}q_{BT}$. Total costs for their concert are: $TC_{LP} = 50q_{LP}$.
+
+Big Thief is playing at the smaller Channel24 venue and is expecting demand, $q_{BT} = 5,000 - 100P_{BT} + 20P_{LP}$ which yields inverse demand: $P_{BT} = 114.58 - \frac{1}{240}q_{LP} - \frac{1}{96}q_{BT}$. Total costs for their concert are: $TC_{BT} = 50q_{BT}$.
+
+**Question C (a):** If Big Thief and Linkin Park compete in a Bertrand game (choosing prices), what are the expected prices and quantities for each band?
+
+\begin{mybox}
+
+For Linkin Park's best response (using demand function):
+\begin{equation*}\begin{aligned}
+\pi_{LP} &= P_{LP}(15000 - 50P_{LP} + 10P_{BT}) - 50(15000 - 50P_{LP} + 10P_{BT})\\
+&= 15000P_{LP} - 50P_{LP}^2 + 10P_{LP}P_{BT} - 750000 + 2500P_{LP} - 500P_{BT}\\
+&= 17500P_{LP} - 50P_{LP}^2 + 10P_{LP}P_{BT} - 500P_{BT} - 750000
+\end{aligned}\end{equation*}
+
+First order condition: $P_{LP} = BR_{LP} = 175 + 0.1P_{BT}$
+
+For Big Thief's best response:
+\begin{equation*}\begin{aligned}
+\pi_{BT} &= P_{BT}(5000 - 100P_{BT} + 20P_{LP}) - 50(5000 - 100P_{BT} + 20P_{LP})\\
+&= 5000P_{BT} - 100P_{BT}^2 + 20P_{BT}P_{LP} - 250000 + 5000P_{BT} - 1000P_{LP}\\
+&= 10000P_{BT} - 100P_{BT}^2 + 20P_{BT}P_{LP} - 1000P_{LP} - 250000
+\end{aligned}\end{equation*}
+
+First order condition: $P_{BT} = BR_{BT} = 50 + 0.1P_{LP}$
+
+Solving simultaneously:
+\begin{equation*}\begin{aligned}
+P_{LP} &= 175 + 0.1(50 + 0.1P_{LP})\\
+P_{LP} &= 180 + 0.01P_{LP}\\
+P_{LP} &= 181.82
+\end{aligned}\end{equation*}
+
+Therefore: $P_{BT} = 50 + 0.1(181.82) = 68.18$
+
+Quantities:
+\begin{equation*}\begin{aligned}
+q_{LP} &= 15000 - 50(181.82) + 10(68.18) = 6590.90\\
+q_{BT} &= 5000 - 100(68.18) + 20(181.82) = 1818.20
+\end{aligned}\end{equation*}
+
+\end{mybox}
+
+**Question C (b):** If Big Thief and Linkin Park compete in a Cournot game (choosing quantities), what are the expected prices and quantities for each band?
+
+\begin{mybox}
+
+For Linkin Park's best response:
+\begin{equation*}\begin{aligned}
+\pi_{LP} &= (322.92 - \frac{1}{48}q_{LP} - \frac{1}{480}q_{BT})q_{LP} - 50q_{LP}\\
+&= 272.92q_{LP} - \frac{1}{48}q_{LP}^2 - \frac{1}{480}q_{LP}q_{BT}
+\end{aligned}\end{equation*}
+
+First order condition: $q_{LP} = BR_{LP} = 6550.08 - 0.05q_{BT}$
+
+For Big Thief's best response:
+\begin{equation*}\begin{aligned}
+\pi_{BT} &= (114.58 - \frac{1}{240}q_{LP} - \frac{1}{96}q_{BT})q_{BT} - 50q_{BT}\\
+&= 64.58q_{BT} - \frac{1}{96}q_{BT}^2 - \frac{1}{240}q_{LP}q_{BT}
+\end{aligned}\end{equation*}
+
+First order condition: $q_{BT} = BR_{BT} = 3099.84 - 0.2q_{LP}$
+
+Solving simultaneously:
+\begin{equation*}\begin{aligned}
+q_{LP} &= 6550.08 - 0.05(3099.84 - 0.2q_{LP})\\
+q_{LP} &= 6395.09
+\end{aligned}\end{equation*}
+
+Therefore: $q_{BT} = 3099.84 - 0.2(6395.09) = 1820.82$
+
+Prices:
+\begin{equation*}\begin{aligned}
+P_{LP} &= 322.92 - \frac{1}{48}(6395.09) - \frac{1}{480}(1820.82) = 185.63\\
+P_{BT} &= 114.58 - \frac{1}{240}(6395.09) - \frac{1}{96}(1820.82) = 68.92
+\end{aligned}\end{equation*}
+
+\end{mybox}
+
+**Question C (c):** If Linkin Park announced their concert first, and so is a first mover, what are the expected prices and quantities for each band? How many more attendees did Linkin Park get to their show compared to the Cournot game?
+
+\begin{mybox}
+
+Big Thief's best response (from part b): $q_{BT} = 3099.84 - 0.2q_{LP}$
+
+Linkin Park maximizes knowing this response:
+\begin{equation*}\begin{aligned}
+\pi_{LP} &= [322.92 - \frac{1}{48}q_{LP} - \frac{1}{480}(3099.84 - 0.2q_{LP})]q_{LP} - 50q_{LP}\\
+&= [316.46 - \frac{1}{48}q_{LP} + \frac{0.2}{480}q_{LP}]q_{LP} - 50q_{LP}\\
+&= [266.46 - 0.02042q_{LP}]q_{LP}
+\end{aligned}\end{equation*}
+
+First order condition:
+\begin{equation*}\begin{aligned}
+\frac{d\pi_{LP}}{dq_{LP}} &= 266.46 - 0.04084q_{LP} = 0\\
+q_{LP} &= 6524.62
+\end{aligned}\end{equation*}
+
+Therefore: $q_{BT} = 3099.84 - 0.2(6524.62) = 1794.91$
+
+Linkin Park gains $6524.62 - 6395.09 = 129.53$ more attendees as first mover.
+
+\end{mybox}

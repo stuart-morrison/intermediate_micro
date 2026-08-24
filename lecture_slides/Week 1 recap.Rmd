@@ -1,0 +1,68 @@
+---
+title: "Week 1 recap"
+date: "Week 1"
+author: "Stuart J Morrison"
+output:
+      revealjs::revealjs_presentation:
+        theme: solarized
+        transition: none
+        fig_width: 12
+        fig_height: 5.5
+---
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+# Refresher on competitive markets
+
+- Competitive market is the best possible market structure - it maximises the total surplus from exchange
+
+- At equilibrium, price will equal marginal cost - can be found by the intersection of supply (willingness to sell or marginal cost) and demand (willingness to pay)
+
+# Monopolies
+
+- One seller that has market power to choose prices
+
+$\quad\quad\quad$ - Typically requires some barrier to entry that prevents competition: CUDA software for Nvidia; "prestige" for Ivy League universities
+
+- The monopoly will aim to maximise its profits, even if it makes society worse off
+
+- Compared to a competitive market, will charge higher prices and sell less goods
+
+- Optimal price and quantity for the monopoly found when $\frac{d\pi}{dP} = 0 \quad\quad$ or, equivalently, marginal revenue = marginal cost
+
+# Example 1
+
+The International Olympic Committee has legal rights to all photos and videos at Olympic events used for commercial purposes. It charges broadcasters in every country exorbitant prices for the rights to use its footage, decreasing the number of people that can watch the Olympics.
+
+Say the demand for Olympics broadcast rights is: $Q_{D} = 196 - P$
+
+The IOC has to go through an extensive negotiation process with each broadcaster, so its marginal costs are increasing, giving a total cost curve of: $TC = 5Q + 0.5Q^{2}$
+
+Let's solve for the IOC's monopoly behaviour, finding:
+
+- Inverse demand curve for broadcast rights
+- Marginal revenue and marginal cost
+- Monopoly price and quantity 
+- Producer surplus and consumer surplus
+
+How much better off would we be if the IOC sold broadcast rights at its marginal costs instead?
+
+# Example 2
+
+Marco Polo had a historical monopoly of trade from China to Europe, mostly because he had befriended the emporer of the Yuan Dynasty, Kublai Khan, the grandson of Genghis Khan. His influence over the emporer meant that other traders could not compete with him. 
+
+Back in Europe, the demand for Marco Polo's wares is: $Q_{D} = 50.4 - 0.2P$
+
+Because of the increasing cost of transport, Marco Polo's total cost is: $TC = 10Q + 0.5Q^{2}$
+
+Let's solve for Marco Polo's monopoly behaviour, finding:
+
+- Inverse demand curve
+- Marginal revenue and marginal cost
+- Monopoly price and quantity
+- Producer surplus and consumer surplus
+
+Eventually, shipping routes opened up between Europe and Asia and trade between the regions became competitive. We'll find price, quantity, producer surplus and consumer surplus under this competitive market. How much worse off was society because of Marco Polo's monopoly?
+

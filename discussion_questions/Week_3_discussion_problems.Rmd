@@ -1,0 +1,259 @@
+---
+title: ARE100B Week 3 Discussion problems
+output:
+     pdf_document:
+         number_sections: FALSE
+         fig_width: 6
+         fig_height: 3.75
+         toc: false
+         latex_engine: xelatex
+         includes:
+             in_header: ["~/Documents/template_header.tex"]
+---
+
+# Question 1
+
+Two criminals, Andy and Bart, commit a robbery. They're not the brightest, so shortly after, they're arrested and brought into the police station for interrogation. They are placed in different interrogation rooms and cannot communicate and are asked to rat out their friend.
+
+If neither rats on the other, there's enough evidence so that both get 1 year in prison. 
+
+If both rat each other out, then it makes it easier to prosecute the case and they both get 3 years.
+
+If one rats the other out, then the one that confesses goes free and the other will be punished more severely for being a ringleader and will go to prison for 5 years.
+
+This yields the following payoff matrix, which describes the original prisoner's dilemma. 
+
+\renewcommand{\arraystretch}{3}
+\begin{table}[htbp]
+\begin{tabular}{llll}
+                      &                                  & \multicolumn{2}{l}{\textbf{Andy}}                                                         \\
+                      & \multicolumn{1}{l|}{}            & \multicolumn{1}{l|}{Stay silent}                  & Rat                          \\\cline{2-4} 
+\multirow{2}{*}{\textbf{Bart}} & \multicolumn{1}{l|}{Stay silent} & \multicolumn{1}{l|}{Andy: 1 year, Bart: 1 year}   & Andy: 0 years, Bart: 5 years \\ \cline{2-4} 
+                      & \multicolumn{1}{l|}{Rat}         & \multicolumn{1}{l|}{Andy: 5 years, Bart: 0 years} & Andy: 3 years, Bart: 3 years \\ \cline{2-4} 
+\end{tabular}
+\end{table}
+
+
+**Question 1 (a):** What is Andy's best response move if Bart rats him out? What is Andy's best response move if Bart does not rat him out?
+
+**Question 1 (b):** Find the pure strategy Nash equilibrium.
+
+**Question 1 (c):** Does Any have any dominating strategies? Are they weakly or strongly dominant?
+
+
+# Question 2 
+
+Andrea and Brooke are trying to organise an activity to do together. Andrea likes to paint and Brooke likes to go bouldering. Their friendship is a bit frayed at the moment, and if they suggest different activities, they will have a fight and won't do anything.
+
+Below is their payoff matrix, showing how happy each activity will make them.
+
+\renewcommand{\arraystretch}{3}
+\begin{table}[htbp]
+\begin{tabular}{llll}
+                      &                                  & \multicolumn{2}{l}{\textbf{Andrea}}                                                         \\
+                      & \multicolumn{1}{l|}{}            & \multicolumn{1}{l|}{Painting}                  & Bouldering                          \\\cline{2-4} 
+\multirow{2}{*}{\textbf{Brooke}} & \multicolumn{1}{l|}{Painting} & \multicolumn{1}{l|}{A: 2, B: 1}   & A: -1, B: -1 \\ \cline{2-4} 
+                      & \multicolumn{1}{l|}{Bouldering}         & \multicolumn{1}{l|}{A: -1, B: -1} & A: 1, B: 2 \\ \cline{2-4} 
+\end{tabular}
+\end{table}
+
+**Question 2 (a):** Find the two pure strategy Nash Equilibria.
+
+**Question 2 (b):** Find the mixed strategy equilibrium.
+
+**Question 2 (c):** What is Andrea's expected happiness from the mixed strategy equilibrium?
+
+**Question 2 (d):** Brooke plays the mixed strategy incorrectly and assigns too much probability/weight to choosing painting, but Andrea plays the mixed strategy perfectly. Show why this is no longer an equilibrium.
+
+**Question 2 (e):** Do either player have a dominating strategy?
+
+# Question 3
+
+Andrea and Brooke are still trying to organise an activity. This time, Andrea is a little bit more pushy and suggests an activity first, yielding the following extensive form game.
+
+
+```{r echo=FALSE,warning=FALSE,error=FALSE,message=FALSE,cache=FALSE}
+library(igraph)
+library(ggraph)
+library(ggplot2)
+library(dplyr)
+
+# Create the game tree structure
+edges <- data.frame(
+  from = c("A", "A", "B_p", "B_b", "B_p", "B_b"),
+  to = c("B_p", "B_b", "(2,1)", "(-1,-1)", "(0,1)", "(0,0)"),
+  action = c("Painting", "Bouldering", "Painting", "Bouldering","Painting", "Bouldering")
+)
+
+edges <- data.frame(
+  from = c("A", "A", "B_p", "B_p", "B_b", "B_b"),
+  to = c("B_p", "B_b", "(2,1)", "(-1,-1)", "(-1,-1)", "(1,2)"),
+  action = c("Painting", "Bouldering", "Painting", "Bouldering", "Painting", "Bouldering")
+)
+
+# Create graph
+g <- graph_from_data_frame(edges, directed = TRUE)
+
+# Add node attributes
+V(g)$type <- ifelse(V(g)$name %in% c("(2,1)", "(-1,-1)", "(-1,-1)", "(1,2)"), 
+                    "terminal", "decision")
+V(g)$player <- case_when(
+  V(g)$name == "A" ~ "Andrea",
+  V(g)$name %in% c("B_p", "B_b") ~ "Brooke",
+  TRUE ~ ""
+)
+
+# Plot the game tree
+ggraph(g, layout = "tree") +
+  geom_edge_link(aes(label = action), 
+                 angle_calc = "along",
+                 label_dodge = unit(2, "mm"),
+                 arrow = arrow(length = unit(2, "mm")), size = 6) +
+  geom_node_point(aes(color = type, size = type)) +
+  geom_node_text(aes(label = ifelse(type == "terminal", name, player)),
+                nudge_y = ifelse(V(g)$type == "terminal", -0.15, 0),
+                nudge_x = ifelse(V(g)$type == "terminal", 0, -0.10),
+                
+                 size = 4) +
+  scale_color_manual(values = c("decision" = "lightblue", "terminal" = "lightcoral")) +
+  scale_size_manual(values = c("decision" = 4, "terminal" = 3)) +
+  theme_graph() +
+  theme(legend.position = "none")
+  
+```
+
+**Question 3 (a):** Find Brooke's best response function to Andrea's actions.
+
+**Question 3 (b):** Does Andrea have a best response function to Brooke's actions?
+
+**Question 3 (c):** Find the subgame perfect Nash Equilibrium.
+
+# Question 4
+
+Draw out and solve the following sequential game, finding the outcome and subgame perfect Nash Equilibrium. 
+
+You have just gotten a new job! Congratulations! It's time for you to negotiate your salary.
+
+The company that hired you values your work at \$10 per hour, and their payoff from hiring you is \$10 minus the final agreed wage: $\pi = \$10 - \text{wage}$. 
+
+At first, you have high self-value, you ask for \$10 per hour. The company can then accept or reject your offer.
+
+If you're initially rejected you start to lowball yourself and can offer either \$7 or \$4. Then the company can accept or reject again.
+
+
+\newpage
+
+# Extra practice problems
+
+# Question A
+
+In soccer penalty kicks, the kicker has to choose the direction they will kick, and the goalie will choose the direction they dive - and they will choose at the same time.
+
+A goalie values a save as much as the kicker values a goal. The goalie is stronger on the left side and is more likely to save a kick in that direction. The kicker is stronger on the right side and is more likely to score in that direction.
+
+This gives us the following scoring matrix. The decimal numbers represent the probability that they will score, versus miss.
+
+\renewcommand{\arraystretch}{3}
+\begin{table}[htbp]
+\begin{tabular}{llll}
+                      &                                  & \multicolumn{2}{l}{\textbf{Kicker}}                                                         \\
+                      & \multicolumn{1}{l|}{}            & \multicolumn{1}{l|}{Left}                  & Right                          \\\cline{2-4} 
+\multirow{2}{*}{\textbf{Goalie}} & \multicolumn{1}{l|}{Left} & \multicolumn{1}{l|}{K: 0.1, G: 0.8}   & K: 0.9, G: 0 \\ \cline{2-4} 
+                      & \multicolumn{1}{l|}{Right}         & \multicolumn{1}{l|}{K: 0.7, G: 0} & K: 0.2, G: 0.7 \\ \cline{2-4} 
+\end{tabular}
+\end{table}
+
+**Question A (a):** Verify that there are no pure strategy Nash Equilibrium.
+
+**Question A (b):** Should we be surprised that there are no pure strategies here?
+
+**Question A (c):** Find the mixed strategy equilibrium.
+
+**Question A (d):** Find the expected number of goals the kicker will score when playing the mixed strategy equilibrium. 
+
+**Question A (e):** Find the expected number of goals the goalie will score when playing the mixed strategy equilibrium.
+
+**Question A (f):** If both the kicker and goalie both tossed a fair coin to make their choices (ie, choicing each side with 50% probability), find both player's expected value.
+
+# Question B
+
+The goalie has been training really hard in order to have better reaction times. Now the kicker will choose a side, and the goalie will then be able to make a choice.
+
+```{r echo=FALSE,warning=FALSE,error=FALSE,message=FALSE,cache=FALSE}
+    
+# Create the game tree structure
+edges <- data.frame(
+  from = c("K", "K", "G_l", "G_r", "G_l", "G_r"),
+  to = c("G_l", "G_r", "(0.1, 0.8)", "(0.9, 0)",  "(0.7, 0)", "(0.2, 0.7)"),
+  action = c("Left", "Right", "Left", "Left", "Right", "Right")
+)
+
+
+# Create graph
+g <- graph_from_data_frame(edges, directed = TRUE)
+
+# Add node attributes
+V(g)$type <- ifelse(V(g)$name %in% c("(0.1, 0.8)", "(0.9, 0)", "(0.2, 0.7)", "(0.7, 0)"), 
+                    "terminal", "decision")
+V(g)$player <- case_when(
+  V(g)$name == "K" ~ "Kicker",
+  V(g)$name %in% c("G_l", "G_r") ~ "Goalie",
+  TRUE ~ ""
+)
+
+# Plot the game tree
+ggraph(g, layout = "tree") +
+  geom_edge_link(aes(label = action), 
+                 angle_calc = "along",
+                 label_dodge = unit(2, "mm"),
+                 arrow = arrow(length = unit(2, "mm")), size = 6) +
+  geom_node_point(aes(color = type, size = type)) +
+  geom_node_text(aes(label = ifelse(type == "terminal", name, player)),
+                nudge_y = ifelse(V(g)$type == "terminal", -0.15, 0),
+                nudge_x = ifelse(V(g)$type == "terminal", 0, -0.10),
+                
+                 size = 4) +
+  scale_color_manual(values = c("decision" = "lightblue", "terminal" = "lightcoral")) +
+  scale_size_manual(values = c("decision" = 4, "terminal" = 3)) +
+  theme_graph() +
+  theme(legend.position = "none")
+  
+    
+```
+
+**Question B (a):** What is the subgrame perfect equilibrium here? What is the equilibrium outcome?
+
+**Question B (b):** What is the goalie's best response function to the kicker's choices? Does this make sense?
+
+**Question B (c):** Does the kicker have first mover advantage here relative to the simultaneous game?
+
+# Question C
+
+Two countries, one large and one small are about to enter a trade war. The small country benefits enormously from free trade, but would introduce reciprocal tariffs if it was in their best interest. 
+
+The following shows the annual GDP of these countries under the trade polices in trillions of dollars.
+
+\renewcommand{\arraystretch}{3}
+\begin{table}[htbp]
+\begin{tabular}{llll}
+                      &                                  & \multicolumn{2}{l}{\textbf{Large country}}                                                         \\
+                      & \multicolumn{1}{l|}{}            & \multicolumn{1}{l|}{Free trade}                  & Impose tariffs                          \\\cline{2-4} 
+\multirow{2}{*}{\textbf{Small country}} & \multicolumn{1}{l|}{Free trade} & \multicolumn{1}{l|}{L: 7, S: 6}   & L: 8, S: -1 \\ \cline{2-4} 
+                      & \multicolumn{1}{l|}{Impose tariffs}         & \multicolumn{1}{l|}{L: 4, S: 1} & L: 5, S:2 \\ \cline{2-4} 
+\end{tabular}
+\end{table}
+
+**Question C (a):** Does the large country have any dominating strategies? Are they weakly or strongly dominant?
+
+**Question C (b):** If the strategies in part (a) are strongly dominant, use them to help find the pure strategy Nash Equilibrium.
+
+# Question D
+
+Draw out and solve the following sequential game, finding the outcome and subgame perfect Nash Equilibrium. 
+
+Two solar farms are potentially going to be built and would require a new part of the electricity network to connect them. The cost of the new part of the network is so high, that both solar farms need help for it if either wants to be profitable.
+
+If just one solar farm gets, they'll make a loss of $-\$1$ paying for all of the network. If both enter, they'll both make profits of $\$1.5$. If neither get built, they both make $\$0$. 
+
+Solar Farm 1 realises that it has a quicker construction date than Solar Farm 2. Should it still enter befor Solar Farm 2 commits to being built?
+

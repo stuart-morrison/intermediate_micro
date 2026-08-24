@@ -1,0 +1,160 @@
+---
+title: ARE100B final exam
+output:
+     pdf_document:
+         number_sections: FALSE
+         fig_width: 6
+         fig_height: 3.75
+         toc: false
+         latex_engine: xelatex
+         includes:
+             in_header: ["~/Documents/template_header.tex"]
+---
+
+Name:________________________ $\quad$   Student ID:________________________
+
+# Question 1
+
+In soccer penalty kicks, the kicker has to choose the direction that they will kick, and the goalie will choose the direction that they will dive. They will choose at the same time.
+
+A goalie values a save as much as the kicker values a goal. The goalie is stronger on the left side and is more likely to make a save in that direction. The kicker is stronger on the right side and is more likely to score in that direction.
+
+This gives us the following payoff matrix, where the decimal numbers represent the probability that they will score/make the save, versus miss.
+
+\renewcommand{\arraystretch}{3}
+\begin{table}[htbp]
+\begin{tabular}{llll}
+                      &                                  & \multicolumn{2}{l}{\textbf{Kicker}}                                                         \\
+                      & \multicolumn{1}{l|}{}            & \multicolumn{1}{l|}{Left}                  & Right                          \\\cline{2-4} 
+\multirow{2}{*}{\textbf{Goalie}} & \multicolumn{1}{l|}{Left} & \multicolumn{1}{l|}{K: 0.2, G: 0.7}   & K: 0.8, G: 0 \\ \cline{2-4} 
+                      & \multicolumn{1}{l|}{Right}         & \multicolumn{1}{l|}{K: 0.6, G: 0} & K: 0.1, G: 0.6 \\ \cline{2-4} 
+\end{tabular}
+\end{table}
+
+**Question 1 (a):** Find the mixed strategy (with randomization) Nash Equilibrium. (9 points)
+
+
+\newpage
+
+
+# Question 2
+
+India is currently facing a choice about whether to align its trading relationship with China or the USA. Simultaneously, the USA has the choice whether to impose high tariffs on India or not.
+
+The following payoff matrix shows the changes to each country's GDP as the result of these choices (each country prefers higher GDP).
+
+\renewcommand{\arraystretch}{3}
+\begin{table}[htbp]
+\begin{tabular}{llll}
+                      &                                  & \multicolumn{2}{l}{\textbf{India}}                                                         \\
+                      & \multicolumn{1}{l|}{}            & \multicolumn{1}{l|}{Align with USA}                  & Align with China                          \\\cline{2-4} 
+\multirow{2}{*}{\textbf{USA}} & \multicolumn{1}{l|}{Impose tariffs} & \multicolumn{1}{l|}{India: -6, USA: 8}   & India: -4, USA: 2 \\ \cline{2-4} 
+                      & \multicolumn{1}{l|}{Don't impose tariffs}         & \multicolumn{1}{l|}{India: 5, USA: 3} & India: 4, USA: -3 \\ \cline{2-4} 
+\end{tabular}
+\end{table}
+
+
+\vspace{12pt}
+
+**Question 2 (a):**  What are India's best responses to the USA's actions? (2 points)
+
+\vspace{128pt}
+
+**Question 2 (b):** Does either player have a dominating strategy? If so, what are they? (2 points)
+
+\vspace{128pt}
+
+**Question 2 (c):** Find all pure strategy (no randomization) Nash Equilibria. You can solve this in the payoff matrix, but make sure you write your final answer for the Nash Equilibria here. (2 points)
+
+\vspace{128pt}
+
+\newpage
+
+# Question 3
+
+The state governments for Texas and California are both proposing to gerrymander their electoral districts to increase their respective seats in the USA House of Representatives. Texas will pass their laws first. California can then decide to gerrymander or not. If Texas gerrymanders first, the choice to gerrymander can be challenged in the Supreme Court, which would overturn all gerrymander actions and cost a lot of money.
+
+The below game tree shows the sequence and payoffs of this sequential/extensive form game.
+
+![](images/final_gerrymander_tree.png)
+
+
+**Question 3 (a):** Find the equilibrium outcome (strategies and payoffs) if Texas and California make their decisions optimally. You can solve this in the game tree, but make sure you write your final answer here. (5 points) 
+
+\vspace{96pt}
+
+**Question 3 (b):** Write the subgame perfect Nash Equilibrium solution to this game, that is, the optimal strategy at each decision node. (4 points)
+
+\vspace{96pt}
+
+\newpage
+
+# Question 4
+
+Apple and Google are battling it out in the smartphone market. Their phone offerings are quite different, so they compete in different market segments from one another.
+
+Apple's inverse demand and total cost curve is:
+\begin{equation*}\begin{aligned}
+    &P_{A} = 1,800 - 0.15q_{A} - 0.2q_{G}\\
+    &TC_{A} = 75q_{A}\\
+\end{aligned}\end{equation*}
+
+Google's inverse demand and total cost curve is:
+\begin{equation*}\begin{aligned}
+    &P_{G} = 1,200 - 0.12q_{A} - 0.1q_{G}\\
+    &TC_{G} = 70q_{G}\\
+\end{aligned}\end{equation*}
+
+\vspace{12pt}
+
+**Question 4 (a):** If Apple and Google compete in a Cournot game with differentiated products (choosing quantities), find Apple and Google's best response functions. (7 points)
+
+\vspace{300pt}
+
+\newpage
+
+**Question 4 (b):** Using your answer from part (a), find the price and quantity sold in both Apple and Google's market segments. (5 points)
+
+\vspace{360pt}
+
+
+**Question 4 (c):** If Google exits the smartphone game (so $q_{G} = 0$), find the price and quantity sold in Apple's market segment.  (3 points)
+
+
+\vspace{360pt}
+\newpage
+
+**Question 4 (d):** Following part (c), find the consumer surplus in Apple's market segment when Google has exited the market. (3 points)
+
+\vspace{360pt}
+
+\newpage
+
+# Question 5
+
+SpaceX is already doing rocket launches for the USA Government. Amazon is about to enter this market. 
+
+The inverse demand for rocket launches is: $P = 1,250 - 2Q$.
+
+The cost curves for both SpaceX and Amazon are:
+\begin{itemize}
+    \item For SpaceX: $TC_{S} = 25q_{S}$
+    \item For Amazon: $TC_{A} = 30q_{A}$
+\end{itemize}
+
+\vspace{12pt}
+
+**Question 5 (a):** If Amazon enters the market, they will compete with SpaceX in a Stackelberg game with SpaceX being the first mover (choosing quantities, with SpaceX going first). Find the resulting profits for each firm. (11 points)
+
+\vspace{480pt}
+\newpage
+**Question 5 (b):** The CEO of Amazon approaches the CEO of SpaceX and proposes that, in return for SpaceX paying 50% of their monopoly profit to Amazon, that Amazon will not enter the market to compete with SpaceX. Find the profit for each firm if they enter this agreement to collude. (5 points)
+
+\vspace{360pt}
+
+**Question 5 (c):** Would SpaceX have the incentive to accept Amazon's proposal to collude? Explain. (4 points)
+
+
+\vspace{360pt}
+
+\vspace{0pt}

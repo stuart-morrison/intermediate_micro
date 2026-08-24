@@ -1,0 +1,212 @@
+---
+title: "Lecture 10: Bertrand competition"
+date: "Week 4"
+author: "Stuart J Morrison"
+output:
+      revealjs::revealjs_presentation:
+        theme: solarized
+        transition: none
+        fig_width: 12
+        fig_height: 5.5
+---
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+# Last lecture we learned about Cournot competition
+
+- Cournot competition occurs when firms compete based on quantity
+
+- The other natural way to compete is by price competition (**I'm about to release my catalogue, at what price should I list my products?**)
+
+- We call this Bertrand competition
+
+- We'll see we actually get very different outcomes compared to Cournot (quantity) models
+
+
+
+
+# But first, who wants to win \$5?
+
+- I want to auction off a \$5 note 
+
+- Each player takes turns making an offer to buy my money
+
+- Offers need to be whole dollars \$1, \$2, etc
+
+- Winning bid earns $\$5 - \text{Highest bid}$
+
+- Loser gets \$0
+
+# But first, who wants to win \$5?
+
+- Assuming this went well, we should have seen bids go up to \$5, eliminating any margin
+
+- Any player with a losing bid should have an incentive to bid \$1 more than the other player up to \$5
+
+- Let's think about the best response function here:
+
+\begin{equation*}\begin{aligned}
+    BR_{i} = \begin{cases}
+        \text{bid}_{j} + 1 & \text{bid}_{j} < \$5\\
+        \$5 & \text{Otherwise}\\
+        \end{cases}
+\end{aligned}\end{equation*}
+
+- The best response function shows that each player would always want to undercut the other player
+
+# This is essentially how Bertrand competition works
+
+- In Bertrand modelling with identical products, the cheapest price takes the whole market, and it's split when prices are the same:
+
+\begin{equation*}\begin{aligned}
+    q_{1} = \begin{cases}
+    0 & p_{1} > p_{2} \quad\text{Firm 1 gets nothing if they price too high}\\
+    Q_{D} / 2 & p_{1} = p_{2} \quad\text{The market is split}\\
+    Q_{D} & p_{1} < p_{2} \quad\text{Firm 1 gets the whole market if they undercut Firm 2}\\
+    \end{cases}
+\end{aligned}\end{equation*}
+
+- We could think of this as an auction, but instead of the auctioneer driving the price higher, competition drives it lower
+
+
+# This is essentially how Bertrand competition works
+
+- Take two firms, both of which have marginal costs of \$5
+
+- What are each firm's best responses here if they compete on price?
+
+- If Firm 1 prices at \$7, Firm 2 could undercut them at \$6 and take the whole market
+
+- If Firm 2 is pricing at \$6, Firm 1 could undercut them at \$5, its marginal cost
+
+- Firm 2 would rather split the market so also offers at MC
+
+**In Bertrand with identical goods, the price always falls to the marginal cost** - Firms always have the incentive to compete with one another
+
+# Wait, isn't this different to what was predicted by Cournot?
+
+
+- In Cournot (quantity) games with identical products, we learnt there'll always be a mark up above marginal cost
+
+- We just showed that our Bertrand (price) games with identical products, price will fall to marginal cost
+
+- What gives?
+
+- My take: Each model is better at describing different  markets better than others
+
+- Bertrand describe some markets like gas stations, car insurance, or particular airline routes better than Cournot - Markets where you migth expect margins to get squeezed over time
+
+<img src="images/airline_identical_fares.png" style="height: 180px; margin-left: 20px; margin-bottom: 20px;">
+
+# Before we go much further - another \$5 auction
+
+**But now the rules are slightly changed**
+
+# Before we go much further - another \$5 auction
+
+**But now the rules are slightly changed**
+
+- Each player takes turns making an offer to buy my money
+
+- Offers need to be whole dollars \$1, \$2, etc
+
+- Winning bid earns $\$5 - \text{Highest bid}$
+
+- **Loser still pays their losing bid!**
+
+# Before we go much further - another \$5 auction
+
+- Assuming that went well, we should have gotten a pretty weird outcome
+
+- We should have gotten to a point where its a better strategy to bid more than \$5 
+
+- Actually only a Nash Equilibrium strategy in mixed strategies (randomisation) where people should expect to lose money most of the time
+
+- All this is to say, slightly changing the rule in competition/auctions/games can create massive differences in outcomes
+
+# Like Cournot, we can think about Bertrand competition with differentiated goods
+
+**Price won't fall to marginal cost where we have differentiated products**
+
+Let's see how Coke and Pepsi might compete on price:
+
+- The demand for coke is: $q_{C} = 58 - 4P_{C} + 2P_{P}$
+
+- The demand for pepsi is: $q_{P} = 63.2 - 4P_{P} + 1.6P_{C}$
+
+Let total cost for both coke and pepsi both be: 
+\begin{equation*}\begin{aligned}
+    &TC_{C} = 5q_{C}\\
+    &TC_{P} = 5q_{P}\\
+\end{aligned}\end{equation*} 
+
+# Like Cournot, we can think about Bertrand competition with differentiated goods
+
+Very similar approach to Cournot (quantity) modelling, but we frame everything in terms of choosing prices!
+
+**1 -** Setup our profit maximisation problem for each firm - needs to consider the prices of the other firms! Each firm has their own demand curve
+
+**2 -** Find the best response functions - at what price should each firm charge as a function of other firm's price
+
+**3 -** Find where the best response functions coincide/intersect - this is a Nash-Bertrand equilibrium
+
+# Let's find Coke's best response function
+
+Coke wants to choose its price to maximise its profit (But not a monopoly!)
+
+\begin{equation*}\begin{aligned}
+    \max_{P_{C}}\pi_{C} &=\max_{P_{C}} P_{C} q_{C} - 5 q_{C}\\
+    &=\max_{P_{C}} P_{C}(58 - 4P_{C} + 2P_{P}) - 5 (58 - 4P_{C} + 2P_{P}) \\
+    &=\max_{P_{C}} P_{C} (58 - 4P_{C} + 2P_{P}) - 5 (58 - 4P_{C} + 2P_{P}) \\
+    &=\max_{P_{C}} 58P_{C}  - 4P_{C}^{2} + 2P_{P}P_{C}  - 290 + 20P_{C} - 10P_{P}\\
+    &=\max_{P_{C}} 78P_{C}  - 4P_{C}^{2} + 2P_{P}P_{C}  - 290 - 10P_{P}\\
+\end{aligned}\end{equation*}
+
+We find the first order condition:
+\begin{equation*}\begin{aligned}
+    \frac{d\pi_{C}}{dP_{C}} = 78 - 8 P_{C} + 2P_{P} &=0\\
+    8P_{C} &= 78 + 2P_{P}\\
+    P_{C} &= BR_{C} =  9.75 + 0.25P_{P}\\
+\end{aligned}\end{equation*}
+
+# Now let's find Pepsi's best response function
+
+Pepsi wants to choose its price to maximise its profit (But not a monopoly!)
+
+\begin{equation*}\begin{aligned}
+    \max_{P_{P}}\pi_{P} &=\max_{P_{P}} P_{P} q_{P} - 5 q_{P}\\
+    &=\max_{P_{P}} P_{P}(63.2 - 4P_{P} + 1.6P_{C}) - 5 (63.2 - 4P_{P} + 1.6P_{C}) \\
+    &=\max_{P_{P}} 63.2P_{P} - 4P_{P}^{2} + 1.6P_{C}P_{P} - 316 + 20P_{P} - 8P_{C}\\
+    &=\max_{P_{P}} 83.2P_{P} - 4P_{P}^{2} + 1.6P_{C}P_{P} - 316 - 8P_{C}\\
+\end{aligned}\end{equation*}
+
+We find the first order condition:
+\begin{equation*}\begin{aligned}
+    \frac{d\pi_{P}}{dP_{P}} = 83.2 - 8P_{P} + 1.6P_{C} &= 0\\
+    8P_{P} &= 83.2 + 1.6P_{C}\\
+    P_{P} &= BR_{P} = 10.4 + 0.2P_{C}\\
+\end{aligned}\end{equation*}
+
+# Finding the Nash-Bertrand Equilibrium
+
+We have both of our best response functions:
+\begin{equation*}\begin{aligned}
+  &P_{C} = BR_{C} = 9.75 + 0.25P_{P}\\
+  &P_{P} = BR_{P} = 10.4 + 0.2P_{C}\\
+\end{aligned}\end{equation*}
+
+Where they intersect is the Nash equilibrium:
+\begin{equation*}\begin{aligned}
+  P_{C} &= 9.75 + 0.25(10.4 + 0.2P_{C})\\
+  P_{C} &= 9.75 + 2.6 + 0.05P_{C}\\
+  P_{C} &= 12.35 + 0.05P_{C}\\
+  0.95P_{C} &= 12.35\\
+  P_{C} &= 13\\
+\end{aligned}\end{equation*}
+
+So then, $P_{P} = 10.4 + 0.2 \times 13 = 13$
+
+**Result**: Both Coke and Pepsi charge $13 in equilibrium! Even though they have differentiated products and slightly different demand curves, the Nash equilibrium results in identical pricing.

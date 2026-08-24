@@ -1,0 +1,297 @@
+---
+title: ARE100B Week 5 Discussion problems
+output:
+     pdf_document:
+         number_sections: FALSE
+         fig_width: 6
+         fig_height: 3.75
+         toc: false
+         latex_engine: xelatex
+         includes:
+             in_header: ["~/Documents/template_header.tex"]
+---
+
+# Question 1
+
+J\&J and Anova pharmaceutical companies are about to enter a new drug market. 
+
+The inverse demand for this new drug is: $P = 250 - 2Q$.
+
+The cost curves for both firms are:
+\begin{itemize}
+    \item For J\&J: $TC_{J} = 25q_{J}$
+    \item For Anova: $TC_{A} = 35q_{A}$
+\end{itemize}
+
+**Question 1 (a):** If both J\&J enter and compete in a Cournot game (choosing quantities), find the profit for each firm.
+
+\begin{mybox}
+
+Firm \(i\)’s profit:
+\[
+\pi_i = (250 - 2(q_J + q_A))q_i - c_i q_i,\qquad c_J=25,\;c_A=35
+\]
+
+J\&J’s profit:
+\[
+\pi_J = (250 - 2(q_J+q_A))q_J - 25q_J
+\]
+
+Finding J\&J's best response function:
+\[
+\frac{\partial \pi_J}{\partial q_J} = 225 - 4q_J - 2q_A = 0 \;\;\Rightarrow\;\; q_J = BR_{J} = 56.25 - 0.5q_A
+\]
+
+Anova’s profit:
+\[
+\pi_A = (250 - 2(q_J+q_A))q_A - 35q_A
+\]
+
+Finding Anova's best response function:
+\[
+\frac{\partial \pi_A}{\partial q_A} = 215 - 2q_J - 4q_A = 0 \;\;\Rightarrow\;\; q_A = BR_{A} = 53.75 - 0.5q_J
+\]
+
+Solve simultaneously:
+\[
+q_J = 39.17,\quad q_A = 34.17,\quad Q=73.33
+\]
+
+Price:
+\[
+P = 250 - 2(73.33) = 103.33
+\]
+
+Profits:
+\[
+\pi_J = (103.33-25)(39.17) = 3068.06,\quad \pi_A = (103.33-35)(34.17) = 2334.72
+\]
+
+J\&J's profit is:
+\begin{equation*}\begin{aligned}
+    \pi_{J} = 103.33 \times 39.17 - 25 \times 39.17 = 3,068.06
+\end{aligned}\end{equation*}
+
+Anova's profit is:
+\begin{equation*}\begin{aligned}
+    \pi_{A} = 103.33 \times 34.17 - 35 \times 34.17 = 2,334.72
+\end{aligned}\end{equation*}
+
+\end{mybox}
+
+\vspace{24pt}
+
+**Question 1 (b):** Instead, executives for J\&J meet in a smoke-filled room and agree not to compete with each other. Owing to Anova's higher costs, they agree that Anova will not enter the market, and J\&J will share 50% of its profit with Anova as a reward for not entering. Find the cartel output and profit for each firm.
+
+\begin{mybox}
+
+Monopoly condition:  
+\[
+MR = 250 - 4Q = 25 \;\;\Rightarrow\;\; Q^{M} = 56.25
+\]
+
+Price:
+\[
+P^M = 250 - 2(56.25) = 137.5
+\]
+
+J\&J monopoly profit:
+\[
+\pi_J^M = (137.5-25)(56.25) = 6,328.13
+\]
+
+Cartel agreement: J\&J shares 50% with Anova:
+\[
+\pi_J^{cartel} = \pi_A^{cartel} = 3,164.06
+\]
+
+\end{mybox}
+
+\vspace{24pt}
+
+**Question 1 (c):** Are the cartel profits high enough to incentive J\&J and Anova to collude?
+
+\begin{mybox}
+
+We want to compare the cartel profit for each firm against that they would earn in a Cournot game. If the cartel profit is larger for each firm, they would have the incentive to collude.
+
+\[
+\pi_J^{\text{Cartel}}=3,164.06 > \pi_J^{\text{Cournot}}=3,068.06,\quad
+\pi_A^{\text{Cartel}}=3,164.06 > \pi_A^{\text{Cournot}}=2,334.72
+\]
+
+Thus both firms prefer cartel outcomes so they would collude.
+
+\end{mybox}
+
+
+\vspace{24pt}
+
+**Question 1 (d):** If Anova observes J\&J following the cartel agreement, what would its cheating profit and output be? Does Anova have the incentive to cheat the cartel? 
+
+\begin{mybox}
+
+If J\&J's output is the agreed cartel output of 56.25, then Anova's best response for output is:
+\begin{equation*}\begin{aligned}
+    q_A = BR_{A} &= 53.75 - 0.5q_J\\
+    &=53.75 - 0.5 \times 56.25\\
+    &=25.625\\
+\end{aligned}\end{equation*}
+
+So the price would be:
+\begin{equation*}\begin{aligned}
+    P = 250 - 2 \times (56.25 + 25.62)= 86.25
+\end{aligned}\end{equation*}
+
+So Anova's cheating profit would be:
+\begin{equation*}\begin{aligned}
+    \pi_{A}^{\text{Cheating}} &= 86.25 \times 25.625 - 35 \times 25.625 \\
+    &=1,313.28\\
+\end{aligned}\end{equation*}
+
+But this is less than the profit it would make from not entering and getting the side payment from J\&J! So Anova does not have the incentive to cheat and the cartel would remain.
+
+\end{mybox}
+
+
+\newpage
+
+# Extra practice questions
+
+# Question A
+
+Greg and Will run concrete businesses in Davis. Normally they compete in Cournot games (choosing quantities).
+
+The inverse demand for concrete in Davis is $P = 1,250 - 5Q$.
+
+Greg and Will's costs are:
+\begin{equation*}\begin{aligned}
+    &TC_{G} = 27q_{G}\\
+    &TC_{W} = 27q_{W}\\
+\end{aligned}\end{equation*}
+
+
+**Question A (a):** Find the Cournot outputs and profits for Greg and Will's concrete businesses.
+
+\begin{mybox}
+
+Greg's profit function is:
+\begin{equation*}\begin{aligned}
+    \pi_{G} = (1,250 - 5(q_{G} - q_{W})) \times q_{G} - 27q_{G}\\
+\end{aligned}\end{equation*}     
+
+Greg's best response function is:
+\begin{equation*}\begin{aligned}
+    \frac{d\pi_{G}}{dq_{G}} = &1,250 - 27 - 5q_{W} - 10q_{G} = 0\\
+    &q_{G} = \frac{1,223 - 5q_{W}}{10}\\
+\end{aligned}\end{equation*}
+
+Because Will has the same costs and Greg and Will's products are identical, Will's best response function is:
+\begin{equation*}\begin{aligned}
+    &q_{W} = \frac{1,223 - 5q_{G}}{10}\\
+\end{aligned}\end{equation*}
+
+Finding the Nash Equilibrium outputs is:
+\begin{equation*}\begin{aligned}
+    &q_{G} = \frac{1,223 - 5\frac{1,223 - 5q_{G}}{10}}{10}\\
+    &q_{G} = \frac{1,223 - 611.5 + 2.5q_{G}}{10}\\
+    &0.75q_{G} = 61.15\\
+    &q_{G} = 81.53\\
+\end{aligned}\end{equation*}
+
+And Will's output will be the same at $q_{W} = 81.53$.
+
+The market price will be:
+\begin{equation*}\begin{aligned}
+    P = 1,250 - 5 \times (81.53 + 81.53) = 434.7\\
+\end{aligned}\end{equation*}
+
+So the Cournot profits will be:
+\begin{equation*}\begin{aligned}
+    \pi_{G} = \pi_{W} = 81.53 \times 434.7 - 27 \times 81.53 = \$33,239.78\\
+\end{aligned}\end{equation*}
+
+
+\end{mybox}
+
+\vspace{24pt}
+
+**Question A (b):** While taking a walk together in the Arboretum, Greg and Will discuss whether they could both make more money from colluding and splitting their combined outputs and profits 50% each. Is this true? Find the collusion/cartel profit and output.
+
+\begin{mybox}
+
+We have that the marginal costs of the cartel is: $MC = 27$.
+
+The cartel's revenue curve is:
+\begin{equation*}\begin{aligned}
+    \text{Revenue} = (1,250 - Q) \times Q
+\end{aligned}\end{equation*}
+
+So marginal revenue is:
+\begin{equation*}\begin{aligned}
+    MR = 1,250 - 10Q
+\end{aligned}\end{equation*}
+
+The cartel will output at the monopoly level where MR = MC:
+\begin{equation*}\begin{aligned}
+    &27 = 1,250 - 10Q\\
+    &Q = 122.30\\
+\end{aligned}\end{equation*}
+
+Greg and Will split this 50-50 so each output is:
+\begin{equation*}\begin{aligned}
+    q_{G} = q_{W} = 61.15\\
+\end{aligned}\end{equation*}
+
+The market price will be:
+\begin{equation*}\begin{aligned}
+    P &= 1,250 - 5 \times 122.30\\
+    &=638.50\\
+\end{aligned}\end{equation*}
+
+The cartel profit will be:
+\begin{equation*}\begin{aligned}
+    \pi^{\text{Cartel}} &= 638.50 \times 61.15 - 27 \times 61.15\\
+    &= \$74,786.45\\
+\end{aligned}\end{equation*}
+And Greg and Will get 50\% each:
+\begin{equation*}\begin{aligned}
+    \pi^{\text{Cartel}}_{G} =     \pi^{\text{Cartel}}_{W} = \$37,393.22\\
+\end{aligned}\end{equation*}
+
+\end{mybox}
+
+\vspace{24pt}
+
+**Question A (c):** If Greg produces concrete at their cartel output, does Will have the incentive to cheat?
+
+\begin{mybox}
+
+If Greg sticks at the cartel agreed output of 61.15, Will's best response is to output:
+\begin{equation*}\begin{aligned}
+    BR_{W} = \frac{1,223 - 5 \times q_{G}}{10} = \frac{1,223 - 5 \times 61.15}{10} = 91.725\\
+\end{aligned}\end{equation*}
+
+The resulting price would be:
+\begin{equation*}\begin{aligned}
+    P = 1,250 - 5 \times (61.15 + 91.725) = 485.625
+\end{aligned}\end{equation*}
+
+Will's profit if they cheat is then:
+\begin{equation*}\begin{aligned}
+    \pi_{W}^{\text{Cheat}} = 485.625 \times 91.725 - 27 \times 91.725 = \$42,067.38
+\end{aligned}\end{equation*}
+
+Will's profit if they cheat of \$42,067.38 is higher than if they stay in the cartel of \$37,393.22 so Will would have the incentive to cheat!
+
+\end{mybox}
+
+\vspace{24pt}
+
+**Question A (d):** Greg and Will have been friends for many years. If Will cheats the cartel, Greg will use social pressure to make Will feel bad - which Will thinks is equivalent to losing \$20,000. Will Will stil cheat?
+
+\begin{mybox}
+
+Cheating the cartel only makes Will $42,067.38 - 37,393.22 = \$4,674.16$ - not that much more money. If Greg can penalise them \$20,000 of emotional hurt from from cheating, Will will be $\$4,674.16 - \$20,000 =-\$15,325.84$ worse off from cheating. So Will shouldn't cheat!
+
+\end{mybox}

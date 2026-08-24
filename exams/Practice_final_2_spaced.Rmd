@@ -1,0 +1,138 @@
+---
+title: ARE100B practice final 2
+output:
+     pdf_document:
+         number_sections: FALSE
+         fig_width: 6
+         fig_height: 3.75
+         toc: false
+         latex_engine: xelatex
+         includes:
+             in_header: ["~/Documents/template_header.tex"]
+---
+
+
+# Question 1
+
+You are at the poker table facing one other opponent. You need to decide on your next moves. The below game tree shows the sequence and payoffs of this sequential/extensive form game that you expect given the cards you have in your hand.
+
+![](images/practice_final2_poker_bluff_tree.png)
+
+\vspace{12pt}
+
+**Question 2 (a):** Find the equilibrium outcome if you and your opponent make their decisions optimally. 
+
+\vspace{48pt}
+
+**Question 2 (b):** Write the equilibrium outcome as a subgame perfect Nash Equilibrium, that is, the optimal strategy at each decision node. 
+
+\vspace{96pt}
+
+
+# Question 2
+
+Abigail and Brooklyn are both choosing which sort of car to buy. They can both choose small or large cars. Safety is their key concern and the following payoff matrix shows the probability they will be injured in a crash (lower is better).
+
+\renewcommand{\arraystretch}{3}
+\begin{table}[htbp]
+\begin{tabular}{llll}
+                      &                                  & \multicolumn{2}{l}{\textbf{Abigail}}                                                         \\
+                      & \multicolumn{1}{l|}{}            & \multicolumn{1}{l|}{Buy small car}                  & Buy large car                          \\\cline{2-4} 
+\multirow{2}{*}{\textbf{Brooklyn}} & \multicolumn{1}{l|}{Buy small car} & \multicolumn{1}{l|}{A: 10\%, B: 10\%}   & A: 8\%, B: 12\% \\ \cline{2-4} 
+                      & \multicolumn{1}{l|}{Buy large car}         & \multicolumn{1}{l|}{A: 12\%, B: 8\%} & A: 15\%, B: 10\% \\ \cline{2-4} 
+\end{tabular}
+\end{table}
+
+\vspace{12pt}
+
+**Question 2 (a):**  What is Abigail's best response to Brooklyn's actions? 
+
+\vspace{128pt}
+
+**Question 2 (b):** Does either player have a dominating strategy? If so, what are they?  
+
+\vspace{128pt}
+
+**Question 2 (c):** Find all pure strategy (no randomization) Nash Equilibria. You can solve this in the payoff matrix, but make sure you write your final answer for the Nash Equilibria here.
+
+\vspace{128pt}
+
+# Question 3
+
+Firm 1 and Firm 2 are deciding whether to enter a market or not. The payoff matrix below shows their profits given which firms enter the market.
+
+
+\renewcommand{\arraystretch}{3}
+\begin{table}[htbp]
+\begin{tabular}{llll}
+                      &                                  & \multicolumn{2}{l}{\textbf{Firm 1}}                                                         \\
+                      & \multicolumn{1}{l|}{}            & \multicolumn{1}{l|}{Enter}                  & Don't enter                          \\\cline{2-4} 
+\multirow{2}{*}{\textbf{Firm 2}} & \multicolumn{1}{l|}{Enter} & \multicolumn{1}{l|}{F1: -4, F2: -3}   & F1: 0, F2: 6 \\ \cline{2-4} 
+                      & \multicolumn{1}{l|}{Don't enter}         & \multicolumn{1}{l|}{F1: 5, F2: 0} & F1: 0, F2: 0 \\ \cline{2-4} 
+\end{tabular}
+\end{table}
+
+**Question 3 (a):** Find the mixed strategy (with randomisation) Nash Equilibrium
+
+\vspace{360pt}
+
+# Question 4
+
+The NFL makes a lot of its money from selling the broadcast rights to its games. 
+
+Say the demand for the NFL's broadcast rights is: $P = 1,000 - 250Q_{D}$. 
+
+For simplicity, say that there are only two teams in the NFL, the 49ers and the Eagles. The total cost of providing games for broadcast for each team is:
+\begin{itemize}
+    \item For the 49ers: $TC_{49} = 200q_{49}$
+    \item For the Eagles: $TC_{E} = 200q_{E}$
+\end{itemize}
+
+The NFL organises itself as a cartel to get monopoly prices for selling its broadcast rights - ie, individual teams don't sell their own rights, limiting competition. The NFL splits the profits and outputs in the cartel equally amongst its members.
+
+**Question 4 (a):** What is the price and total quantity for broadcast when the NFL operates as a cartel?
+
+\vspace{240pt}
+
+**Question 4 (b):** What is the profit for each individual team, the 49ers and the Eagles, when the NFL operates as a cartel?
+
+\vspace{200pt}
+
+**Question 4 (c):** The NFL imposes big fines on its members if anyone tries to cheat the cartel. Suppose that the NFL would fine a team \$150 for cheating the cartel and selling additional broadcast rights. Would the 49ers cheat the cartel?
+
+\vspace{300pt}
+
+\newpage
+
+\vspace{300pt}
+
+# Question 5
+
+J&J is about to launch a new drug onto the market. 
+
+The inverse demand for this drug is $P = 15,000 - Q_{D}$. 
+
+J&J has total costs $TC_{JJ} = 1,500q_{JJ}$.
+
+**Question 5 (a):** If J&J enters the drug market as a monopoly, what is the price and quantity of this drug that will be sold?
+
+
+\vspace{240pt}
+
+**Question 5 (b):** If J&J enters the drug market as a monopoly, what is the consumer surplus?
+
+\vspace{240pt} 
+
+
+
+**Question 5 (c):** Suppose a new firm, Anova drugs, now chooses to enter the market after J&J. Anova has total costs $TC_{JJ} = 1,200q_{JJ}$. What is the price and quantity of the the drug that will be sold if J&J and Anova compete in a Stackelberg game (J&J enters first, both compete on quantity)?
+
+\newpage
+
+\vspace{360pt}
+
+\vspace{360pt}
+
+**Question 5 (d):** How much better off are consumers from Anova entering the market, relative to when J&J was a monopoly?
+
+\vspace{240pt}

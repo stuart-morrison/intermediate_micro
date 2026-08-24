@@ -1,0 +1,16 @@
+---
+title: ARE100B final exam PLO attribution
+output:
+     pdf_document:
+         number_sections: FALSE
+         fig_width: 6
+         fig_height: 3.75
+         toc: false
+         latex_engine: xelatex
+         includes:
+             in_header: ["~/Documents/template_header.tex"]
+---
+
+# Question 1
+
+**Question 1 (a):** 

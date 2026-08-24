@@ -1,0 +1,395 @@
+---
+title: ARE100B practice midterm
+output:
+     pdf_document:
+         number_sections: FALSE
+         fig_width: 6
+         fig_height: 3.75
+         toc: false
+         latex_engine: xelatex
+         includes:
+             in_header: ["~/Documents/template_header.tex"]
+---
+
+# Question 1
+
+Explain in words why a business would always prefer to be a monopoly, rather than be in a competitive market.
+
+\vspace{12pt}
+\begin{mybox}
+A monopoly uses its market power to choose the price that maximizes its profit. This literally means that being a monopoly gives it the highest possible profit out of all the possible market structures. This means that it will always earn a higher profit than it would if it operated in a competitive market. 
+
+Points breakdown:
+\begin{itemize}
+    \item 1.5 points for noting that being monopoly allows a company to maximize its profit.
+    \item 1.5 points for noting that this monopoly profit will always be larger than what it could achieve in a competitive market.
+\end{itemize}
+\end{mybox}
+\vspace{24pt}
+
+# Question 2
+
+Explain in words why a monopoly will always set prices in the elastic part of the demand curve.
+
+\vspace{12pt}
+\begin{mybox}
+In the inelastic part of the demand curve, a 1\% increase in price will cause a less than a 1\% decrease in quantity, meaning that the lost sales from a price increase will be made up by increased margin/profit by the customers who remain.
+
+As the price increases, customers will go from inelastic demand to elastic demand. 
+
+So if the price is set in the inelastic part of the demand curve, the monopoly can always increase profits by increasing the price. To be profit maximizing, the monopoly must then increase prices until some point in the elastic region of demand.
+
+Where the price is set in the elastic part of the demand curve will depend on the exact demand equation and cost function.
+
+Points breakdown:
+\begin{itemize}
+    \item 1 point for noting that the monopolist aims to be profit maximizing
+    \item 2 points for noting that in the inelastic part of the equation, the lost quantity sold from a price increase will be more than made up for by the increased margin on the goods it does sell. 
+    \item 2 points for then noting that the monopolist can always increase profits by raising pricess in the inelastic region, and so prices must land somewhere in the elastic region.
+\end{itemize}
+
+\end{mybox}
+
+
+\vspace{24pt}
+# Question 3
+
+Advertising and marketing can change customers' price elasticity, making customers less sensitive to changes in price. For example, Rolex's advertising that their product is prestigious allows them to raise their prices with little change in the quantity demanded.
+
+A monopoly has a constant marginal cost of production of \$200. What is the maximum it would pay for an advertising campaign that moves customers' elasticity of demand from -1.5 to -1.1. Assume the company sells 500 units irrespective of the customers' elasticity.
+
+\vspace{24pt}
+
+\begin{mybox}
+We know that when consumers are relatively less elastic (less sensitive to prices), monopolies can charge a higher price. 
+
+The maximum amount that the company would spend on this advertising campaign is the increase in profits from the changing elasticities increasing prices and, resultingly, profits.
+
+The relationship between price, elasticities and marginal cost is:
+\begin{equation*}\begin{aligned}
+    P = MC \frac{1}{1 + \frac{1}{\varepsilon}}
+\end{aligned}\end{equation*}
+
+The original price, $P_{1}$, is:
+\begin{equation*}\begin{aligned}
+    P_{1} = 200 \times \frac{1}{1 + \frac{1}{-1.5}} = \$600
+\end{aligned}\end{equation*}
+
+The new price after the advertising campaign, $P_{2}$, is:
+\begin{equation*}\begin{aligned}
+    P_{2} = 200 \times \frac{1}{1 + \frac{1}{-1.1}} = \$2,200
+\end{aligned}\end{equation*}
+
+
+Because we have a constant marginal cost, and we sell the same quantity, the original profit, $\pi_{1}$, is:
+\begin{equation*}\begin{aligned}
+    \pi_{1} &= P_{1} \times  Q - MC \times Q\\
+    &= 600 \times 500 - 200 \times 500\\
+    &= \$200,000\\
+\end{aligned}\end{equation*}
+
+The new profit, $\pi_{2}$, is:
+\begin{equation*}\begin{aligned}
+    \pi_{2} &= P_{2} \times  Q - MC \times Q\\
+    &= 2,200 \times 500 - 200 \times 500\\
+    &= \$1,000,000\\
+\end{aligned}\end{equation*}
+
+So the maximum price the company would pay for the advertising campaign is $\pi_{2} - \pi_{1} = \$800,000$.
+
+Points breakdown:
+\begin{itemize}
+    \item 1.5 points total for calculating the prices under each elasticity.
+    \item 1.5 points total for calculating the profits under each elasticity.
+    \item 1 point for recognising that the maximum amount they would pay for advertising is the difference in profits under each elasticity.
+    \item 1 point for actually calculating the maximum amount they would pay.
+\end{itemize}
+\end{mybox}
+\vspace{24pt}
+# Question 4
+
+When companies want to launch into a new market, they often charge prices below their marginal costs in order to attract market share away from incumbents. When this is done to expressly drive other companies out of business, we call this predatory pricing.
+
+\vspace{6pt}
+
+When Uber first launched, it used this tactic to drive many taxi companies out of business. It was backed by massive amounts of venture capital that allowed it to make many years of losses in order to expand. The following questions will show a simple model of this.
+
+\vspace{6pt}
+
+
+
+Assume that there are two years, Year 1 and Year 2. The demand for car rides (both taxis and Uber) is $Q_{D} = 324 - 3P$. The total cost of supplying car rides, irrespective of whether its Uber or taxis supplying them, is $TC = 0.1Q + 0.1Q^{2}$.
+
+\vspace{6pt}
+
+
+If taxis and Uber are in the market at the same time, they split the producer surplus/total industry profits 50% each. If just Uber is in the market, they act as a monopoly.
+
+\vspace{6pt}
+
+
+For parts (a)-(d), Uber will charge discounted rides in Year 1 to bankrupt the taxi industry, then act as a monopoly in Year 2.
+
+**Question 4 (a):** If the taxi industry receives $0 or less in Year 1, it will go out of business. At what price will the taxi industries go out of business (your answer will get two possible prices because of the quadratic formula, choose the smallest one)? How many total rides are sold in the market (taxi and Uber combined)?
+
+\vspace{12pt}
+
+\begin{mybox}
+
+If Uber charges a price such that the total industry profit is \$0, then the taxi industry will go bankrupt.
+
+That is, we will find the price so that the industry profits are equal to 0:
+\begin{equation*}\begin{aligned}
+    &\pi = 0\\
+    &P\times Q - 0.1Q - 0.1Q^{2} =0\\
+    &P(324 - 3P) - 0.1(324-3P) - 0.1(324-3P)^{2}=0\\
+    &324P - 3P^{2} -32.4 + 0.3 P - 0.1(324^{2} - 2 \times 3 \times 324P + 9p^{2})=0\\
+    &324P - 3P^{2} -32.4 + 0.3 P - 10,497.6 + 194.4P - 0.9P^{2} =0\\
+    &(-3 - 0.9)P^{2} +  (324 + 0.3 +194.4)P + (-32.4 - 10,497.6)=0\\
+    &-3.9P^{2} + 518.7 - 10,530 =0\\
+\end{aligned}\end{equation*}
+Using the quadratic formula, we get that the price where profits are 0 is \$25.
+
+When the price is \$25, there are $Q = 324 - 3 \times 25 = 249$ rides sold.
+
+Points breakdown:
+\begin{itemize}
+    \item 1 point for recognizing that profits are zero if Uber is predatory pricing to send the taxi company out of business
+    \item 3 points for solving for the price, showing working
+    \item 1 point for find the quantity of rides using the demand curve
+    \item No need to show the $\max_{P}\pi$ step, you can jump straight to the derivative.
+\end{itemize}
+
+\end{mybox}
+\vspace{24pt}
+
+**Question 4 (b):** Taking your Year 1 price from part (a), what is the consumer surplus in Year 1? What is the total producer surplus (taxi and Uber combined)?
+
+\vspace{12pt}
+
+\begin{mybox}
+
+Under the price in part (a), industry profits, and so total producer surplus is \$0.
+
+To calculate the consumer surplus, it's useful to find the inverse demand curve: $P = 108 - \frac{1}{3}Q$, as this puts the price on the y-axis.
+
+The consumer surplus when we have linear demand is the area of a triangle, with a base of the quantity of rides, and a height of the inverse demand curve intercept minus the market price. That is:
+\begin{equation*}\begin{aligned}
+    CS &= \frac{1}{2} \times 249 \times (108 - 25)\\
+    &= \$10,333.5\\
+\end{aligned}\end{equation*}
+
+\includegraphics{images/practice_midterm_q4b_surplus_predatory.png}
+
+
+Points breakdown:
+\begin{itemize}
+    \item 1 point for correct producer surplus
+    \item 3 points for correctly solving consumer surplus, showing working
+    \item No points off if price or demand was incorrect in part (a), but used correctly in this quesiton.
+\end{itemize}
+
+
+
+\end{mybox}
+
+
+
+\vspace{24pt}
+
+**Question 4 (c):** Give the low price in Year 1, taxis go out of business and Uber operates as a monopoly in Year 2. Find the price and quantity of rides sold in Year 2 when Uber acts as a monopoly.
+
+\vspace{12pt}
+
+
+\begin{mybox}
+
+Under a monopoly, Uber is going to choose the price that maximizes its profit. Its optimization problem is:
+\begin{equation*}\begin{aligned}
+    \max_{P} \pi &= \max_{P} P \times Q - 0.1Q - 0.1Q^{2}\\
+    &=P(324 - 3P) - 0.1(324-3P) - 0.1(324-3P)^{2}\\
+\end{aligned}\end{equation*}
+
+We find the maximium point of the profit, by finding when the derivative of the profit function is zero:
+\begin{equation*}\begin{aligned}
+    \frac{d\pi}{dP} = 0 &= (324 - 3P) - 3P + 0.3 - 0.1 \times 2 \times -3 \times (324 - 3P)\\
+    0 &= 324.3 - 6P + 0.6 \times(324 - 3P)\\
+    0 &= 324.3 - 6P + 194.4 - 1.8P\\
+    0 &= 518.7 - 7.8P\\
+    P&= \$66.5
+\end{aligned}\end{equation*}
+
+So the monopolist will set a price of \$66.5, and will sell $Q = 324 - 3P =324 - 199.5= 124.5$ rides.
+
+Points breakdown:
+\begin{itemize}
+    \item 1 point for showing the first order condition that the derivative of profit will be 0 at the optimal price
+    \item 2 points for correctly solving for the price
+    \item 1 point for calculating the quantity of rides sold
+\end{itemize}
+
+
+\end{mybox}
+
+\vspace{24pt}
+
+
+**Question 4 (d):** Given your answer in part (c), find the producer and consumer surplus in Year 2.
+
+
+
+\vspace{12pt}
+
+\begin{mybox}
+
+We will use the same triangle formula for calculating the consumer surplus under a monopoly:
+\begin{equation*}\begin{aligned}
+    CS &= \frac{1}{2} \times 124.5 \times (108 - 66.5)\\
+    &= \$2,583.38
+\end{aligned}\end{equation*}
+
+You can calculate the producer surplus as the profit that Uber makes under monopoly prices:
+\begin{equation*}\begin{aligned}
+    PS &= \pi\\
+    &= P \times Q - 0.1Q - 0.1Q^{2}\\
+    &= 66.5 \times 124.5 - 0.1 \times 124.5 - 0.1 \times 124.5^{2}\\
+    &= 6,716.78
+\end{aligned}\end{equation*}
+
+You could also calculate this as the area of the original quadrilateral in the figure below.
+
+\includegraphics{images/practice_midterm_q4d_surplus_monopoly.png}
+
+Points breakdown:
+\begin{itemize}
+    \item 3 points for correctly solving consumer surplus, showing working
+    \item 3 points for correctly solving producer surplus, showing working
+\end{itemize}
+
+\end{mybox}
+
+\vspace{24pt}
+There are two potential effects of predatory pricing. First, because rides are discounted in Year 1, this transfers some additional surplus to consumers, and consumers might be better off in aggregate even though Uber acts as a monopoly in Year 2 compared to if Uber acted competitively. Second, because of the discounting in Year 1, Uber might make less profit in aggregate compared to if it acted competitively. We will explore this in parts (e) - (h).
+
+\vspace{12pt}
+
+**Question 4 (e):** Now find the price and quantity of rides sold if Uber does not do predatory pricing and we assume a competitive market (this will be the same in both years).
+
+\vspace{12pt}
+
+
+\begin{mybox}
+
+Under a competitive market, the price will equal the marginal. That is, we find the point where the supply and demand curves meet; or where the willingness to pay meets the willingness to sell.
+
+Our total cost is: $TC = 0.1Q + 0.1Q^{2}$. Our marginal cost is our supply curve, which is the derivative of TC:
+\begin{equation*}\begin{aligned}
+    MC = \frac{dTC}{dQ} = 0.1 + 0.2Q
+\end{aligned}\end{equation*}
+This represents our willingness to sell.
+
+Our willingness to pay is our inverse demand curve: $P = 108 - \frac{1}{3}Q$.
+
+When they meet, the MC is equal to our willingness to pay:
+\begin{equation*}\begin{aligned}
+    P &= MC\\
+    108 - \frac{1}{3}Q &= 0.1 + 0.2Q\\
+    107.9&= \frac{8}{15}Q\\
+    Q &= 202.31\\
+\end{aligned}\end{equation*}
+So in a competitive market, we would sell 202.31 rides. The price would be: $P = 108 - \frac{1}{3} \times 202.31 = 40.56$.
+
+
+Points breakdown:
+\begin{itemize}
+    \item 2 points for solving for quantity, showing working
+    \item 2 points for solving for price, showing working
+\end{itemize}
+
+\end{mybox}
+
+\vspace{24pt}
+
+**Question 4 (f):** Under the competitive market, find the total consumer surplus in both years (summed together). Find Uber's producer surplus in both years (summed together), remembering that they receive 50% of the total industry producer surplus under a competitive market.
+
+\vspace{12pt}
+
+\begin{mybox}
+
+The consumer surplus in just one year under a competitive market is:
+\begin{equation*}\begin{aligned}
+    \text{CS in one year} &= \frac{1}{2} \times 202.31 \times (108 - 40.56)\\
+    &= 6,821.89\\
+\end{aligned}\end{equation*}
+So the CS in both years combined will be $CS = 2 \times 6,821.89 = \$13,643.79$.
+
+Uber's producer surplus in one year will be half that of the total producer surplus/total industry profits:
+\begin{equation*}\begin{aligned}
+    \text{Uber's PS in one year} &= \frac{1}{2} \times \pi\\
+    &= \frac{1}{2} \times \left( P \times Q - TC \right)\\
+    &= \frac{1}{2} \times (40.56 \times 202.31 - 0.1 \times 202.31 - 0.1 \times 202.31^{2})\\
+    &=\$2,046.26\\
+\end{aligned}\end{equation*}
+So Uber's producer surplus in both year would be $2 \times \$2,046.26=\$4,093.03$.
+
+\includegraphics{images/practice_midterm_q4f_surplus_competitive.png}
+
+Points breakdown:
+\begin{itemize}
+    \item 2.5 points for solving for consumer surplus, for both years combined. 
+    \item 3 points for solving for just Uber's producer surplus for both years combined
+\end{itemize}
+
+
+\end{mybox}
+
+\vspace{24pt}
+
+**Question 4 (g):** Would consumers prefer Uber doing predatory pricing or acting in a competitive market?
+
+\vspace{12pt}
+
+\begin{mybox}
+
+Under the competitive market, the total consumer surplus across two years is $\$13,643.79$.
+
+Under the predatory pricing then monopoly, the total consumer surplus is $\$2,583.38 + \$10,333.5 = \$12,916.88$.
+
+So consumer surplus is lower under the predatory pricing that under the competitive market.
+
+So they would prefer Uber to enter as a competitor.
+
+Points breakdown:
+\begin{itemize}
+    \item 1 point for calculating total consumer surplus for both years under the predatory pricing then monopoly
+    \item 1 point for comparing the CS under the two scenarios
+    \item 1 point for the conclusion
+\end{itemize}
+
+\end{mybox}
+
+\vspace{24pt}
+
+**Question 4 (h):** From Uber's perspective, is it better for Uber to do predatory pricing or to act in a competitive market?
+
+\vspace{12pt}
+
+\begin{mybox}
+
+Under the competitive market, the Uber's total producer surplus across two years is $\$4,093.03$.
+
+Under the predatory pricing then monopoly, the total consumer surplus is $\$0 + \$6,716.78 = 6,716.78$.
+
+So Uber's producer surplus is higher under the predatory pricing that under the competitive market.
+
+So Uber would prefer to do predatory pricing. Although this sacrifices profits in year 1, it makes up for in year 2.
+
+Points breakdown:
+\begin{itemize}
+    \item 1 point for calculating Uber's producer surplus for both years under the predatory pricing then monopoly
+    \item 1 point for comparing Uber's PS under the two scenarios
+    \item 1 point for the conclusion
+\end{itemize}
+
+
+\end{mybox}

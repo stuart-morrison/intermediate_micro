@@ -1,0 +1,374 @@
+---
+title: "Lecture 9: Introduction to oligopolies"
+date: "Week 4"
+author: "Stuart J Morrison"
+output:
+      revealjs::revealjs_presentation:
+        theme: solarized
+        transition: none
+        fig_width: 12
+        fig_height: 5.5
+---
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+# We can start applying our game theory to firm competition
+
+- With monopolies, we studied when one firm has significant barriers of entry and has full market power
+
+- Oligopolies have this same principle, but now there are multiple firms
+
+$\quad\quad\quad$ - Our firms are going to compete with each other and act at the same time, so we need to use our ideas of game theory
+
+$\quad\quad\quad$ - Our firms are also going to try to maximise their profits, so we need our ideas from monopolies
+
+![](images/planeteers.jpg)
+
+# What we're going to study are "models" of the world
+
+- We're going to use some simple mathematical models of how firms compete
+
+- These aren't designed to capture every nuance in real-world competition
+
+- For certain industries and markets they can surprisingly be predictive of actual outcomes
+
+- We're going see how see how outcomes end up somewhere between monopolies (high prices, low quantities) and perfect competition (prices at MC)
+
+# What we're going to study are "models" of the world
+
+- Three key models for us to study - all variations on the same theme
+
+- First two are like our simultaneous games - firms can compete on price or quantity
+
+- Third model is like our first mover/sequential games - one firm enters the market first
+
+# Why do we use models?
+
+- Real life competition is difficult, complex and dynamic
+
+- Imagine you're an economist working at an airline, trying to work out whether selling more seats from Sacramento to LA will increase profits or not?
+
+- What are some questions we might want to ask and answer?
+
+- How will me increasing the number of flights change prices? How will competitors respond? Will this increase prices or not?
+
+- Models give us a framework that we can build on to use statistics, make predictions, have an intuitive understanding of the market to start to answer these questions
+
+# When is a model a good model?
+
+- We started this course studying the bookends of competition: perfect competition and monopolies
+
+- Our models should give the monopoly outcome when we model 1 firm
+
+- Our models should get closer to the perfectly competitive outcome when we model many firms!
+
+- Our models should give us predictions that: we can use to make business decisions; and verify and refine with statistical tools
+
+- **No model is perfect** - they are only useful if they are useful
+
+
+# First model - Firms choose quantity
+
+- Our first model of oligopoly competition is when firms choose quantity simultaneously. (Think: **I already have a factory, how much should I produce?**)
+
+- This is also known as the Cournot model
+
+- Increasing output of either firm decreases the price & margin for both firms - we assume they are both price takers
+
+- We want to ask: **What is the Nash Equilibrium of output each firm should produce?**
+
+# First model - Firms choose quantity
+
+- Firms know the total market willingness to pay for flights $P = a - b \times Q_{D}$
+
+- Each firm can compete to supply total demand: $Q_{D} = q_{1} + q_{2}$
+
+- The more each firm tries to sell, the more it will lower the price! **(A trade-off!)**
+
+- Each firm will have a **best response** function on how much to sell given how much the other firm will sell!
+
+# Cournot example - Airlines
+
+This is how we approach solving Cournot games using both our profit-maximising math and our game theory:
+
+**1 -** Find market demand as a function of how much each firm supplies
+
+**2 -** Setup our profit maximisation problem for each firm - needs to consider the actions of the other firms!
+
+**3 -** Find the best response functions - how much should each firm sell as a function of other firm's quantities
+
+**4 -** Find where the best response functions coincide/intersect - this is a Nash-Cournot equilibrium
+
+\vspace{20pt}
+
+Let's do this on the board
+
+# Cournot example - Airlines
+
+<img src="images/airline_tails.jpg" style="float: right; height: 400px; margin-left: 20px; margin-bottom: 20px;">
+
+- American Airlines and United are competing to sell flights from Sacramento to LA
+
+- Inverse demand for this route is $P = 339 - Q_{D}$
+
+- Both airlines have no fixed costs and constant marginal costs of \$147
+
+- **How many seats will each airline sell?**
+
+# Cournot example - Airlines
+
+**Step 1**
+
+The first thing to do, is when we see total market demand, $Q_{D}$, replace this with the sum of quantities supplied by each firm: $q_{U} + q_{A}$
+
+So the inverse demand curve is: $P = 339 - (q_{U} + q_{A})$
+
+# Cournot example - Airlines
+
+We'll do step 2 and 3 for American Airlines first:
+
+**Step 2** Maximise profits
+
+Each firm is going to maximise its profits with respect to how much it sells - we want to find when the derivative of profit is zero:
+
+\begin{equation*}\begin{aligned}
+  \max_{q_{A}} \pi_{A}(q_{A},q_{U}) &= P \times q_{A} - 147 \times q_{A}\\
+&(339 - (q_{U} + q_{A}))q_{A} - 147 \times q_{A}\\
+&339q_{A} - q_U\times q_{A} - q_{A}^{2} - 147 \times q_{A}\\
+\end{aligned}\end{equation*}
+With first order conditions:
+\begin{equation*}\begin{aligned}
+  \frac{d\pi_{A}}{dq_{A}} = &339 - q_{U} - 2q_{A} - 147 = 0\\
+  &192 - q_{U} - 2q_{A} = 0\\
+\end{aligned}\end{equation*}
+
+# Cournot example - Airlines
+
+**Step 3:** Best response function
+
+How much should American Airlines sell as a function of how much United sells? Or, what is American's profit maximising quantity given United is selling $q_{U}$ flights
+
+We start with: $192 - q_{U} - 2q_{A} = 0$
+
+\begin{equation*}\begin{aligned}
+  &192 - q_{U} - 2q_{A} = 0\\
+  &-2q_{A} = -192 + q_{U}\\
+  &q_{A} = BR_{A} = 96 - \frac{1}{2}q_{U}\\
+\end{aligned}\end{equation*}
+
+This is American's **best response** function to how many seats $q_{U}$ sells - we know it's the optimal quantity conditional on $q_{U}$ because we derived it from the profit maximising condition
+
+
+# Cournot example - Airlines
+
+We'll do step 2 and 3 for United:
+
+**Step 2** Maximise profits
+
+Each firm is going to maximise its profits with respect to how much it sells - we want to find when the derivative of profit is zero:
+
+\begin{equation*}\begin{aligned}
+  \max_{q_{U}} \pi_{U}(q_{A},q_{U}) &= P \times q_{U} - 147 \times q_{U}\\
+&(339 - (q_{U} + q_{A}))q_{U} - 147 \times q_{U}\\
+&339q_{U} - q_U\times q_{A} - q_{U}^{2} - 147 \times q_{U}\\
+\end{aligned}\end{equation*}
+With first order conditions:
+\begin{equation*}\begin{aligned}
+  \frac{d\pi_{U}}{dq_{U}} = &339 - 2q_{U} - q_{A} - 147 = 0\\
+  &192 - 2q_{U} - q_{A} = 0\\
+\end{aligned}\end{equation*}
+
+# Cournot example - Airlines
+
+**Step 3:** Best response function
+
+How much should United sell as a function of how much American sells? Or, what is United's profit maximising quantity given American is selling $q_{A}$ flights
+
+We start with: $192 - 2q_{U} - q_{A} = 0$
+
+\begin{equation*}\begin{aligned}
+  &192 - 2q_{U} - q_{A} = 0\\
+  &-2q_{U} = -192 + q_{A}\\
+  &q_{U} = 96 - \frac{1}{2}q_{A}\\
+  &BR_{U} = 96 - \frac{1}{2}q_{A}\\
+\end{aligned}\end{equation*}
+
+This is United's **best response** function - we know it's the optimal quantity given $q_{A}$ because we derived it from the profit maximising condition
+
+
+# Cournot example - Airlines
+
+Finally, **step 4** - when each firms' best response functions intersect, the quantity is a Nash equilibrium. 
+
+It's both profit maximising conditional on other firm's behaviour, and no one wants to deviate.
+
+
+# Cournot example - Airlines
+
+How to do this? Simply substitute one best response function into the other:
+
+We have:
+\begin{equation*}\begin{aligned}
+  (1) \quad q_{A} = 96 - \frac{1}{2}q_{U}\\
+  (2) \quad q_{U} = 96 - \frac{1}{2}q_{A}\\
+\end{aligned}\end{equation*}
+Let's subsitute (1) into (2)
+\begin{equation*}\begin{aligned}
+  q_{U} &= 96 - \frac{1}{2}\left( 96 - \frac{1}{2}q_{U} \right)\\
+  q_{U} &= 96 - 48 + \frac{1}{4}q_{U}\\
+  \frac{3}{4}q_{U} &= 48\\
+  q_{U} &= 64\\
+\end{aligned}\end{equation*}
+
+And we know that $q_{A} = 96 - \frac{1}{2}q_{U}$
+
+So we get that $q_{A} = 64$
+
+And prices will be: $P = 339 - (q_{U} + q_{A}) = 339 - 128 = \$211$
+
+# Cournot example - Airlines
+
+We know this is a Nash Equilibrium, because neither firm would want to deviate and change its output:
+
+✅ American sells 64 → United's best response is to sell 96 - 0.5 x 64 = 64 → American's best response is to sell 96 - 0.5 x 64 = 64
+
+👎 **Counterexample:** What if American sells 60 → United's best response is to sell 96 - 0.5 x 60 = 66 → American's best response is to sell 96 - 0.5 x 66 = 63 so **American deviates**
+
+# Cournot example - Airlines
+
+Compared to a monopoly - Cournot competition will lead to lower prices and higher output:
+
+- **Cournot:** Price = \$211, Total quantity $Q_{D} = q_{U} + q_{A} = 128$
+
+- **Monopoly:** Price = \$243, Total quantity $Q_{D} = 96$
+
+In general, the more firms you keep adding, the closer you get to the outcome of a competitive market!
+
+We'll keep it to two firms in this class to make the math easier
+
+# Cournot, Monopoly and perfect competitive outcome
+
+Remember our mark up rule from monopolies:
+\begin{equation*}\begin{aligned}
+  P_{\text{Monopoly}} = \text{MC}\frac{1}{\left( 1 + \frac{1}{\varepsilon} \right)}
+\end{aligned}\end{equation*}
+
+There's the equivalent for Cournot competition - with $n$ firms:
+\begin{equation*}\begin{aligned}
+  P_{\text{Cournot}} = \text{MC}\frac{1}{\left( 1 + \frac{1}{n \times \varepsilon} \right)}
+\end{aligned}\end{equation*}
+
+How many firms do we need to get to the perfectly competitive outcome?
+\begin{equation*}\begin{aligned}
+  P_{\text{Competitive}} = MC
+\end{aligned}\end{equation*}
+
+**Infinitely many** - this is why we often say that perfect competition requires unrealistic assumption
+
+# The power of Cournot in real world markets
+
+<img src="images/coke_pepsi_boxing.webp" style="float: right; height: 400px; margin-left: 20px; margin-bottom: 20px;">
+
+
+- There's one small addition we can add to our Cournot model to make it reality a little bit better
+
+- **Production differentiation:** Products made by competing firms might be substitutes with one another - but will be valued differently in the market
+
+- Examples: iPhone versus Google Pixel; Coke v Pepsi; Nvidia v Intel GPUs
+
+- Main change: Introducing separate demand curves for each competitor showing the willingness to pay for each each differentiated product
+
+# Differentiated Cournot (Choosing quantity with differing products)
+
+In a week 1 lecture, I talked about how Nvidia is a monopolist for GPUs. This isn't quite true, there is a small amount of market share taken by Intel. Let's model this a bit more accurately.
+
+
+Intel GPUs:
+
+- Inverse demand: $P_{I} = 490 - q_{N} - 1.5q_{I}$
+
+- Total costs: $TC_{I} = 40q_{I}$
+
+Nvidia GPUs
+
+- Inverse demand: $P_{N} = 150 - 0.3q_{N} - 0.1q_{I}$
+
+- Total costs: $TC_{N} = 50q_{N}$
+
+The key part is that the demand for each product depends on the other product, this links them as substitutes - ie, they're competing in related markets
+
+If they act in Cournot competition (choosing quantity), what will their prices be?
+
+# Differentiated Cournot (Choosing quantity with differing products)
+
+The steps and math remain mostly the same, except that now each firm has its own demand curve
+
+**1 -** Setup our profit maximisation problem for each firm - needs to consider the actions of the other firms! Each firm has their own inverse demand curve
+
+**2 -** Find the best response functions - how much should each firm sell as a function of other firm's quantities
+
+**3 -** Find where the best response functions coincide/intersect - this is a Nash-Cournot equilibrium
+
+# Differentiated Cournot (Choosing quantity with differing products)
+
+Let's start with finding Intel's profit and best response functions:
+
+\begin{equation*}\begin{aligned}
+\max_{q_{I}} \pi_{I} &=\max_{q_{I}} P_{I} \times q_{I} - 40q_{I}\\
+&= \max_{q_{I}} \left( 490 - q_{N} - 1.5q_{I} \right) \times q_{I} - 40q_{I}\\
+&= \max_{q_{I}} 490q_{I} - q_{N}q_{I} - 1.5q_{I}^{2} - 40q_{I}\\
+&= \max_{q_{I}} 450q_{I} - q_{N}q_{I} - 1.5q_{I}^{2}\\
+\end{aligned}\end{equation*}
+
+We optimise Intel's profit - setting the derivative to zero:
+\begin{equation*}\begin{aligned}
+\frac{d\pi_{I}}{dq_{I}} &= 450 - q_{N} - 3q_{I} = 0\\
+3q_{I} &= 450 - q_{N}\\
+q_{I} &= BR_{I} = 150 - \frac{1}{3}q_{N}\\
+\end{aligned}\end{equation*}
+
+# Differentiated Cournot (Choosing quantity with differing products)
+
+Now let's find Nvidia's profit and best response functions:
+
+\begin{equation*}\begin{aligned}
+\max_{q_{N}} \pi_{N} &=\max_{q_{N}} P_{N} \times q_{N} - 50q_{N}\\
+&= \max_{q_{N}} \left(150 - 0.3q_{N} - 0.1q_{I} \right) \times q_{N} - 50q_{N}\\
+&= \max_{q_{N}} 150q_{N} - 0.3q_{N}^{2} - 0.1q_{I}q_{N} - 50q_{N} \\
+&= \max_{q_{N}} 100q_{N} - 0.3q_{N}^{2} - 0.1q_{I}q_{N}\\
+\end{aligned}\end{equation*}
+
+We optimise Nvidia's profit - setting the derivative to zero:
+\begin{equation*}\begin{aligned}
+\frac{d\pi_{N}}{dq_{N}} &= 100 - 0.6q_{N} - 0.1q_{I} = 0\\
+0.6q_{N} &= 100 - 0.1q_{I}\\
+q_{N} &= BR_{N} = 166.67 - 0.167q_{I}\\
+\end{aligned}\end{equation*}
+
+# Differentiated Cournot (Choosing quantity with differing products)
+
+We have both of our best responses:
+\begin{equation*}\begin{aligned}
+&q_{I} = BR_{I} = 150 - \frac{1}{3}q_{N}\\
+&q_{N} = BR_{N} = 166.67 - 0.167q_{I}\\
+\end{aligned}\end{equation*}
+
+Where they intersect is the Nash equilibrium:
+\\begin{equation*}\begin{aligned}
+q_{I} &= 150 - \frac{1}{3} \left( 166.67 - 0.167q_{I} \right)\\
+q_{I} &= 150 - 55.56 + 0.0556q_{I}\\
+q_{I} &= 94.44 + 0.0556q_{I}\\
+0.9444q_{I} &= 94.44\\
+q_{I} &= 100\\
+\end{aligned}\end{equation*}
+
+So then, $q_{N} = 166.67 - 0.167 \times 100 = 150$
+
+So even though both companies both make GPUs, differentiation in ability means Nvidia sells far more!
+
+
+
+
+

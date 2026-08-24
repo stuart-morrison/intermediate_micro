@@ -1,0 +1,396 @@
+---
+title: "Lecture 1: Competitive markets and welfare"
+date: "Week 1"
+author: "Stuart J Morrison"
+output:
+      revealjs::revealjs_presentation:
+        theme: solarized
+        transition: none
+        fig_width: 12
+        fig_height: 5.5
+---
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+# Competitive markets
+
+- From society's perspective, competitive markets are the best way to allocate goods and services between people
+
+- As we learn about imperfect competition for the rest of this course - we'll use competitive markets as a benchmark 
+
+- Requires unrealistic assumptions for a market to actually be 'perfectly competitive'...
+        
+- ...But some markets get close enough - like stock exchanges
+
+
+# Remembering Competitive markets with the NYSE
+
+- At each moment, people who want to sell stocks tell the NYSE their minimum price they'd take to sell their stock - their `willingness to sell'
+
+- People who want to buy stocks tell the NYSE their maximum price they'd buy for - their `willingness to pay'
+
+- The NYSE does two important things:
+
+↬ matches buyers with the highest willingness to pay with sellers with the lowest willingness to sell - lets these people trade
+
+↬ sets a price at which everyone trades
+
+# Remembering Competitive markets with the NYSE
+
+We can turn our share market into supply and demand
+
+```{r echo=FALSE,warning=FALSE,error=FALSE,message=FALSE,cache=FALSE}
+        
+        library(tidyverse)
+
+        library(ggplot2)
+
+# Create data for increasing step function (supply)
+supply_data <- tibble(
+  shares = rep(0:10, each = 2),
+  price = c(0,0,1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10)
+)
+
+# Create data for decreasing step function (demand)  
+demand_data <- tibble(
+  shares = rep(0:10, each = 2),
+  price = c(11,11,10, 10, 9, 9, 8, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1)
+)
+
+# Find intersection point (where supply price = demand price)
+# This occurs around shares = 5.5, price = 5.5
+intersection_shares <- 6
+intersection_price <- 5.5
+
+# Create the plot
+ggplot() +
+  # Supply curve (increasing, dark blue)
+  geom_step(data = supply_data, aes(x = shares, y = price), 
+            color = "darkblue", size = 1.2, direction = "hv") +
+  
+  # Demand curve (decreasing, dark red)
+  geom_step(data = demand_data, aes(x = shares, y = price), 
+            color = "darkred", size = 1.2, direction = "hv") +
+  
+  # Horizontal dotted line at intersection
+  geom_hline(yintercept = intersection_price, 
+             linetype = "dotted", color = "black", size = 0.8) +
+  
+  # Vertical dotted line at intersection
+  geom_vline(xintercept = intersection_shares, 
+             linetype = "dotted", color = "black", size = 0.8) +
+  
+  # Add text labels for the dotted lines
+  annotate("text", x = 1, y = intersection_price + 0.3, 
+           label = "Price at which everyone trades ($5.50)", 
+           hjust = 0.5, vjust = 0, size = 3.5) +
+  
+  annotate("text", x = intersection_shares + 0.1, y = 0, 
+           label = "Number of shares sold (6)", 
+           hjust = 0, vjust = 0.5, size = 3.5, angle = 90) +
+  
+ annotate("text", x = 1.2, y = 0.5, label = "Willingness to sell (Supply curve)", hjust = 0, vjust = 0.5, size = 3.5, col = "darkblue") +
+ 
+ annotate("text", x = 1.2, y = 10.5, label = "willingness to pay (Demand curve)", hjust = 0, vjust = 0.5, size = 3.5, col = "darkred") +
+
+  # Customize axes and labels
+  labs(x = "Number of shares", 
+       y = "Price of the shares ($)") +
+  
+  # Set axis limits and breaks
+  scale_x_continuous(limits = c(0, 11), breaks = 0:11) +
+  scale_y_continuous(limits = c(0, 11), breaks = 0:10) +
+  
+  # Apply a clean theme
+  theme_minimal() +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  )
+        
+```
+
+# Remembering Competitive markets with the NYSE
+
+What is the willingness to pay and willingness to sell for the 7th share? Will they trade?
+
+```{r echo=FALSE,warning=FALSE,error=FALSE,message=FALSE,cache=FALSE}
+        
+        library(tidyverse)
+
+        library(ggplot2)
+
+# Create data for increasing step function (supply)
+supply_data <- tibble(
+  shares = rep(0:10, each = 2),
+  price = c(0,0,1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10)
+)
+
+# Create data for decreasing step function (demand)  
+demand_data <- tibble(
+  shares = rep(0:10, each = 2),
+  price = c(11,11,10, 10, 9, 9, 8, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1)
+)
+
+# Find intersection point (where supply price = demand price)
+# This occurs around shares = 5.5, price = 5.5
+intersection_shares <- 6
+intersection_price <- 5.5
+
+# Create the plot
+ggplot() +
+  # Supply curve (increasing, dark blue)
+  geom_step(data = supply_data, aes(x = shares, y = price), 
+            color = "darkblue", size = 1.2, direction = "hv") +
+  
+  # Demand curve (decreasing, dark red)
+  geom_step(data = demand_data, aes(x = shares, y = price), 
+            color = "darkred", size = 1.2, direction = "hv") +
+  
+  # Horizontal dotted line at intersection
+  geom_hline(yintercept = intersection_price, 
+             linetype = "dotted", color = "black", size = 0.8) +
+  
+  # Vertical dotted line at intersection
+  geom_vline(xintercept = intersection_shares, 
+             linetype = "dotted", color = "black", size = 0.8) +
+  
+  # Add text labels for the dotted lines
+  annotate("text", x = 1, y = intersection_price + 0.3, 
+           label = "Price at which everyone trades ($5.50)", 
+           hjust = 0.5, vjust = 0, size = 3.5) +
+  
+  annotate("text", x = intersection_shares + 0.1, y = 0, 
+           label = "Number of shares sold (6)", 
+           hjust = 0, vjust = 0.5, size = 3.5, angle = 90) +
+  
+ annotate("text", x = 1.2, y = 0.5, label = "Willingness to sell (Supply curve)", hjust = 0, vjust = 0.5, size = 3.5, col = "darkblue") +
+ 
+ annotate("text", x = 1.2, y = 10.5, label = "willingness to pay (Demand curve)", hjust = 0, vjust = 0.5, size = 3.5, col = "darkred") +
+
+
+  # Customize axes and labels
+  labs(x = "Number of shares", 
+       y = "Price of the shares ($)") +
+  
+  # Set axis limits and breaks
+  scale_x_continuous(limits = c(0, 11), breaks = 0:11) +
+  scale_y_continuous(limits = c(0, 11), breaks = 0:10) +
+  
+  # Apply a clean theme
+  theme_minimal() +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  )
+        
+```
+
+# Remembering Competitive markets with the NYSE
+
+How much better off are the people that sell the first share?
+
+```{r echo=FALSE,warning=FALSE,error=FALSE,message=FALSE,cache=FALSE}
+        
+        library(tidyverse)
+
+        library(ggplot2)
+
+# Create data for increasing step function (supply)
+supply_data <- tibble(
+  shares = rep(0:10, each = 2),
+  price = c(0,0,1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10)
+)
+
+# Create data for decreasing step function (demand)  
+demand_data <- tibble(
+  shares = rep(0:10, each = 2),
+  price = c(11,11,10, 10, 9, 9, 8, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1)
+)
+
+# Find intersection point (where supply price = demand price)
+# This occurs around shares = 5.5, price = 5.5
+intersection_shares <- 6
+intersection_price <- 5.5
+
+# Create the plot
+ggplot() +
+  # Supply curve (increasing, dark blue)
+  geom_step(data = supply_data, aes(x = shares, y = price), 
+            color = "darkblue", size = 1.2, direction = "hv") +
+  
+  # Demand curve (decreasing, dark red)
+  geom_step(data = demand_data, aes(x = shares, y = price), 
+            color = "darkred", size = 1.2, direction = "hv") +
+  
+  # Horizontal dotted line at intersection
+  geom_hline(yintercept = intersection_price, 
+             linetype = "dotted", color = "black", size = 0.8) +
+  
+  # Vertical dotted line at intersection
+  geom_vline(xintercept = intersection_shares, 
+             linetype = "dotted", color = "black", size = 0.8) +
+  
+  # Add text labels for the dotted lines
+  annotate("text", x = 1, y = intersection_price + 0.3, 
+           label = "Price at which everyone trades ($5.50)", 
+           hjust = 0.5, vjust = 0, size = 3.5) +
+  
+  annotate("text", x = intersection_shares + 0.1, y = 0, 
+           label = "Number of shares sold (6)", 
+           hjust = 0, vjust = 0.5, size = 3.5, angle = 90) +
+  
+ annotate("text", x = 1.2, y = 0.5, label = "Willingness to sell (Supply curve)", hjust = 0, vjust = 0.5, size = 3.5, col = "darkblue") +
+ 
+ annotate("text", x = 1.2, y = 10.5, label = "willingness to pay (Demand curve)", hjust = 0, vjust = 0.5, size = 3.5, col = "darkred") +
+
+
+  # Customize axes and labels
+  labs(x = "Number of shares", 
+       y = "Price of the shares ($)") +
+  
+  # Set axis limits and breaks
+  scale_x_continuous(limits = c(0, 11), breaks = 0:11) +
+  scale_y_continuous(limits = c(0, 11), breaks = 0:10) +
+  
+  # Apply a clean theme
+  theme_minimal() +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  )
+        
+```
+
+# Remembering Competitive markets with the NYSE
+
+In total, how much better off is everyone that sells a share? How much better off is everyone that buys a share? In total, how much better off is society for trading?
+
+```{r echo=FALSE,warning=FALSE,error=FALSE,message=FALSE,cache=FALSE}
+        
+        library(tidyverse)
+
+        library(ggplot2)
+
+# Create data for increasing step function (supply)
+supply_data <- tibble(
+  shares = rep(0:10, each = 2),
+  price = c(0,0,1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10)
+)
+
+# Create data for decreasing step function (demand)  
+demand_data <- tibble(
+  shares = rep(0:10, each = 2),
+  price = c(11,11,10, 10, 9, 9, 8, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1)
+)
+
+# Find intersection point (where supply price = demand price)
+# This occurs around shares = 5.5, price = 5.5
+intersection_shares <- 6
+intersection_price <- 5.5
+
+# Create the plot
+ggplot() +
+  # Supply curve (increasing, dark blue)
+  geom_step(data = supply_data, aes(x = shares, y = price), 
+            color = "darkblue", size = 1.2, direction = "hv") +
+  
+  # Demand curve (decreasing, dark red)
+  geom_step(data = demand_data, aes(x = shares, y = price), 
+            color = "darkred", size = 1.2, direction = "hv") +
+  
+  # Horizontal dotted line at intersection
+  geom_hline(yintercept = intersection_price, 
+             linetype = "dotted", color = "black", size = 0.8) +
+  
+  # Vertical dotted line at intersection
+  geom_vline(xintercept = intersection_shares, 
+             linetype = "dotted", color = "black", size = 0.8) +
+  
+  # Add text labels for the dotted lines
+  annotate("text", x = 1, y = intersection_price + 0.3, 
+           label = "Price at which everyone trades ($5.50)", 
+           hjust = 0.5, vjust = 0, size = 3.5) +
+  
+  annotate("text", x = intersection_shares + 0.1, y = 0, 
+           label = "Number of shares sold (6)", 
+           hjust = 0, vjust = 0.5, size = 3.5, angle = 90) +
+  
+ annotate("text", x = 1.2, y = 0.5, label = "Willingness to sell (Supply curve)", hjust = 0, vjust = 0.5, size = 3.5, col = "darkblue") +
+ 
+ annotate("text", x = 1.2, y = 10.5, label = "willingness to pay (Demand curve)", hjust = 0, vjust = 0.5, size = 3.5, col = "darkred") +
+
+
+  # Customize axes and labels
+  labs(x = "Number of shares", 
+       y = "Price of the shares ($)") +
+  
+  # Set axis limits and breaks
+  scale_x_continuous(limits = c(0, 11), breaks = 0:11) +
+  scale_y_continuous(limits = c(0, 11), breaks = 0:10) +
+  
+  # Apply a clean theme
+  theme_minimal() +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  )
+        
+```
+
+# Features of a competitive market to remember
+
+- Everyone trades at the same price: At the intersection of willingness to pay and willingness to sell
+
+- That is, no one has market power
+
+↬ For most of our examples, the willingness to sell is the `marginal cost' of producing a good - so we say Price = Marginal Cost 
+
+- If you sum up how much better off all the buyers and sellers are from trading - this is the best we can ever possibly do!
+
+# Social welfare
+
+In this class, our measure of how well off society is from trade is from summing up how much better off buyers and sellers are from trading
+
+- We call how much better off buyers are `Consumer surplus'
+
+- We call how much better off sellers are `Producer surplus'
+
+How much better off society is from trading is Total surplus = Consumer surplus + Producer surplus
+
+# Quick example (2 volunteers)
+
+- A trade makes society better off
+
+- We don't care how that benefit is distributed between people
+
+↬ This makes the math easier - obviously not true in cases such as social welfare or tax policy
+
+# Another quick example (2 volunteers)
+
+- A trade makes society better off
+
+- But a redistribution decreases total welfare, even if one party is better off
+
+- We call these deadweight losses - its a drag on society
+
+
+## Combining this all  together
+
+- This course is all about `imperfect' competition
+
+- We are going to think about how well off society in the real world compared to the `perfectly competitive' benchmark
+
+- Remember Ivy Leagure enrollment from the introduction lecture
+
+↬ These universities use market power and decrease the number of enrollments (imperfect competition) - this decreases surplus by artificially decreasing `trade' of university placements
+
+↬ Some people who would be willing to pay the price of admission still can't get in - even if the universities have the resources to allow them in!
+
+↬ We could then think about much better off society would be if they opened their doors to more students - but also how much worse off these universities would be in terms of value

@@ -1,0 +1,412 @@
+---
+title: "Lecture 3: Monopolies with calculus"
+date: "Week 1"
+author: "Stuart J Morrison"
+output:
+      revealjs::revealjs_presentation:
+        theme: solarized
+        transition: none
+        fig_width: 12
+        fig_height: 5.5
+---
+
+<head>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+# The goal of the monopoly is to maximize profit
+
+The monopoly has the power to charge whatever price it likes 
+
+
+The smart monopoly will choose the price that maximizes its profit
+
+# The goal of the monopoly is to maximize profit
+
+We want to find the price the monopoly would charge
+
+```{r echo=FALSE,warning=FALSE,error=FALSE,message=FALSE,cache=FALSE}
+  
+  library(tidyverse)
+
+  ggplot() +
+    coord_cartesian(ylim = c(0,3000)) +
+    geom_line(
+      data = tibble(price = 0:100)|> mutate(
+        demand = 100 - price
+      ) |> mutate(cost = 0.5 * demand + 0.05 * (demand ^ 2)) |>
+      mutate(profit = price * demand - cost),
+      aes(x = price, y = profit), col = "darkblue",
+      linewidth = 1.2
+    ) +
+      theme_minimal() +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  ) + 
+  labs(x = "Price that the monopoly could charge", y = "Resulting profit") +
+  geom_vline(xintercept = 1105/21, linewidth = 1.2, linetype = 2) +
+annotate(geom='text', x=80, y=1800, 
+         label=expression(pi(P) == P %*% Q - TC(Q)), 
+         parse=TRUE, col = "darkblue", hjust = 0, size = 6) +
+  annotate(geom='text', x=17, y=2750, 
+         label="Profit is maximized\nwhen the monopoly charges $52", 
+         parse=FALSE, col = "darkred", hjust = 0, size = 6)
+```
+
+# The goal of the monopoly is to maximize profit
+
+We want to find the price the monopoly would charge
+
+```{r echo=FALSE,warning=FALSE,error=FALSE,message=FALSE,cache=FALSE}
+  
+  library(tidyverse)
+
+  ggplot() +
+    coord_cartesian(ylim = c(0,3000)) +
+    geom_line(
+      data = tibble(price = 0:100)|> mutate(
+        demand = 100 - price
+      ) |> mutate(cost = 0.5 * demand + 0.05 * (demand ^ 2)) |>
+      mutate(profit = price * demand - cost),
+      aes(x = price, y = profit), col = "darkblue",
+      linewidth = 1.2
+    ) +
+      theme_minimal() +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  ) + 
+  labs(x = "Price that the monopoly could charge", y = "Resulting profit") +
+  geom_vline(xintercept = 1105/21, linewidth = 1.2, linetype = 2) +
+annotate(geom='text', x=80, y=1800, 
+         label=expression(pi(P) == P %*% Q - TC(Q)), 
+         parse=TRUE, col = "darkblue", hjust = 0, size = 6) +
+  annotate(geom='text', x=17, y=2750, 
+         label="At the optimal profit\nthe slope of the profit function is 0", 
+         parse=FALSE, col = "darkred", hjust = 0, size = 6)
+```
+
+# The goal of the monopoly is to maximize profit
+
+So, if we know the profit function, we need to find the price so that:
+\begin{equation*}\begin{aligned}
+  \frac{\partial \pi}{\partial P} = 0\\
+\end{aligned}\end{equation*}
+
+That is, the derivative of the profit function is zero when profit is maximized
+
+Another way, if you drew the profit function for all possible prices the monopoly could charge, we're finding the price that gives us the highest profit
+
+
+# The monopoly's trade-off in calculus
+
+Last lecture we discussed that Nvidia's monopoly trade off from raising prices is that:
+
+- Means it will sell fewer chips - losing sales but decreasing costs
+
+- But it will make more profit on the chips that it does sell
+
+Let's see how we can see that in calculus
+
+# The monopoly's trade-off in calculus
+
+We have that profit function is:
+\begin{equation*}\begin{aligned}
+  \pi = P \times Q(P) - TC (Q(P))
+\end{aligned}\end{equation*}
+
+By the chain and product rules we get:
+\begin{equation*}\begin{aligned}
+  \frac{ \partial \pi}{\partial P} = Q(P) + P \frac{d Q(P)}{d P} - \frac{d TC}{d Q} \frac{d Q(P)}{d P} = 0\\
+\end{aligned}\end{equation*}
+
+We should think of the derivative as how much additional profit per change in price by a small, little bit
+
+# The monopoly's trade-off in calculus:
+\begin{equation*}\begin{aligned}
+  \color{gray}{\frac{ \partial \pi}{\partial P} =} Q(P)   \color{gray}{+ P \frac{d Q(P)}{d P} - \frac{d TC}{d Q} \frac{d Q(P)}{d P} = 0}\\
+\end{aligned}\end{equation*}
+
+$Q(P) \quad$ is how much additional revenue we make on the customers we keep by raising our prices
+
+Remember, this is a change in profit per unit of price change. An approximation to our derivative is, if we raise our prices by \$x, we get:
+\begin{equation*}\begin{aligned}
+  \text{Change in revenue per \$ price change} = \frac{\text{Change in revenue}}{\text{Change in price}} = \frac{x \times \text{Sales quantity}}{x} = \text{Sales quantity}\\
+\end{aligned}\end{equation*}
+
+# The monopoly's trade-off in calculus:
+\begin{equation*}\begin{aligned}
+  \color{gray}{\frac{ \partial \pi}{\partial P} = Q(P)   +} P \frac{d Q(P)}{d P} \color{gray}{- \frac{d TC}{d Q} \frac{d Q(P)}{d P} = 0}\\
+\end{aligned}\end{equation*}
+
+$\frac{d Q(P)}{d P}\quad$ is how many customers we lose from raising our prices. This will always be negative
+
+So $P \frac{d Q(P)}{d P}\quad$ is much revenue we lose from raising our prices because we drive customers out of the market
+
+# The monopoly's trade-off in calculus:
+
+\begin{equation*}\begin{aligned}
+  \color{gray}{\frac{ \partial \pi}{\partial P} =} Q(P)   + P \frac{d Q(P)}{d P} \color{gray}{- \frac{d TC}{d Q} \frac{d Q(P)}{d P} = 0}\\
+\end{aligned}\end{equation*}
+
+Together $Q(P)   + P \frac{d Q(P)}{d P} \quad\quad$ is the change in revenue from raising the prices
+
+We also call this marginal revenue - how much revenue changes from a small change in prices: $MR(P) = Q(P)   + P \frac{d Q(P)}{d P}$
+
+# The monopoly's trade-off in calculus:
+
+\begin{equation*}\begin{aligned}
+  \color{gray}{\frac{ \partial \pi}{\partial P} = Q(P)   + P \frac{d Q(P)}{d P} } - \frac{d TC}{d Q} \frac{d Q(P)}{d P} = 0\\
+\end{aligned}\end{equation*}
+
+Lastly, our costs also change as we sell fewer goods. We call this our marginal cost: $MC(P) = \frac{d TC}{d Q} \frac{d Q(P)}{d P}$
+
+# The monopoly's trade-off in calculus:
+
+\begin{equation*}\begin{aligned}
+  \frac{ \partial \pi}{\partial P} =& \underbrace{Q(P)   + P \frac{d Q(P)}{d P}}_{\text{Marginal revenue}}  - \underbrace{\frac{d TC}{d Q} \frac{d Q(P)}{d P}}_{\text{Marginal cost}} = 0\\
+  &Q(P)   + P \frac{d Q(P)}{d P}= \frac{d TC}{d Q} \frac{d Q(P)}{d P}\\
+  &MR(P) = MC(P)\\
+\end{aligned}\end{equation*}
+
+So our trade-off, in calculus terms, means we're going to keep raising prices until the change in revenue (marginal revnue) equals the change in costs (marginal cost)
+
+
+
+
+
+# Example to do on the board
+
+Nvidia has a constant marginal cost of making a chip of $2,000
+
+Demand for chips is $Q_{D} = 10,000 - 1.5P$
+
+Let's solve for how much Nvidia would charge for chips
+
+# Example to do on the board
+
+First, we find Nvidia's profit function - this is how much profit it would make for some given $P$.
+
+We don't know what the optimal $P$ is yet - we want to solve for it
+
+The profit function is:
+\begin{equation*}\begin{aligned}
+  \pi = \underbrace{P \times (10,000 - 1.5P)}_{\text{Revenue = Price times demand}} - \underbrace{2,000 \times (10,000 - 1.5P)}_{\text{Total cost}}
+\end{aligned}\end{equation*}
+
+Because marginal cost is constant, total cost is $\text{Marginal cost} \times \text{Quantity demanded}$
+
+# Example to do on the board
+
+We'll expand out the brackets of the profit function
+\begin{equation*}\begin{aligned}
+  \pi &= 10,000 P - 1.5 P^{2} - 20,000,000  + 3,000 P\\
+  &= 13,000 P - 1.5P^{2} - 20,000,000\\
+\end{aligned}\end{equation*}
+
+Then we want to find the price where profit is maximized. This means we find the derivative of profit, and solve for the price that makes it equal to 0
+
+This corresponds to the top of the parabola in the example diagram:
+\begin{equation*}\begin{aligned}
+  \frac{\partial \pi}{\partial P} = 13,000 - 3 P \stackrel{\text{set}}{=}& 0
+\end{aligned}\end{equation*}
+
+We then solve for P:
+\begin{equation*}\begin{aligned}
+  13,000 - 3 P \stackrel{\text{set}}{=}& 0\\
+  13,000 &= 3 P\\ 
+  P = $4,333\\
+\end{aligned}\end{equation*}
+
+A $2,333 mark up over marginal cost\!
+
+And we would sell $Q_{D} = 10,000 - 1.5 \times 4,333 = 3,500 \text{ chips}$
+
+# Welfare implications of a monopoly
+
+When thinking of welfare implications, we often compare to a competitive market - where Nvidia prices at marginal cost = \$2,000
+
+```{r echo=FALSE,warning=FALSE,error=FALSE,message=FALSE,cache=FALSE}
+ 
+
+  ggplot() +
+    geom_line(
+      data = tibble(quantity = 0:10000, price = 2000),
+      aes(x = quantity, y = price), col = "darkblue",
+      linewidth = 1.2
+    ) +
+        geom_line(
+      data = tibble(price = 0:6667) |> mutate( quantity = 10000 - 1.5 * price),
+      aes(x = quantity, y = price), col = "coral4",
+      linewidth = 1.2
+    ) +
+      theme_minimal() +
+    
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  ) + 
+  labs(x = "Quantity", y = "Price") +
+  annotate(geom='text', x=7500, y=3100, 
+         label="Price equals\nmarginal cost in a\ncompetitive market", 
+         parse=FALSE, col = "black", hjust = 0, size = 6) +
+    annotate(geom='text', x=100, y=1700, 
+         label="Constant marginal cost is the supply curve", 
+         parse=FALSE, col = "darkblue", hjust = 0, size = 6) +
+    annotate(geom='text', x=2600, y=5200, 
+         label="Demand: Q = 10000 - 1.5 P", 
+         parse=FALSE, col = "coral4", hjust = 0, size = 6)
+    
+```
+
+# Welfare implications of a monopoly
+
+The consumer surplus in a competitive market is the area between the demand curve and price
+
+```{r echo=FALSE,warning=FALSE,error=FALSE,message=FALSE,cache=FALSE}
+ 
+
+  ggplot() +
+  geom_ribbon(
+    data = tibble(price = 2000:6667)|>mutate(quantity = 10000 - 1.5 * price) |> mutate(ymin = 2000),
+    aes(x = quantity, ymin = ymin, ymax = price),
+    fill = "red", alpha = 0.4
+  ) +
+    geom_line(
+      data = tibble(quantity = 0:10000, price = 2000),
+      aes(x = quantity, y = price), col = "darkblue",
+      linewidth = 1.2
+    ) +
+        geom_line(
+      data = tibble(price = 0:6667) |> mutate( quantity = 10000 - 1.5 * price),
+      aes(x = quantity, y = price), col = "coral4",
+      linewidth = 1.2
+    ) +
+      theme_minimal() +
+    annotate(geom='text', x=50, y=3600, 
+         label="Consumer surplus is the area\nof this highlighted triangle\n
+         CS = 1/2 x (7,000 x 4,667) = ~$16 million", 
+         parse=FALSE, col = "darkblue", hjust = 0, size = 6) +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  ) + 
+  labs(x = "Quantity", y = "Price") +
+      annotate(geom='text', x=100, y=1700, 
+         label="Constant marginal cost is the supply curve", 
+         parse=FALSE, col = "darkblue", hjust = 0, size = 6) +
+    annotate(geom='text', x=2600, y=5200, 
+         label="Demand: Q = 10000 - 1.5 P", 
+         parse=FALSE, col = "coral4", hjust = 0, size = 6)
+```
+
+# Welfare implications of a monopoly
+
+Let's calculate consumer and producer surplus under a monopoly on the board
+
+```{r echo=FALSE,warning=FALSE,error=FALSE,message=FALSE,cache=FALSE}
+ 
+
+  ggplot() +
+  geom_ribbon(
+    data = tibble(price = 4333:6667)|>mutate(quantity = 10000 - 1.5 * price) |> mutate(ymin = 4333),
+    aes(x = quantity, ymin = ymin, ymax = price),
+    fill = "red", alpha = 0.4
+  ) +
+  geom_ribbon(
+    aes(x = 0:3500, ymin = 2000, ymax = 4333),
+    fill = "darkgray", alpha = 0.4
+  ) +
+    geom_line(
+      data = tibble(quantity = 0:10000, price = 2000),
+      aes(x = quantity, y = price), col = "darkblue",
+      linewidth = 1.2
+    ) +
+        geom_line(
+      data = tibble(price = 0:6667) |> mutate( quantity = 10000 - 1.5 * price),
+      aes(x = quantity, y = price), col = "coral4",
+      linewidth = 1.2
+    ) +
+    geom_hline(yintercept = 4333, linetype = 2, linewidth = 1.2)+
+    geom_vline(xintercept = 3500, linetype = 2, linewidth = 1.2)+
+    theme_minimal() +
+    annotate(geom='text', x=50, y=5000, 
+         label="Consumer surplus", 
+         parse=FALSE, col = "darkblue", hjust = 0, size = 6) +
+    annotate(geom='text', x=7000, y=3800, 
+         label="Monopoly price rises to $4,333\n from $2,000", 
+         parse=FALSE, col = "black", hjust = 0, size = 6) + 
+    annotate(geom='text', x=3600, y=1000, 
+         label="Quantity of chips sold falls\nto 3,500 from 7,000", 
+         parse=FALSE, col = "black", hjust = 0, size = 6) + 
+  annotate(geom='text', x=50, y=3500, 
+         label="Producer surplus", 
+         parse=FALSE, col = "darkblue", hjust = 0, size = 6) +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  ) 
+
+```
+
+# Welfare implications of a monopoly
+
+This triangle is the deadweight loss - how much worse off society is from a monopoly compared to a competitive market
+
+```{r echo=FALSE,warning=FALSE,error=FALSE,message=FALSE,cache=FALSE}
+ 
+
+  ggplot() +
+  geom_ribbon(
+    data = tibble(price = 2000:4333)|>mutate(quantity = 10000 - 1.5 * price) |> mutate(ymin = 2000),
+    aes(x = quantity, ymin = ymin, ymax = price),
+    fill = "darkgreen", alpha = 0.4
+  ) +
+  
+    geom_line(
+      data = tibble(quantity = 0:10000, price = 2000),
+      aes(x = quantity, y = price), col = "darkblue",
+      linewidth = 1.2
+    ) +
+        geom_line(
+      data = tibble(price = 0:6667) |> mutate( quantity = 10000 - 1.5 * price),
+      aes(x = quantity, y = price), col = "coral4",
+      linewidth = 1.2
+    ) +
+    geom_hline(yintercept = 4333, linetype = 2, linewidth = 1.2)+
+    geom_vline(xintercept = 3500, linetype = 2, linewidth = 1.2)+
+    theme_minimal() +
+    annotate(geom='text', x=7000, y=3800, 
+         label="Monopoly price rises to $4,333\n from $2,000", 
+         parse=FALSE, col = "black", hjust = 0, size = 6) + 
+    annotate(geom='text', x=3600, y=1000, 
+         label="Quantity of chips sold falls\nto 3,500 from 7,000", 
+         parse=FALSE, col = "black", hjust = 0, size = 6) + 
+  annotate(geom='text', x=3800, y=3000, 
+         label="Deadweight loss", 
+         parse=FALSE, col = "black", hjust = 0, size = 6) +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  ) 
+
+```
+
+# Welfare implications of a monopoly
+
+This triangle is the deadweight loss - how much worse off society is from a monopoly compared to a competitive market
+
+It is the lost surplus of customers that have willingness to pay above the marginal cost
+
+These people would be willing to buy Nvidia chips for a profitable price! But the monopoly shuts them out of the market
+
+This is why we typically don't like market power - it prevents mutually beneficial activity from occuring
+
+

@@ -1,0 +1,402 @@
+---
+title: ARE100B midterm
+output:
+     pdf_document:
+         number_sections: FALSE
+         fig_width: 6
+         fig_height: 3.75
+         toc: false
+         latex_engine: xelatex
+         includes:
+             in_header: ["~/Documents/template_header.tex"]
+---
+
+Name:_____________________________
+
+
+\begin{mybox}
+
+    General marking notes:
+
+    \begin{itemize}
+        \item No points off if answers are slightly different because students rounded numbers during their work as long as the process is correct
+        \item When an item asks for an explanation, we're looking for a written answer that hits the key points/motivation of the question. No points off for using dot points or spelling/etc as long as its legible.
+    \end{itemize}
+
+\end{mybox}
+
+
+# Question 1 
+
+In general, would a monopolist prefer customers that are more or less elastic in terms of their price sensitivity? Explain why. (5 points)
+
+\begin{mybox}
+
+    In order to get full marks, students should:
+    
+    \begin{itemize}
+        \item (2 points) Discuss that the monopolist is aiming to raise prices, trading off losing customers against making higher margins
+        \item (2 points) Discuss that monopolists can raise prices relatively higher for less elastic customers while losing relatively fewer customers
+        \item (1 point) Conclude that the monopolist would prefer customers that are less elastic
+    \end{itemize}
+
+    Full marks should be given if the response correctly touches on these three points.
+
+    If the response mixes up the monopolist preferring more vs less elastic customers, but is otherwise correct, the maximum possible score should be 3.5 points. 
+
+\end{mybox}
+
+# Question 2
+
+
+A monopolist with constant marginal costs is producing at an output level where marginal revenue is greater than its marginal cost. Should it increase or decrease its output? Explain why. (5 points)
+
+\begin{mybox}
+
+    For full marks, the response should
+
+    \begin{itemize}
+        \item (1 point) Note that the monopolist is aiming to maximise its profits
+        \item (2 point) Note/discuss that the monopolist maximising its profits occurs when marginal revenue is equal to marginal cost
+        \item (2 point) Correctly conclude that the monopolist should increase its output
+    \end{itemize}
+
+    If the response notes that if $MR > MC$ then quantity is too low, but does not say that it should increase it, and is otherwise correct, full marks should be given.
+
+    No marks should be given for a plain supply/demand diagram that just shows demand, marginal revenue and marginal cost without any indication on whether output is too high/low.
+
+    If a diagram clearly shows output should increase to the point where $MR = MC$, this can stand in for a correct conclusion that output should increase.
+
+
+
+
+\end{mybox}
+
+
+# Question 3
+
+\begin{mybox}
+
+    The following questions have parts where the answer in one part is used in future parts of the question. No marks should be deducted for using an incorrect value derived in previous parts, as long as it is used correctly in future parts.
+
+\end{mybox}
+
+PGE is going to build a new part of the electricity network to connect a new solar farm to the grid. Once the solar farm is connected, PGE will charge the solar for transporting electricity to the main grid. CPUC, the Californian utilities regulator, will set the price for electricity transport.
+
+The solar farm's demand for electricity transport is $Q_{D} = 2,000 - 0.2P$.
+
+Once the network has been build, PGE has a total cost curve of supplying electricity transport of $TC = 10Q$.
+
+It will cost PGE \$1 million to construct the new part of the electricity network. If it cannot recover this investment cost from its profits from charging the solar farm for electricity transport, it will not build it.
+
+It will cost the solar farm \$3 million to build its solar panels. If it cannot recover this investment from its consumer surplus (think of this as the solar farm's profits from operating), it will not build it.
+
+\vspace{12pt}
+
+**Question 3 (a):** Find the price and quantity of electricity transported if CPUC set a price that would arise out of a competitive market. (3 points)
+
+\begin{mybox}
+
+    (1.5 points): The price in a competitive market is the marginal cost. Because PGE has a constant marginal cost of \$10, the price is \$10. No explanation or working required as long as they find the correct price. Half points off for small math mistakes.
+
+    (1.5 points): Using the demand curve and the competitive price, the quantity is $Q = 2000 - 0.2 \times 10 = 1,998$. Half points off for small math mistakes.
+
+
+    
+
+\end{mybox}
+
+
+**Question 3 (b):** Find the price and quantity of electricity transported if allowed PGE to act as a monopoly. (5 points)
+
+\begin{mybox}
+
+    Full marks given whether responses solve this using $MR = MC$ or $\frac{d\pi}{dP} = 0$. No explanation of these starting points is needed.
+
+    Example given for the MR = MC method finding quantity first, but apply similar grading for other correct methods. For example, responses might find price first through the similar steps.
+
+    (2.5 points): Finding quantity:
+
+    First, find the revenue curve:
+    \begin{equation*}\begin{aligned}
+        \text{Revenue} &= P\times Q\\
+        &=(10,000 - 5Q)Q\\
+        &=10,000 - 5Q^{2}\\
+    \end{aligned}\end{equation*}
+
+    
+    Next, find marginal revenue:
+    \begin{equation*}\begin{aligned}
+        MR = \frac{dR}{dQ} = 10,000 - 10Q\\
+    \end{aligned}\end{equation*}
+
+    (1 point off for getting the revenue curve incorrect but the MR correct)
+    (1 point off for getting the MR curve incorrect but the revenue correct)
+    (2 points off for getting the MR and revenue curve independently incorrect)
+    
+    Next, find the price so that MR = MC:
+    \begin{equation*}\begin{aligned}
+        &10,000 - 10Q = 10\\
+        &9,990 = 10Q\\
+        &Q = 999\\
+    \end{aligned}\end{equation*}
+
+    (Half points off for math mistakes solving for Q)
+
+    \vspace{12pt}
+
+    (2.5 points): Finding price:
+
+    Can be solved as either plugging this into inverse demand curve or solving the demand curve.
+
+    $P = 10,000 - 5Q = 10,000 - 5 \times 999 = 5,005$
+
+    (Half points off for math mistakes)
+
+
+\end{mybox}
+
+**Question 3 (c):** Would PGE build the new part of the network under the competitive price? (2 points) Would PGE build the new part of the network under monopoly pricing? (5 points)
+
+\begin{mybox}
+
+    \textbf{Under a competitive price:}
+    (1 point): Comparing the producer surplus under the competitive price againt the investment cost
+
+    Producer surplus is zero, compared to investment costs of \$1 million
+
+    (1 point): Concluding they would not build
+
+    Under the competitive price, because PGE has constant marginal costs, its producer surplus is zero. Responses do not need to explain this as long as they provide that PS = 0
+
+    If responses aim to solve for PS, but make math mistakes, take half points off. 
+
+    \vspace{12pt}
+
+    \textbf{Under the monopoly price:}
+
+    (3 points): Solving for producer surplus
+
+    We can find producer surplus as PGE's profit from operating:
+    \begin{equation*}\begin{aligned}
+        PS &= \pi\\
+        &= PQ - 10Q\\
+        &= 999 \times 5,005 - 10 \times 999\\
+        &=\$4,990,005\\
+    \end{aligned}\end{equation*}
+
+    Note here that the price and quantity values should have been calculated in part (b). If they did part (b) incorrectly, but used those values correctly in this part, full marks should still be given.
+
+    Half points off for math mistakes. If there is no working and the answer is incorrect, no points. If they approach it in a different, correct way - eg, geometrically, full points should still be given as appropriate.
+
+    (1 point): Comparing the producer surplus under the competitive price againt the investment cost
+
+    Producer surplus is \$4.99 million, compared to investment costs of \$1 million
+
+    (1 point): Concluding they would  build
+
+
+\end{mybox}
+
+**Question 3 (d):** Would the solar farm build its solar panels under the competitive price? (5 points) Would the solar farm build its solar panels under monopoly pricing? (5 points)
+
+
+\begin{mybox}
+
+    \textbf{Under a competitive price:}
+    (3 points): Calculating consumer surplus:
+    
+    Note here that the price and quantity values should have been calculated in part (a). If they did part (a) incorrectly, but used those values correctly in this part, full marks should still be given.
+
+    We have the inverse demand curve of $P = 10,000 - 5Q$.
+
+    The con sumer surplus is:
+    \begin{equation*}\begin{aligned}
+        CS &= \frac{1}{2} Q (10,000 - P)\\
+        &= \frac{1}{2} \times 1,998 \times (10,000 - 10)\\
+        &=9,980,010\\
+    \end{aligned}\end{equation*}
+
+
+    (1 point): Comparing the consumer surplus under the competitive price againt the investment cost
+
+    Consumer surplus of \$9.98 million is larger than the solar farm investment cost of \$3 million.
+
+    (1 point): Concluding they would build.
+
+    If responses aim to solve for CS, but make math mistakes, take half points off. 
+
+    If responses do not calculate CS, give appropriate part marks to the extent their response coincides with the remainder of the correct answer
+
+    \vspace{12pt}
+
+    \textbf{Under the monopoly price:}
+
+    Note here that the price and quantity values should have been calculated in part (b). If they did part (b) incorrectly, but used those values correctly in this part, full marks should still be given.
+
+
+    (3 points): Solving for consumer surplus
+
+    The consumer surplus is:
+    \begin{equation*}\begin{aligned}
+        CS &= \frac{1}{2} Q (10,000 - P)\\
+        &= \frac{1}{2} \times 999 (10,000 - 5,005)\\
+        &=2,495,002.50\\
+    \end{aligned}\end{equation*}
+
+
+    (1 point): Comparing the consumer surplus under the competitive price againt the investment cost
+
+    Consumer surplus of \$2.49 million is smaller than the solar farm investment cost of \$3 million.
+
+    (1 point): Concluding they would not build.
+
+    If responses aim to solve for CS, but make math mistakes, take half points off. 
+
+    If responses do not calculate CS, give appropriate part marks to the extent their response coincides with the remainder of the correct answer
+
+
+
+\end{mybox}
+
+
+**Question 3 (e):** Find the maximum price that the solar farm would pay for electricity transport so that it would still build its solar panels. (5 points)
+
+By virtue of solving this with the quadratic formula, you will get two possible prices. Choose as your final answer the one **less than** \$10,000. Note that prices above \$10,000 give negative demand and so we can ignore them.
+
+\begin{mybox}
+
+    We're given in the question that: if the solar farm cannot recover this investment from its consumer surplus (think of this as the solar farm's profits from operating), it will not build it.
+
+    This should motivate the answer to find the price so that consumer surplus is exactly \$3 million, which will be the maximum price before they would choose not to build.
+
+    (2 points): The starting point that we want to set $CS = 3,000,000$. Full marks just for stating this in any appropriate form.
+
+    (3 points): Solving for the price given $CS = 3,000,000$:
+    \begin{equation*}\begin{aligned}
+        &\frac{1}{2} Q (10,000 - P) = 3,000,000\\
+        &\frac{1}{2} (2,000 - 0.2P) (10,000 - P) = 3,000,000\\
+        &\frac{1}{2} (2,000 - 0.2P) (10,000 - P) = 3,000,000\\
+        &(1,000 - 0.1P) (10,000 - P) = 3,000,000\\
+        &10,000,000 - 1,000P - 1,000P + P^{2} = 3,000,000\\
+        &7,000,000 - 2,000P + 0.1P^{2} = 0\\
+    \end{aligned}\end{equation*}
+    Then using the quadratic formula, we get:
+    \begin{equation*}\begin{aligned}
+        P = \left\{\$4,522.77, \$15,447.2  \right\}
+    \end{aligned}\end{equation*}
+
+    So the final maximum price where the solar farm would only just build their solar farm is $P = \$4,522.77$.
+
+    Students do not need to show every step if their final answer is correct. 
+
+    Part marks breakdown if responses contain math mistakes:
+    \begin{itemize}
+        \item 1 point off if mistakes substituting in demand/inverse demand into the CS formula
+        \item 1 point off for mistakes in the quadratic formula
+        \item 1 point off if they choose the wrong final answer from the possible values in the quadratic formula.
+    \end{itemize}
+
+
+\end{mybox}
+
+**Question 3 (f):** Find the minimum price that PGE could charge for electricity transport so that it would still build the new part of the network. (5 points)
+
+By virtue of solving this with the quadratic formula, you will get two possible prices. Choose as your final answer the **smaller one**.
+
+\begin{mybox}
+
+    We're given in the question that: if PGE  cannot recover this investment cost from its profits from charging the solar farm for electricity transport, it will not build it.
+
+    This should motivate the answer to find the price so that producer surplus is exactly \$1 million, which will be the minimum price before they would choose not to build.
+
+    (2 points): The starting point that we want to set $PS = 1,000,000$. Full marks just for stating this in any appropriate form.
+
+    (3 points): Solving for the price given $PS = 1,000,000$:
+    \begin{equation*}\begin{aligned}
+        &P\times Q - 10Q = 1,000,000\\
+        &P(2,000 - 0.2P) - 10 (2,000 - 0.2P) = 1,000,000\\
+        &2,000P - 0.2P^{2} - 20,000 + 2P = 1,000,000\\
+        &2,002P - 0.2P^{2} - 1,020,000 = 0\\
+    \end{aligned}\end{equation*}
+    Then using the quadratic formula, we get:
+    \begin{equation*}\begin{aligned}
+        P = \left\{\$538.45,  \$9,471.55 \right\}
+    \end{aligned}\end{equation*}
+
+    So the final minimum price where PGE will still build the network is $P = \$538.45$.
+
+    Students do not need to show every step if their final answer is correct. 
+
+    Part marks breakdown if responses contain math mistakes:
+    \begin{itemize}
+        \item 1 point off if mistakes substituting in demand/inverse demand into the PS formula
+        \item 1 point off for mistakes in the quadratic formula
+        \item 1 point off if they choose the wrong final answer from the possible values in the quadratic formula.
+    \end{itemize}
+
+
+\end{mybox}
+
+
+
+
+**Question 3 (g):** Is there a price that CPUC could set for electricity transport so that both PGE and the solar make their investments? Explain why. (5 points)
+
+\begin{mybox}
+
+(2 points): The price needs to be between the prices where either PGE and the solar farm would no longer build.
+(2 points): PGE's minimum price is lower than the solar farm's maximum price
+(1 point): This implies we could set a price in the middle where both would build.
+
+Full marks should be given as long as responses capture the thrust of the question that the price needs to be between PGE's minimum price and the solar farm's maximum price.
+
+
+
+\end{mybox}
+
+\vspace{250pt}
+
+**Question 3 (h):** If CPUC wanted to set a price so that social surplus is as big as possible, would it choose the price you found in part (e) or part (f)? (5 points)
+
+\begin{mybox}
+
+
+
+\textbf{Finding total surplus under the price in part (e)} 
+
+By defintion, we should have that the consumer surplus when the price is $\$4,522.7$ is \$3,000,000. (0.5 point)
+
+We find the producer surplus: (1 point)
+\begin{equation*}\begin{aligned}
+    PS &= PQ - 10Q\\
+    &= 4,522 \times (2,000 - 0.2 \times 4,522) - 10 (2,000 - 0.2 \times 4,522)\\
+    &=4,943,347\\
+\end{aligned}\end{equation*}
+
+So total surplus is \$7,943,347 (0.5 points.) 
+
+\textbf{Finding total surplus under the price in part (f)} 
+
+By defintion, we should have that the producer surplus when the price is $\$538.45$ is \$1,000,000. (0.5 point)
+
+We find the consumer surplus: (1 point)
+\begin{equation*}\begin{aligned}
+    CS &= \frac{1}{2} \times Q \times (10,000 - P)\\
+    &= \frac{1}{2} \times (2,000 - 0.2 \times 538.45) \times (10,000 - 538.45)\\
+    &=8,952,093\\
+\end{aligned}\end{equation*}
+
+So total surplus is \$9,952,093\\ (0.5 points.)
+
+
+So CPUC should set the price at \$538.45 (1 point)
+
+Again, if responses use values found in previous parts that are incorrect, but do the working here correctly, full marks should be given. Half marks off as appropriate for math errors.
+
+
+\end{mybox}
+
+
+
+\vspace{250pt}

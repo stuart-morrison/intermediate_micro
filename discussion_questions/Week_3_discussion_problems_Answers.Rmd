@@ -1,0 +1,636 @@
+---
+title: ARE100B Week 3 Discussion problems
+output:
+     pdf_document:
+         number_sections: FALSE
+         fig_width: 6
+         fig_height: 3.75
+         toc: false
+         latex_engine: xelatex
+         includes:
+             in_header: ["~/Documents/template_header.tex"]
+---
+
+# Question 1
+
+Two criminals, Andy and Bart, commit a robbery. They're not the brightest, so shortly after, they're arrested and brought into the police station for interrogation. They are placed in different interrogation rooms and cannot communicate and are asked to rat out their friend.
+
+If neither rats on the other, there's enough evidence so that both get 1 year in prison. 
+
+If both rat each other out, then it makes it easier to prosecute the case and they both get 3 years.
+
+If one rats the other out, then the one that confesses goes free and the other will be punished more severely for being a ringleader and will go to prison for 5 years.
+
+This yields the following payoff matrix, which describes the original prisoner's dilemma. 
+
+\renewcommand{\arraystretch}{3}
+\begin{table}[htbp]
+\begin{tabular}{llll}
+                      &                                  & \multicolumn{2}{l}{\textbf{Andy}}                                                         \\
+                      & \multicolumn{1}{l|}{}            & \multicolumn{1}{l|}{Stay silent}                  & Rat                          \\\cline{2-4} 
+\multirow{2}{*}{\textbf{Bart}} & \multicolumn{1}{l|}{Stay silent} & \multicolumn{1}{l|}{Andy: 1 year, Bart: 1 year}   & Andy: 0 years, Bart: 5 years \\ \cline{2-4} 
+                      & \multicolumn{1}{l|}{Rat}         & \multicolumn{1}{l|}{Andy: 0 years, Bart: 5 years} & Andy: 3 years, Bart: 3 years \\ \cline{2-4} 
+\end{tabular}
+\end{table}
+
+
+**Question 1 (a):** What is Andy's best response move if Bart rats him out? What is Andy's best response move if Bart does not rat him out?
+
+\begin{mybox}
+
+  If Bart rats Andy out, Andy's potential jail times are:
+  \begin{itemize}
+    \item 5 years in prison if Andy does not rat Bart out
+    \item 3 years in prison if Andy does not rat Bart out
+  \end{itemize}
+  Andy would prefer less time in prison, so their best response is to rate Bart out.
+
+
+    If Bart does not rat Andy out, Andy's potential jail times are:
+  \begin{itemize}
+    \item 1 years in prison if Andy does not rat Bart out
+    \item 0 years in prison if Andy does not rat Bart out
+  \end{itemize}
+  Andy would prefer less time in prison, so their best response is to rate Bart out.
+
+  So in both cases, Andy's best response is to rat Bart out - that is, ratting Bart out is a dominating strategy for Andy.
+
+  Here, the payoffs for Andy are the same as for Bart, so ratting Andy out is a dominating strategy for Bart.
+
+\end{mybox}
+
+**Question 1 (b):** Find the pure strategy Nash equilibrium.
+
+\begin{mybox}
+
+  The pure strategy Nash Equilibrium is that both Andy and Bart rat each other out.
+
+  The following diagram shows that, conditional on keeping the other person's actions the same, each player prefers to rat their friend out. Here, the arrows show whether each player would like to deviate out of the cell - or which of their choices they would prefer. A Nash Equilibrium only has arrows that point into the cell, and none that go out of it.
+
+  \includegraphics{images/week3/prisoners_dilemma_best_responses.png}
+
+
+  The other way to think about this is that staying silent is dominated for both players and it would never be played. We can cross out these options, leaving only one possible option left as an equilibrium.
+
+  \includegraphics{images/week3/prisoners_dilemma_dominated_crossed_out.png}
+
+\end{mybox}
+
+**Question 1 (c):** Does Any have any dominating strategies? Are they weakly or strongly dominant?
+
+\begin{mybox}
+
+Ratting the other person out is dominating for both players.
+
+This is because, irrespective of what the other person does, they are better off if they rat the other person out.
+
+Here, the strategy is strongly dominating, because they get strictly less jail time for doing so - ie, they are never indifferent between ratting the other person out or not.
+
+\end{mybox}
+
+
+
+# Question 2 
+
+Andrea and Brooke are trying to organise an activity to do together. Andrea likes to paint and Brooke likes to go bouldering. Their friendship is a bit frayed at the moment, and if they suggest different activities, they will have a fight and won't do anything.
+
+Below is their payoff matrix, showing how happy each activity will make them.
+
+\renewcommand{\arraystretch}{3}
+\begin{table}[htbp]
+\begin{tabular}{llll}
+                      &                                  & \multicolumn{2}{l}{\textbf{Andrea}}                                                         \\
+                      & \multicolumn{1}{l|}{}            & \multicolumn{1}{l|}{Painting}                  & Bouldering                          \\\cline{2-4} 
+\multirow{2}{*}{\textbf{Brooke}} & \multicolumn{1}{l|}{Painting} & \multicolumn{1}{l|}{A: 2, B: 1}   & A: -1, B: -1 \\ \cline{2-4} 
+                      & \multicolumn{1}{l|}{Bouldering}         & \multicolumn{1}{l|}{A: -1, B: -1} & A: 1, B: 2 \\ \cline{2-4} 
+\end{tabular}
+\end{table}
+
+**Question 2 (a):** Find the two pure strategy Nash Equilibria.
+
+\begin{mybox}
+
+  Here, we have two Nash Equilibria, both choosing painting, and both choosing bouldering.
+
+  \includegraphics{images/week3/coordination_game_two_equilibria.png}
+
+  Even though Andrea prefers painting to bouldering, if Brooke chooses bouldering, Andrea is better off also having chosen bouldering, rather than changing their strategy and getting into a fight.
+
+
+\end{mybox}
+
+**Question 2 (b):** Find the mixed strategy equilibrium.
+
+\begin{mybox}
+
+
+For the mixed strategy equilibrium, both Andrea and Brooke need to be indifferent between their choice, conditional on the other player's probabilities.
+
+That is, if Andrea knows Brooke is going to randomise, Andrea should feel indifferent in the outcomes. If they don't feel indifferent, there's an opportunity to deviate to improve their expected payoff so we wouldn't be at an equilibrium.
+
+Let's solve for Brooke's probabilities. Let $p_{A}$, $p_{B}$ be the probability they choose painting, so $(1 - p_{A})$, $(1 - p_B)$ are the probabilites they choose bouldering.  
+
+To do so, we think of Andrea's indifference:
+\begin{equation*}\begin{aligned}
+  &E(\pi_{A} | \text{Andrea choosing painting}) = E(\pi_{A} | \text{Andrea choosing boulding})\\
+  &\underbrace{p_{B} \times 2}_{\text{Probability weighted outcome that Brooke choosing painting too}} +\\
+  & \underbrace{(1 - p_{B}) \times -1}_{\text{Probability weighted outcome that Brooke choosing painting too}} =\\
+  & p_{B} \times -1 + (1- p_{B}) \times 1\\
+  &2p_{B} - 1 + p_{B} = -p_{B} + 1 -p_{B}\\
+  &5p_{B} = 2\\
+  &p_{B} = \frac{2}{5}\\
+\end{aligned}\end{equation*}
+
+So the probability that Brooke chooses painting is $\frac{2}{5}$.
+
+We'll now solve for Andrea's probabilities using Brooke's indifference:
+
+\begin{equation*}\begin{aligned}
+  &E(\pi_{B} | \text{Brooke choosing painting}) = E(\pi_{B} | \text{Brooke choosing boulding})\\
+  &p_{A} \times 1 + (1- p_{A}) \times -1 = p_{A} \times -1 + (1-p_{A}) \times 2\\
+  &2p_{A} - 1 = -p_{A} + 2 - 2p_{A}\\
+  &5p_{A} = 3\\
+  &p_{A} = \frac{3}{5}
+\end{aligned}\end{equation*}
+So the probability that Andrea chooses painting is $\frac{3}{5}$.
+
+We write out mixed strategy equilibrium as a vector of strategies and probabilities:
+\begin{equation*}
+\begin{aligned}
+  &\text{Andrea} = \left( \genfrac{}{}{0pt}{}{\text{Painting}}{\tfrac{3}{5}}, \genfrac{}{}{0pt}{}{\text{Bouldering}}{\tfrac{2}{5}} \right)\\
+  &\text{Brooke}  = \left( \genfrac{}{}{0pt}{}{\text{Painting}}{\tfrac{2}{5}}, \genfrac{}{}{0pt}{}{\text{Bouldering}}{\tfrac{3}{5}} \right)\\
+\end{aligned}
+\end{equation*}
+
+
+
+\end{mybox}
+
+**Question 2 (c):** What is Andrea's expected happiness from the mixed strategy equilibrium?
+
+\begin{mybox}
+
+Andrea's expected happiness is the the expected outcome given both Andrea's and Brooke's probabilities from playing each action:
+\begin{equation*}\begin{aligned}
+  E(\pi_{A}) =& p_{A} \times p_{B} \times 2 + \quad \text{Both choosing painting}\\
+  &(1 - p_{A}) \times p_{B} \times -1 \times \quad \text{A choosing bouldering and they fight}\\
+  &p_{A} \times (1-p_{B}) \times -1 \times \quad \text{B choosing bouldering and they fight}\\
+  &(1-p_{A}) \times (1-p_{B}) \times 1 \times \quad \text{Both choose bouldering}\\
+  =& \frac{3}{5} \times \frac{2}{5} \times 2 +  \frac{2}{5} \times \frac{2}{5} \times -1 +  \frac{3}{5} \times \frac{3}{5} \times -1 +  \frac{2}{5} \times \frac{3}{5} \times 1\\
+  =& 0.2\\
+\end{aligned}\end{equation*}
+
+\end{mybox}
+
+**Question 2 (d):** Brooke plays the mixed strategy incorrectly and assigns too much probability/weight to choosing painting, but Andrea plays the mixed strategy perfectly. Show why this is no longer an equilibrium.
+
+\begin{mybox}
+
+Andrea's action probabilities are balancing their preferences between painting and bouldering, and the risk that the pair get into a fight.
+
+If Brooke starting putting more weight on painting, then Andrea would want to also increase the probability they choose painting, increasing the probabiltiy of agreeing on painting, and decreasing the risk of a fight. This means that Andrea would want to deviate from the  mixed strategy. Because Andrea would want to deviate, this is not an equilibrium.
+
+
+\end{mybox}
+
+**Question 2 (e):** Do either player have a dominating strategy?
+
+\begin{mybox}
+
+No, we can see from the arrows in part (a) that each player's best responses depend on what the other person plays. So no strategy is dominating.
+
+\end{mybox}
+
+# Question 3
+
+Andrea and Brooke are still trying to organise an activity. This time, Andrea is a little bit more pushy and suggests an activity first, yielding the following extensive form game.
+
+
+```{r echo=FALSE,warning=FALSE,error=FALSE,message=FALSE,cache=FALSE}
+library(igraph)
+library(ggraph)
+library(ggplot2)
+library(dplyr)
+
+# Create the game tree structure
+edges <- data.frame(
+  from = c("A", "A", "B_p", "B_b", "B_p", "B_b"),
+  to = c("B_p", "B_b", "(2,1)", "(-1,-1)", "(0,1)", "(0,0)"),
+  action = c("Painting", "Bouldering", "Painting", "Bouldering","Painting", "Bouldering")
+)
+
+edges <- data.frame(
+  from = c("A", "A", "B_p", "B_p", "B_b", "B_b"),
+  to = c("B_p", "B_b", "(2,1)", "(-1,-1)", "(-1,-1)", "(1,2)"),
+  action = c("Painting", "Bouldering", "Painting", "Bouldering", "Painting", "Bouldering")
+)
+
+# Create graph
+g <- graph_from_data_frame(edges, directed = TRUE)
+
+# Add node attributes
+V(g)$type <- ifelse(V(g)$name %in% c("(2,1)", "(-1,-1)", "(-1,-1)", "(1,2)"), 
+                    "terminal", "decision")
+V(g)$player <- case_when(
+  V(g)$name == "A" ~ "Andrea",
+  V(g)$name %in% c("B_p", "B_b") ~ "Brooke",
+  TRUE ~ ""
+)
+
+# Plot the game tree
+ggraph(g, layout = "tree") +
+  geom_edge_link(aes(label = action), 
+                 angle_calc = "along",
+                 label_dodge = unit(2, "mm"),
+                 arrow = arrow(length = unit(2, "mm")), size = 6) +
+  geom_node_point(aes(color = type, size = type)) +
+  geom_node_text(aes(label = ifelse(type == "terminal", name, player)),
+                nudge_y = ifelse(V(g)$type == "terminal", -0.15, 0),
+                nudge_x = ifelse(V(g)$type == "terminal", 0, -0.10),
+                
+                 size = 4) +
+  scale_color_manual(values = c("decision" = "lightblue", "terminal" = "lightcoral")) +
+  scale_size_manual(values = c("decision" = 4, "terminal" = 3)) +
+  theme_graph() +
+  theme(legend.position = "none")
+  
+```
+
+**Question 3 (a):** Find Brooke's best response function to Andrea's actions.
+
+\begin{mybox}
+
+If Andrea chooses bouldering, Brooke's best response is to choose bouldering.
+
+If Andrea chooses painting, Brooke's best response is to choose painting.
+
+\end{mybox}
+
+**Question 3 (b):** Does Andrea have a best response function to Brooke's actions?
+
+\begin{mybox}
+
+No, because Andrea moves first, they do not have to response to Brooke's actions. Instead, Andrea should solve the game using backwards induction, and choose the optimal strategy knowing only Brooke will respond to them.
+
+\end{mybox}
+
+**Question 3 (c):** Find the subgame perfect Nash Equilibrium.
+
+\begin{mybox}
+
+We will solve the game tree using backwards induction. 
+
+First, start on the lowest level at the left hand side. Here, We need to think about how Brooke will make a choice conditional on Andrea having chosen painting.
+
+Here, Brooke would prefer to also choose painting (rather than get into a fight). I like to show this by crossing out the choices Brooke wouldn't make and circling the one they would. Then bringing the payoffs for the decision up to the node.
+
+\includegraphics{images/week3/coordination_tree_step1_left_node.png}
+
+\end{mybox}
+
+\begin{mybox}
+We then do the next on the node on the right hand side.
+
+\includegraphics{images/week3/coordination_tree_step2_right_node.png}
+
+Then we move up the levels, up to Andrea's choice. Here, Andrea how worked out how Brooke will respond. So Andrea choosing painting, knowing that Brooke will also respond painting. This makes Andrea better off as they prefer painting. This means that Andrea has a first mover advantage relative to the simulatenous game.
+
+\includegraphics{images/week3/coordination_tree_step3_first_mover.png}
+
+
+We write the subgame perfect Nash Equilibrium as the the equilibrium choices at each node. Here it is $(\underbrace{P}_{\text{Andrea's choice}}, \underbrace{PG}_{\text{Brooke's best choices}})$.  This encodes all of the best possible best responses. The outcome of this game is that Andrea chooses painting, so Brooke's best response is to also choose painting.
+
+\end{mybox}
+
+# Question 4
+
+
+Draw out and solve the following sequential game, finding the outcome and subgame perfect Nash Equilibrium. 
+
+You have just gotten a new job! Congratulations! It's time for you to negotiate your salary.
+
+The company that hired you values your work at \$10 per hour, and their payoff from hiring you is \$10 minus the final agreed wage : $\pi =\$10 - \text{wage}$. 
+
+At first, you have high self-value, you ask for \$10 per hour. The company can then accept or reject your offer.
+
+If you're initially rejected you start to lowball yourself and can offer either \$7 or \$4. Then the company can accept or reject again.
+
+
+\begin{mybox}
+
+The game tree looks as follows:
+
+  \includegraphics{images/week3/salary_negotiation_tree.png}
+
+The payoffs are listed as $(\text{Your payoffs}, \text{The company's payoffs})$
+
+Solving the tree bottom to top, left to right, we get:
+\begin{itemize}
+  \item The company would rather pay you \$7 rather than not hire you, so they accept your offer of \$7.
+  \item The company would rather pay you \$4 rather than not hire you, so they accept your offer of \$4.
+  \item Moving up one layer, you know that you would be accepted for both offers, and you would rather be paid \$7, so you offer \$7.
+  \item Moving up one layer, the firm knows that if it rejects your \$10 offer, it can pay you \$7, so it rejects your initial offer.
+\end{itemize}
+
+\end{mybox}
+
+\begin{mybox}
+
+
+
+  \includegraphics{images/week3/salary_negotiation_tree_solved.png}
+
+The subgame perfect equilibrium is: $(\underbrace{7}_{\text{Your offer}}, \underbrace{RAA}_{\text{Rejects the first offer, accepts either second offer}})$
+
+The outcome of the game is that your first offer gets rejected, you offer \$7, which is then accepted.
+
+\end{mybox}
+
+
+# Extra practice problems
+
+# Question A
+
+In soccer penalty kicks, the kicker has to choose the direction they will kick, and the goalie will choose the direction they dive - and they will choose at the same time.
+
+A goalie values a save as much as the kicker values a goal. The goalie is stronger on the left side and is more likely to save a kick in that direction. The kicker is stronger on the right side and is more likely to score in that direction.
+
+This gives us the following scoring matrix. The decimal numbers represent the probability that they will score, versus miss.
+
+\renewcommand{\arraystretch}{3}
+\begin{table}[htbp]
+\begin{tabular}{llll}
+                      &                                  & \multicolumn{2}{l}{\textbf{Kicker}}                                                         \\
+                      & \multicolumn{1}{l|}{}            & \multicolumn{1}{l|}{Left}                  & Right                          \\\cline{2-4} 
+\multirow{2}{*}{\textbf{Goalie}} & \multicolumn{1}{l|}{Left} & \multicolumn{1}{l|}{K: 0.1, G: 0.8}   & K: 0.9, G: 0 \\ \cline{2-4} 
+                      & \multicolumn{1}{l|}{Right}         & \multicolumn{1}{l|}{K: 0.7, G: 0} & K: 0.2, G: 0.7 \\ \cline{2-4} 
+\end{tabular}
+\end{table}
+
+**Question A (a):** Verify that there are no pure strategy Nash Equilibrium.
+
+\begin{mybox}
+
+  If we draw out each player's arrows of what they would prefer, we don't have a cell that no player wants to deviate from. This means that we do not have any pure strategy Nash Equilibria.
+
+  \includegraphics{images/week3/penalty_kick_no_pure_equilibrium.png}
+
+
+\end{mybox}
+
+**Question A (b):** Should we be surprised that there are no pure strategies here?
+
+\begin{mybox}
+
+  No. Soccer penalties are essentially high stakes scissors-paper-rock. There is no universally better move, it's very much just a game of chance. As a result, we should expect that diving to one side is universally better.
+
+  In another way, pretend that diving left for the goalie was in the equilibrium here - ie, they do it 100\% of the time. This means the goal is always open on the right, so the kicker should always kick there. This obviously doesn't make sense, of course the goalie would want to try and save the kick to the right.
+
+\end{mybox}
+
+**Question A (c):** Find the mixed strategy equilibrium.
+
+  
+  Let $p_{K}$, $p_{G}$ be the probabilities that each player goes left.
+
+  We'll find the kickers's probabilities using the goalie's indifference between sides:
+  \begin{equation*}\begin{aligned}
+    &E(\pi_{G}|\text{Goalie goes left}) =E(\pi_{G}|\text{Goalie goes right}) \\
+    &p_{K} \times 0.8 + (1 - p_{K}) \times 0 =p_{K} \times 0 + (1 - p_{K}) \times 0.7\\
+    &0.8 p_{K} = 0.7 - 0.7p_{K}\\
+    &1.5p_{K} = 0.7\\
+    &p_{K} = 0.4666\\
+  \end{aligned}\end{equation*}
+  So the kicker will go left 46\% of the time.
+
+  Let's find the goalie's probabitlies:
+  \begin{equation*}\begin{aligned}
+      &E(\pi_{K}|\text{Kicker goes left}) =E(\pi_{K}|\text{Kicker goes right}) \\
+      & p_{G} \times 0.1 + (1 - p_{G}) \times 0.7 = p_{G} \times 0.9 + (1 - p_{G})0.2\\
+      &0.1p_{G} + 0.7 - 0.7p_{G} = 0.9p_{G} + 0.2 - 0.2p_{G}\\
+      &-0.6p_{G} + 0.7 = 0.7p_{G} + 0.2\\
+      &-1.3p_{G}  = -0.5\\
+      &p_{G} = 0.3846\\
+  \end{aligned}\end{equation*}
+  So the goalie will go left 38\% of the time.
+
+  So our mixed strategy equilibrium is:
+  \begin{equation*}
+\begin{aligned}
+  &\text{Kicker} = \left( \genfrac{}{}{0pt}{}{\text{Left}}{0.4666}, \genfrac{}{}{0pt}{}{\text{Right}}{0.5333} \right)\\
+  &\text{Goalie}  = \left( \genfrac{}{}{0pt}{}{\text{Left}}{0.3846}, \genfrac{}{}{0pt}{}{\text{Right}}{0.6153} \right)\\
+\end{aligned}
+\end{equation*}
+
+
+\end{aligned}\end{equation*}
+
+**Question A (d):** Find the expected number of goals the kicker will score when playing the mixed strategy equilibrium. 
+
+\begin{mybox}
+
+  The kicker's expected value of goals they will score is:
+  \begin{equation*}\begin{aligned}
+    E(\pi_{K}) &= p_{K}p_{G} \times 0.1 + (1 - p_{K})p_{G} \times 0.9 + p_{K}(1 - p_{G}) 0.7 + (1 - p_{K})(1 - p_{G})0.2\\
+    &= 0.4692\\
+  \end{aligned}\end{equation*}
+
+  So they will score 0.46 goals on average per penalty kick. Or one goal 46\% of the time.
+
+\end{mybox}
+
+**Question A (e):** Find the expected number of goals the goalie will score when playing the mixed strategy equilibrium.
+
+\begin{mybox}
+
+The goalie's expected value of goals they will save is:
+  \begin{equation*}\begin{aligned}
+    E(\pi_{G}) &= p_{K}p_{G} \times 0.8 + (1 - p_{K})p_{G} \times 0 + p_{K}(1 - p_{G})0 + (1 - p_{K})(1 - p_{G})0.7\\
+    &= 0.37333\\
+  \end{aligned}\end{equation*}
+
+  So they will save 0.373 goals on average per penalty kick. Or one goal 37\% of the time.
+
+  (The rest of the probability is when the kick goes wide or something so there's no score and no save).
+
+
+\end{mybox}
+
+**Question A (f):** If both the kicker and goalie both tossed a fair coin to make their choices (ie, choicing each side with 50\% probability), find both player's expected value.
+
+  The kicker's expected value of goals they will score is:
+  \begin{equation*}\begin{aligned}
+    E(\pi_{K}) &= 0.5 \times 0.5 \times 0.1 + 0.5 \times 0.5 \times 0.9 + 0.5 \times 0.5 \times 0.7 + 0.5 \times 0.5 \times 0.2\\
+    &= 0.475\\
+  \end{aligned}\end{equation*}
+
+  So the kicker would score slightly more goals at 47.5\% of the time.
+
+  The goalie's expected value of goals they will score is:
+  \begin{equation*}\begin{aligned}
+    E(\pi_{G}) &= 0.5 \times 0.5 \times 0.8 + 0.5 \times 0.5 \times 0 + 0.5 \times 0.5 \times 0 + 0.5 \times 0.5 \times 0.7\\
+    &= 0.375\\
+  \end{aligned}\end{equation*}
+
+  So the goalie would save slightly more goals at 37.5\% of the time.
+
+  Wait, both players are better off, so why isn't this an equilibrium?
+
+  If the kicker is choosing sides with 50-50 probability, we have the expected saves for the goalie for each choice being:
+  \begin{equation*}\begin{aligned}
+    &E(\pi_{G} | \text{Goalie goes left}) = 0.5 \times 0.8 + 0.5 \times 0 = 0.4\\
+    &E(\pi_{G} | \text{Goalie goes right}) = 0.5 \times 0 + 0.5 \times 0.7 = 0.35\\
+  \end{aligned}\end{equation*}
+  So the goalie is not indifferent between its choices, it would actually just prefer to dive left 100\% of the time. The goalie would want to deviate from the 50-50 strategy, so it is not an equilibrium.
+
+  
+
+# Question B
+
+The goalie has been training really hard in order to have better reaction times. Now the kicker will choose a side, and the goalie will then be able to make a choice.
+
+```{r echo=FALSE,warning=FALSE,error=FALSE,message=FALSE,cache=FALSE}
+    
+# Create the game tree structure
+edges <- data.frame(
+  from = c("K", "K", "G_l", "G_r", "G_l", "G_r"),
+  to = c("G_l", "G_r", "(0.1, 0.8)", "(0.9, 0)",  "(0.7, 0)", "(0.2, 0.7)"),
+  action = c("Left", "Right", "Left", "Left", "Right", "Right")
+)
+
+
+# Create graph
+g <- graph_from_data_frame(edges, directed = TRUE)
+
+# Add node attributes
+V(g)$type <- ifelse(V(g)$name %in% c("(0.1, 0.8)", "(0.9, 0)", "(0.2, 0.7)", "(0.7, 0)"), 
+                    "terminal", "decision")
+V(g)$player <- case_when(
+  V(g)$name == "K" ~ "Kicker",
+  V(g)$name %in% c("G_l", "G_r") ~ "Goalie",
+  TRUE ~ ""
+)
+
+# Plot the game tree
+ggraph(g, layout = "tree") +
+  geom_edge_link(aes(label = action), 
+                 angle_calc = "along",
+                 label_dodge = unit(2, "mm"),
+                 arrow = arrow(length = unit(2, "mm")), size = 6) +
+  geom_node_point(aes(color = type, size = type)) +
+  geom_node_text(aes(label = ifelse(type == "terminal", name, player)),
+                nudge_y = ifelse(V(g)$type == "terminal", -0.15, 0),
+                nudge_x = ifelse(V(g)$type == "terminal", 0, -0.10),
+                
+                 size = 4) +
+  scale_color_manual(values = c("decision" = "lightblue", "terminal" = "lightcoral")) +
+  scale_size_manual(values = c("decision" = 4, "terminal" = 3)) +
+  theme_graph() +
+  theme(legend.position = "none")
+  
+    
+```
+
+**Question B (a):** What is the subgrame perfect equilibrium here? What is the equilibrium outcome?
+
+\begin{mybox}
+
+If we solve the game from bottom to top, left to right, we find that the goalie will always dive in the save direction as the kicker (makes sense), and the kicker will choose kicking right where they have a slightly higher chance of scoring.
+
+\includegraphics{images/week3/penalty_kick_sequential_solved.png}
+
+The subgame perfect nash equilibrium is: $(\text{Right}; \text{Left},\text{Right} )$.
+
+The equilibrium outcome is that the kicker will kick right, and the goalie will dive right. The kicker will score 20% of the time.
+
+
+\end{mybox}
+
+**Question B (b):** What is the goalie's best response function to the kicker's choices? Does this make sense?
+
+\begin{mybox}
+
+The goalie's best response function is to dive in the same direction  that the kicker kicked. Yes, this definitely makes sense! Now the goalie can respond to the kicker.
+
+\end{mybox}
+
+
+**Question B (c):** Does the kicker have first mover advantage here relative to the simultaneous game?
+
+\begin{mybox}
+
+No, here the kicker actually has first move disadvantage. In the simultaneous game, they scored 46\% of the time. Now that the goalie can react to them, they only score 20\% of the time!
+
+\end{mybox}
+
+
+
+# Question C
+
+Two countries, one large and one small are about to enter a trade war. The small country benefits enormously from free trade, but would introduce reciprocal tariffs if it was in their best interest. 
+
+The following shows the annual GDP of these countries under the trade polices in trillions of dollars.
+
+\renewcommand{\arraystretch}{3}
+\begin{table}[htbp]
+\begin{tabular}{llll}
+                      &                                  & \multicolumn{2}{l}{\textbf{Large country}}                                                         \\
+                      & \multicolumn{1}{l|}{}            & \multicolumn{1}{l|}{Free trade}                  & Impose tariffs                          \\\cline{2-4} 
+\multirow{2}{*}{\textbf{Small country}} & \multicolumn{1}{l|}{Free trade} & \multicolumn{1}{l|}{L: 7, S: 6}   & L: 8, S: -1 \\ \cline{2-4} 
+                      & \multicolumn{1}{l|}{Impose tariffs}         & \multicolumn{1}{l|}{L: 4, S: 1} & L: 5, S:2 \\ \cline{2-4} 
+\end{tabular}
+\end{table}
+
+**Question C (a):** Does the large country have any dominating strategies? Are they weakly or strongly dominant?
+
+\begin{mybox}
+
+Yes, here the large country always prefers to impose tariffs, so imposing tariffs is a dominating strategy. Because the large country is never indifferent between the two, it is a strongly dominating strategy.
+
+\includegraphics{images/week3/trade_war_best_responses.png}
+
+
+\end{mybox}
+
+**Question C (b):** If the strategies in part (a) are strongly dominant, use them to help find the pure strategy Nash Equilibrium.
+
+\begin{mybox}
+
+Because the large country has imposing tariffs as a dominating strategy, it will never play free trade. So we can cross out that option from the table.
+
+We then see that, conditional on the large country imposing tariffs, the small country would also prefer imposing tariffs.
+
+So the Nash Equilibrium is that both countries will impose tariffs.
+
+
+\end{mybox}
+
+# Question D
+
+Draw out and solve the following sequential game, finding the outcome and subgame perfect Nash Equilibrium. 
+
+Two solar farms are potentially going to be built and would require a new part of the electricity network to connect them. The cost of the new part of the network is so high, that both solar farms need help for it if either wants to be profitable.
+
+If just one solar farm gets, they'll make a loss of $-\$1$ paying for all of the network. If both enter, they'll both make profits of $\$1.5$. If neither get built, they both make $\$0$. 
+
+Solar Farm 1 realises that it has a quicker construction date than Solar Farm 2. Should it still enter befor Solar Farm 2 commits to being built?
+
+\begin{mybox}
+
+We get the following game tree:
+
+  \includegraphics{images/week3/solar_farm_tree.png}
+
+Solving bottom to top, left to right, we get:
+\begin{itemize}
+  \item If SF1 has committed to building, SF2 would prefer to also build than not
+  \item If SF1 has decides not to build, SF2 would also prefer not to build
+  \item Knowing SF2 would build if it does, SF1 would also then prefer to build
+\end{itemize}
+
+
+  \includegraphics{images/week3/solar_farm_tree_solved.png}
+
+
+
+\end{mybox}

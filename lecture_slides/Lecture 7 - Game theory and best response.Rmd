@@ -1,0 +1,360 @@
+---
+title: "Lecture 7: Best response and mixed strategies"
+date: "Week 3"
+author: "Stuart J Morrison"
+output:
+      revealjs::revealjs_presentation:
+        theme: solarized
+        transition: none
+        fig_width: 12
+        fig_height: 5.5
+---
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+# Let's think about our decisions in terms of the decisions of the other plays
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 3px solid black; padding: 30px;"></td>
+    <td style="border-right: 1px solid black; border-bottom: 3px solid black; padding: 30px;">Anna buys a small car</td>
+    <td style="border-bottom: 3px solid black; padding: 30px;">Anna buys a big car</td>
+  </tr>
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 1px solid black; padding: 30px;">Beth buys a small car</td>
+    <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding: 30px;">Anna 10% probability of dying <br> Beth 10% probability of dying</td>
+    <td style="border-bottom: 1px solid black; padding: 30px;">A: 5% <br> B: 30% </td>
+  </tr>
+  <tr>
+    <td style="border-right: 3px solid black; padding: 30px;">Beth buys a big car car</td>
+    <td style="border-right: 1px solid black; padding: 30px;">A: 30% <br> B: 5% </td>
+    <td style="padding: 30px;">A: 15%<br> B: 15%</td>
+  </tr>
+</table>
+
+We want to construct a **best response** function for Anna and Beth:
+
+For Anna this tells us, what should Anna do based on what Beth does; and for Beth, what should Beth do based on what Anna does.
+
+# Let's think about our decisions in terms of the decisions of the other plays
+
+Let's call the decisions of Anna and Beth, $D_{A} \text{ and } D_{B}$
+
+Anna's best response function given Beth's decision is:
+\begin{equation*}\begin{aligned}
+    BR_{A} (D_{B}) = \begin{cases} \text{Buy a big car} & D_{B} = \text{Buy a small car}\\
+    \text{Buy a big car} & D_{B} = \text{Buy a big car} \end{cases}
+\end{aligned}\end{equation*}
+
+Here, we say the Anna buying a big car is **dominating**, Anna would choose it no matter what Beth does
+
+**Incredibly important:** Our best response is shown in terms of the other person's decisions - this the the key part of game theory/strategic thinking. We always want to phrase our actions conditional on the other players' actions
+
+
+# When best response functions coincide, we get a Nash equilibrium
+\begin{equation*}\begin{aligned}
+    BR_{A} (D_{B}) = \begin{cases} \text{Buy a big car} & D_{B} = \text{Buy a small car}\\
+    \text{Buy a big car} & D_{B} = \text{Buy a big car} \end{cases}
+\end{aligned}\end{equation*}
+
+\begin{equation*}\begin{aligned}
+    BR_{B} (D_{A}) = \begin{cases} \text{Buy a big car} & D_{A} = \text{Buy a small car}\\
+    \text{Buy a big car} & D_{A} = \text{Buy a big car} \end{cases}
+\end{aligned}\end{equation*}
+
+Start with one of Anna's decisions → Find Beth's best response → Find Anna's best response (does Anna want to deviate from the original decision):
+
+**Example 1:**
+
+✅ Anna buys a big car → Beth's best response to buy a big car  → Anna's best response to buy a big car 
+
+Anna does not deviate from the original decision, so both buying a big car is a Nash equilibrium
+
+
+# When best response functions coincide, we get a Nash equilibrium
+\begin{equation*}\begin{aligned}
+    BR_{A} (D_{B}) = \begin{cases} \text{Buy a big car} & D_{B} = \text{Buy a small car}\\
+    \text{Buy a big car} & D_{B} = \text{Buy a big car} \end{cases}
+\end{aligned}\end{equation*}
+
+\begin{equation*}\begin{aligned}
+    BR_{B} (D_{A}) = \begin{cases} \text{Buy a big car} & D_{A} = \text{Buy a small car}\\
+    \text{Buy a big car} & D_{A} = \text{Buy a big car} \end{cases}
+\end{aligned}\end{equation*}
+
+Start with one of Anna's decisions → Find Beth's best response → Find Anna's best response (does Anna want to deviate from the original decision):
+
+
+**Example 2:**
+
+❌ Anna buys a small car → Beth's best response to buy a big car  → Anna's best response to buy a big car 
+
+Anna **does** deviate from the original decision, so Anna buying a small car is not part of a Nash equilibrium
+
+# Dominating strategies
+
+If a player would always choose one particular strategy, we call that strategy dominating
+
+$\quad\quad$ - If, depending on the other players action, we'd be indifferent between the dominating strategy and another, we call it **weakly dominating**
+
+$\quad\quad$ - If the dominating strategy is always strictly better than any other action, we call it **strictly dominating**
+
+
+- If one strategy is strictly dominating, the others are **dominated**. Players should never play these
+
+- Finding dominated strategies can help us solve games quicker by eliminating options
+
+# Finding Nash Equilibria with dominated strategies
+
+Remember our car safety  problem. Buying a small car is **dominated** for both people.
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 3px solid black; padding: 30px;"></td>
+    <td style="border-right: 1px solid black; border-bottom: 3px solid black; padding: 30px;">Anna buys a small car</td>
+    <td style="border-bottom: 3px solid black; padding: 30px;">Anna buys a big car</td>
+  </tr>
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 1px solid black; padding: 30px;">Beth buys a small car</td>
+    <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding: 30px;">Anna 10% probability of dying <br> Beth 10% probability of dying</td>
+    <td style="border-bottom: 1px solid black; padding: 30px;">A: 5% <br> B: 30% </td>
+  </tr>
+  <tr>
+    <td style="border-right: 3px solid black; padding: 30px;">Beth buys a big car car</td>
+    <td style="border-right: 1px solid black; padding: 30px;">A: 30% <br> B: 5% </td>
+    <td style="padding: 30px;">A: 15%<br> B: 15%</td>
+  </tr>
+</table>
+
+
+
+
+
+# Sometimes there are only Nash equilibria if players randomize
+
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 3px solid black; padding: 30px;"></td>
+    <td style="border-right: 1px solid black; border-bottom: 3px solid black; padding: 30px;">P1 scissors</td>
+    <td style="border-bottom: 3px solid black; padding: 30px;">P1 paper</td>
+    <td style="border-bottom: 3px solid black; padding: 30px;">P1 rock</td>
+  </tr>
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 1px solid black; padding: 30px;">P2 scissors</td>
+    <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding: 30px;">Draw</td>
+    <td style="border-bottom: 1px solid black; padding: 30px;">P2 wins</td>
+    <td style="border-bottom: 1px solid black; padding: 30px;">P1 wins</td>
+  </tr>
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 1px solid black; padding: 30px;">P2 paper</td>
+    <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding: 30px;">P1 wins</td>
+    <td style="border-bottom: 1px solid black; padding: 30px;">Draw</td>
+    <td style="border-bottom: 1px solid black; padding: 30px;">P2 wins</td>
+  </tr>
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 1px solid black; padding: 30px;">P2 rock</td>
+    <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding: 30px;">P2 wins</td>
+    <td style="border-bottom: 1px solid black; padding: 30px;">P1 wins</td>
+    <td style="border-bottom: 1px solid black; padding: 30px;">Draw</td>
+  </tr>
+</table>
+
+Let's say that people win \$1 from winning, and \$0 otherwise
+
+# We can use our best response function to convice ourselves there are no pure Nash equilibria
+
+\begin{equation*}\begin{aligned}
+    BR_{i} (D_{j}) = \begin{cases} \text{Scissors} & D_{j} = \text{Paper}\\
+    \text{Paper} & D_{j} = \text{Rock}\\
+    \text{Rock} & D_{j} = \text{Scissors}\end{cases}
+\end{aligned}\end{equation*}
+
+❌ P1 plays rock → P2's best response to play paper → P1 would want to deviate to scissors
+❌ P1 plays scissors → P2's best response to play rock → P1 would want to deviate to paper
+❌ P1 plays paper → P2's best response to play scissors → P1 would want to deviate to rock
+
+If players respond to each other, then they will always want to deviate
+
+# But if players randomize, then there is a Nash equilibrium
+
+We call a Nash equilibrium mixed, if players make decisions with some probability
+
+If each player plays each move with $\frac{1}{3}$ probability, there is a mixed strategy equilibrium
+
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 3px solid black; padding: 30px;"></td>
+    <td style="border-right: 1px solid black; border-bottom: 3px solid black; padding: 30px;">P1 scissors</td>
+    <td style="border-bottom: 3px solid black; padding: 30px;">P1 paper</td>
+    <td style="border-bottom: 3px solid black; padding: 30px;">P1 rock</td>
+  </tr>
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 1px solid black; padding: 30px;">P2 scissors</td>
+    <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding: 30px;">Draw with 1/9 prob</td>
+    <td style="border-bottom: 1px solid black; padding: 30px;">P2 wins with 1/9 prob</td>
+    <td style="border-bottom: 1px solid black; padding: 30px;">P1 wins with 1/9 prob</td>
+  </tr>
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 1px solid black; padding: 30px;">P2 paper</td>
+    <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding: 30px;">P1 wins  with 1/9 prob</td>
+    <td style="border-bottom: 1px solid black; padding: 30px;">Draw with 1/9 prob</td>
+    <td style="border-bottom: 1px solid black; padding: 30px;">P2 wins with 1/9 prob</td>
+  </tr>
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 1px solid black; padding: 30px;">P2 rock</td>
+    <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding: 30px;">P2 wins with 1/9 prob</td>
+    <td style="border-bottom: 1px solid black; padding: 30px;">P1 wins with 1/9 prob</td>
+    <td style="border-bottom: 1px solid black; padding: 30px;">Draw with 1/9 prob</td>
+  </tr>
+</table>
+
+Each payoff has a $\frac{1}{9}$ chance of happening. The expected value is the sum over the entry game matrix - P1 wins $\frac{3}{9}$ of the time; P2 wins $\frac{3}{9}$ of the time; draw $\frac{3}{9}$ of the time
+
+
+# Let's learn to calculate these probabilities in a simpler game
+
+There a two firms looking to enter a market. If both enter, they both make \$-1 profit, if only one enters then that firm makes \$1 profit, otherwise they both make no money
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 3px solid black; padding: 30px;"></td>
+    <td style="border-right: 1px solid black; border-bottom: 3px solid black; padding: 30px;">Firm 1 enters</td>
+    <td style="border-bottom: 3px solid black; padding: 30px;">Firm 1 does not enter</td>
+  </tr>
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 1px solid black; padding: 30px;">Firm 2 enters</td>
+    <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding: 30px;">F1 profit = -1 <br> F2 profit = -1</td>
+    <td style="border-bottom: 1px solid black; padding: 30px;">F1 profit = 0 <br> F2 profit = 1</td>
+  </tr>
+  <tr>
+    <td style="border-right: 3px solid black; padding: 30px;">Firm 2 does not enter</td>
+    <td style="border-right: 1px solid black; padding: 30px;">F1 profit = 1 <br> F2 profit = 0</td>
+    <td style="padding: 30px;">F1 profit = 0 <br> F2 profit = 0</td>
+  </tr>
+</table>
+
+Let $p_{1}$ be the probability that firm 1 enters, and $p_{2}$ the probability that firm 2 enters
+
+**Our goal:** Find these probabilities!
+
+
+# Let's learn to calculate these probabilities in a simpler game
+
+Our Nash equilibrium condition with randomization is that we wouldn't deviate given the probability expectations of the other person's actions
+
+**We're indifferent between our actions on average**
+
+The expected payoff for Firm 1 entering should equal the expected payoff for Firm 1 not entering
+
+\begin{equation*}\begin{aligned}
+    E (\pi_{1} | \text{Firm 1 enters}) = E (\pi_{1} | \text{Firm 1 does not enter})
+\end{aligned}\end{equation*}
+
+That is, the expected profit of Firm 1 entering is equal conditional on it entering or not
+
+**Tricky part:** We use Firm 1's expected profit to find **Firm 2's probabilities**
+
+\begin{equation*}\begin{aligned}
+    \underbrace{E (\pi_{1} | \text{Firm 1 enters})}_{\text{F1 expected payoff if F1 enters}} = \underbrace{p_{2} \times -1}_{\text{Expected profit if F2 enters}} + \underbrace{(1 -p_{2}) \times 1}_{\text{Expected profit if F2 does not enter}}
+\end{aligned}\end{equation*}
+
+And if Firm 1 does not enter:
+\begin{equation*}\begin{aligned}
+  E(\pi_{1} | \text{Firm 1 does not enter}) = 0
+\end{aligned}\end{equation*}
+
+# Let's learn to calculate these probabilities in a simpler game
+
+\begin{equation*}\begin{aligned}
+    &E (\pi_{1} | \text{Firm 1 enters}) = E (\pi_{1} | \text{Firm 1 does not enter})\\
+    &\underbrace{p_{2} \times -1}_{\text{Expected profit if F2 enters}} + \underbrace{(1 -p_{2}) \times 1}_{\text{Expected profit if F2 does not enter}} = \underbrace{0}_{\text{F1 profit is zero if it does not enter}}\\
+    & -p_{2} + 1 -p_{2} = 0\\
+    &p_{2} = \frac{1}{2}\\
+\end{aligned}\end{equation*}
+
+So the probabiility of Firm 2 entering is 50\%
+
+**Again, really tricky** we use the expectations of Firm 1's profits to find Firm 2's probabilities
+
+**Why?** We need Firm 1 to be indifferent between what it chooses - otherwise it would have an incentive to deviate and we wouldn't have a Nash equilibrium
+
+# How to think about these probabilities
+
+Let's go back to our scissors paper rock example:
+
+- There's obviously no move that's strictly speaking better than the other
+
+- The best way to play is through randomising your moves - choosing each move with $\frac{1}{3}$ probabilities
+
+- **Why is this a Nash Equilibrium?** If you were to play rock too often - eg 50\% of the time - your opponent could statistically take advantage of this anomaly and beat you on average
+
+- So you would want to deviate back to equal probabilities
+
+# Let's try another example with dominating probabilities
+
+In this case, Firm 1 has entering as a strictly dominating strategy - so it should always play this, even in mixed strategy.
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 3px solid black; padding: 30px;"></td>
+    <td style="border-right: 1px solid black; border-bottom: 3px solid black; padding: 30px;">Firm 1 enters</td>
+    <td style="border-bottom: 3px solid black; padding: 30px;">Firm 1 does not enter</td>
+  </tr>
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 1px solid black; padding: 30px;">Firm 2 enters</td>
+    <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding: 30px;">F1 profit = -1 <br> F2 profit = -1</td>
+    <td style="border-bottom: 1px solid black; padding: 30px;">F1 profit = 0 <br> F2 profit = 1</td>
+  </tr>
+  <tr>
+    <td style="border-right: 3px solid black; padding: 30px;">Firm 2 does not enter</td>
+    <td style="border-right: 1px solid black; padding: 30px;">F1 profit = 2 <br> F2 profit = 2</td>
+    <td style="padding: 30px;">F1 profit = 0 <br> F2 profit = 0</td>
+  </tr>
+</table>
+
+# In many real games, equilibria only exist in mixed strategies
+
+In baseball, the pitcher needs to choose whether to pitch high or low; and often the batter needs to commit before the ball is thrown.
+
+Say the pitcher values a strike out as much as a batter values a run. The batter will score 2 runs if the pitch is low and they hit it, and 1 run if its high and they hit it
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 3px solid black; padding: 30px;"></td>
+    <td style="border-right: 1px solid black; border-bottom: 3px solid black; padding: 30px;">Pitcher goes high</td>
+    <td style="border-bottom: 3px solid black; padding: 30px;">Pitcher goes low</td>
+  </tr>
+  <tr>
+    <td style="border-right: 3px solid black; border-bottom: 1px solid black; padding: 30px;">Batter goes high</td>
+    <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding: 30px;">Pitcher: 0 <br> Batter: 1</td>
+    <td style="border-bottom: 1px solid black; padding: 30px;">Pitcher: 1 <br> Batter: 0</td>
+  </tr>
+  <tr>
+    <td style="border-right: 3px solid black; padding: 30px;">Batter goes low</td>
+    <td style="border-right: 1px solid black; padding: 30px;">Pitcher: 1 <br> Batter: 0</td>
+    <td style="padding: 30px;">Pitcher: 0 <br> Batter: 2</td>
+  </tr>
+</table>
+
+1) We'll show there are no pure strategy equilibria
+
+2) We'll find the mixed strategies
+
+# In many real games, equilibria only exist in mixed strategies
+
+Our mixed strategy equilibria is:
+
+\begin{equation*}
+\begin{aligned}
+  &\text{Pitcher} = \left( \genfrac{}{}{0pt}{}{\text{Low}}{\tfrac{1}{3}}, \genfrac{}{}{0pt}{}{\text{High}}{\tfrac{2}{3}} \right)\\
+  &\text{Batter}  = \left( \genfrac{}{}{0pt}{}{\text{Low}}{\tfrac{1}{2}}, \genfrac{}{}{0pt}{}{\text{High}}{\tfrac{1}{2}} \right)\\
+\end{aligned}
+\end{equation*}
+
+- The pitcher knows that the batter values a high hit more, so it throws fewer high balls
+
+- The batter knows high balls will be less frequent, but are more valuable, the optimal point is to swing high and low with equal probability

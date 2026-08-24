@@ -1,0 +1,90 @@
+---
+title: ARE100B practice midterm
+output:
+     pdf_document:
+         number_sections: FALSE
+         fig_width: 6
+         fig_height: 3.75
+         toc: false
+         latex_engine: xelatex
+         includes:
+             in_header: ["~/Documents/template_header.tex"]
+---
+
+# Question 1
+
+Explain in words why a business would always prefer to be a monopoly, rather than be in a competitive market.
+
+\vspace{12pt}
+
+# Question 2
+
+Explain in words why a monopoly will always set prices in the elastic part of the demand curve.
+
+\vspace{12pt}
+
+# Question 3
+
+Advertising and marketing can change customers' price elasticity, making customers less sensitive to changes in price. For example, Rolex's advertising that their product is prestigious allows them to raise their prices with little change in the quantity demanded.
+
+A monopoly has a constant marginal cost of production of \$200. What is the maximum it would pay for an advertising campaign that moves customers' elasticity of demand from -1.5 to -1.1. Assume the company sells 500 units irrespective of the customers' elasticity.
+
+\vspace{24pt}
+
+# Question 4
+
+When companies want to launch into a new market, they often charge prices below their marginal costs in order to attract market share away from incumbents. When this is done to expressly drive other companies out of business, we call this predatory pricing.
+
+\vspace{6pt}
+
+When Uber first launched, it used this tactic to drive many taxi companies out of business. It was backed by massive amounts of venture capital that allowed it to make many years of losses in order to expand. The following questions will show a simple model of this.
+
+\vspace{6pt}
+
+
+Assume that there are two years, Year 1 and Year 2. The demand for car rides (both taxis and Uber) is $Q_{D} = 324 - 3P$. The total cost of supplying car rides, irrespective of whether its Uber or taxis supplying them, is $TC = 0.1Q + 0.1Q^{2}$.
+
+\vspace{6pt}
+
+
+If taxis and Uber are in the market at the same time, they split the producer surplus/total industry profits 50% each. If just Uber is in the market, they act as a monopoly.
+
+\vspace{6pt}
+
+
+For parts (a)-(d), Uber will charge discounted rides in Year 1 to bankrupt the taxi industry, then act as a monopoly in Year 2.
+
+**Question 4 (a):** If the taxi industry receives $0 or less in Year 1, it will go out of business. At what price will the taxi industries go out of business (your answer will get possible prices because of the quadratic formula, choose the smallest one)? How many total rides are sold in the market (taxi and Uber combined)?
+
+\vspace{12pt}
+
+**Question 4 (b):** Taking your Year 1 price from part (a), what is the consumer surplus in Year 1? What is the total producer surplus (taxi and Uber combined)?
+
+\vspace{12pt}
+
+**Question 4 (c):** Give the low price in Year 1, taxis go out of business and Uber operates as a monopoly in Year 2. Find the price and quantity of rides sold in Year 2 when Uber acts as a monopoly.
+
+\vspace{12pt}
+
+**Question 4 (d):** Given your answer in part (c), find the producer and consumer surplus in Year 2.
+
+\vspace{12pt}
+
+There are two potential effects of predatory pricing. First, because rides are discounted in Year 1, this transfers some additional surplus to consumers, and consumers might be better off in aggregate even though Uber acts as a monopoly in Year 2 compared to if Uber acted competitively. Second, because of the discounting in Year 1, Uber might make less profit in aggregate compared to if it acted competitively. We will explore this in parts (e) - (h).
+
+\vspace{12pt}
+
+**Question 4 (e):** Now find the price and quantity of rides sold if Uber does not do predatory pricing and we assume a competitive market (this will be the same in both years).
+
+\vspace{12pt}
+
+**Question 4 (f):** Under the competitive market, find the total consumer surplus in both years (summed together). Find Uber's producer surplus in both years (summed together), remembering that they receive 50% of the total industry producer surplus under a competitive market.
+
+\vspace{12pt}
+
+
+**Question 4 (g):** Would consumers prefer Uber doing predatory pricing or acting in a competitive market?
+
+\vspace{12pt}
+
+**Question 4 (h):** From Uber's perspective, is it better for Uber to do predatory pricing or to act in a competitive market?

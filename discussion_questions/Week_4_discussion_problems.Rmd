@@ -1,0 +1,126 @@
+---
+title: ARE100B Week 4 Discussion problems
+output:
+     pdf_document:
+         number_sections: FALSE
+         fig_width: 6
+         fig_height: 3.75
+         toc: false
+         latex_engine: xelatex
+         includes:
+             in_header: ["~/Documents/template_header.tex"]
+---
+
+# Question 1
+
+**Question 1 (a):** Apple and Google are competing in the market for smart phones.
+
+Apple's total costs of making iPhones is $TC_{A} = 70q_{A}$
+
+Google's total costs of making its smartphones is $TC_{G} = 65q_{G}$.
+
+Say the market considers Apple's and Google's phones to be identical, the total market inverse demand is:
+\begin{equation*}\begin{aligned}
+    P = 700 - 0.1Q_{D}
+\end{aligned}\end{equation*}
+
+Find the output of both Apple and Google, and the resulting price, if they compete in a Cournot game (simultaneously choosing quantities).
+
+\vspace{12pt}
+
+**Question 1 (b):**
+
+Really, the market treats phones from Apple and Google very differently, they are differentiated goods. 
+
+Let the inverse demand for Apple's iPhone be: $P_{A} = 850 - 0.1q_{A} - 0.12q_{G}$
+
+Let the inverse demand for Google's smartphones be: $P_{G} = 650 - 0.05q_{A} - 0.1q_{G}$
+
+Use the same cost curves as in part (a).
+
+Find the output of both Apple and Google, and the resulting price, if they compete in a Cournot game (simultaneously choosing quantities) in this differentiated market.
+
+\vspace{24pt}
+
+# Question 2
+
+Two new apartment blocks are going to be built in Davis. Block 1 will be built first, and Block 2 has construction delays so will be built second. They will compete to rent out their apartments.
+
+Block 1 is a nicer apartment, and has inverse demand for rental apartments: $P_{1} = 2,000 - 0.1q_{1} - 0.1q_{2}$. Block 1 has a total cost of supplying rental apartments of $TC_{1} = 100q_{1}$.
+
+Block 2 is a bit dingy, and has inverse demand for rental apartments: $P_{2} = 1,500 - 0.1q_{1} - 0.1q_{2}$. Block 2 has a total cost of supplying rental apartments of $TC_{2} = 80q_{2}$.
+
+Find the number of units each block will rent out, and at what price, if they compete in a Stackelberg game (Block 1 moves first, and they choose quantities).
+
+\vspace{24pt}
+
+# Question 3
+
+Suppose there are only two mechanics in Davis. Mechanic 1 has quite premium service and has total costs of servicing cars of $TC_{1} = 250q_{1}$.
+
+Mechanic 2 does not pay all of its taxes, so has cheaper labour costs, and has total costs of servicing cars of $TC_{2} = 180q_{2}$.
+
+The demand for Mechanic 1's services are: $q_{1} = 500 - 0.1P_{1} - 0.1P_{2}$.
+
+The demand for Mechanic 2's services are $q_{2} = 1,000 - 0.2P_{1} - 0.2P_{2}$.
+
+These mechanics are competing with each other and want to show they are great value. Find the prices each mechanic would set, and the number of cars they would service, if they competed in a Bertrand game (simultaneous choosing prices).
+
+
+\newpage
+
+# Extra practice questions
+
+# Question A
+
+**Question A (a):** Firm 1 and Firm 2 both have total cost curves $TC_{i} = 10q_{i}$. Market demand for their product is $Q_{D} = 500 - 10P$.
+
+If they compete in a Bertrand game with identical products (choosing prices), what will the price in the market be?
+
+\vspace{12pt}
+
+**Question A (b):** Suppose now that Firm 1 has total costs $TC_{1} = 8q_{1}$ and Firm 2 has total costs $TC_{2} = 10q_{2}$. Market demand is the same.
+
+Now if they compete in a Bertrand game with identical products, what will the price be if they are required to set prices in whole dollars (eg, \$1, \$2, \$3, etc)?
+
+\vspace{12pt}
+
+# Question B
+
+UC Davis's business school is starting a new undergrad business major that is likely to attract some students from the current Managerial Economics major.
+
+
+**Question B (a):** Currently,  Managerial Economics operates as a monopoly in this space. 
+
+Let the inverse demand for the Managerial Economics major be: $P_{ME} = 1,200 - 0.12q_{ME}$. The total cost of educating Managerial Economics students is $TC_{ME} = 350q_{ME}$.
+
+Find the price and quantity of students enrolled in Managerial Economics.
+
+**Question B (b):** Now, when the new business major starts, supposed our departments compete in a Cournot game by competing on the number of students enrolled. 
+
+Now let the inverse demand for the Managerial Economics major be: $P_{ME} = 1,200 - 0.12q_{ME} - 0.1q_{B}$. The total cost of educating Managerial Economics students is still $TC_{ME} = 350q_{ME}$.
+
+Let the inverse demand for the new business major is: $P_{B} = 1,000 - 0.1q_{ME} - 0.15q_{B}$. The total cost of educating business undergrands is $TC_{B} = 450q_{B}$, owing to their fancier building.
+
+Find the price and outcome from this competition. How many students does the Managerial Economics major lose compared to when it was a monopoly?
+
+**Question B (c):** Perhaps a more accurate way to model this competition is by thinking of Managerial Economics as a first mover. Find the price and outcome if the two majors compete in a Stackelberg game (sequentially choosing quantity). How many fewer students does the new business major attract because it is the second entrant, compared to the original Cournot game?
+
+\vspace{12pt}
+
+# Question C
+
+Big Thief and Linkin Park are both playing in Sacramento on the same night in a few weeks time. There are enough millennials aroud that we could think of them as competing with differentiated goods.
+
+Linkin Park is playing at the Golden1 Centre, and is expecting demand $q_{LP} = 15,000 - 50P_{LP} + 10P_{BT}$, which yields inverse demand: $P_{LP} = 322.92 - \frac{1}{48}q_{LP} - \frac{1}{480}q_{BT}$. Total costs for their concert are: $TC_{LP} = 50q_{LP}$.
+
+Big Thief is playing at the smaller Channel24 venue and is expecting demand, $q_{BT} = 5,000 - 100P_{BT} + 20P_{LP}$ which yields inverse demand: $P_{BT} = 114.58 - \frac{1}{240}q_{LP} - \frac{1}{96}q_{BT}$. Total costs for their concert are: $TC_{BT} = 50q_{BT}$.
+
+\vspace{12pt}
+
+**Question C (a):** If Big Thief and Linkin Park compete in a Bertand game (choosing prices), what are the expected prices and quantities for each band?
+
+**Question C (b):** If Big Thief and Linkin Park compete in a Cournot game (choosing quantities), what are the expected prices and quantities for each band?
+
+**Question C (c):** If Linkin Park announced their concert first, and so is a first mover, what are the expected prices and quantities for each band? How many more attendees did Linkin Park get to their show compared to the Cournot game?
+

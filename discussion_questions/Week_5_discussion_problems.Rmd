@@ -1,0 +1,73 @@
+---
+title: ARE100B Week 5 Discussion problems
+output:
+     pdf_document:
+         number_sections: FALSE
+         fig_width: 6
+         fig_height: 3.75
+         toc: false
+         latex_engine: xelatex
+         includes:
+             in_header: ["~/Documents/template_header.tex"]
+---
+
+# Question 1
+
+J\&J and Anova pharmaceutical companies are about to enter a new drug market. 
+
+The inverse demand for this new drug is: $P = 250 - 2Q$.
+
+The cost curves for both firms are:
+\begin{itemize}
+    \item For J\&J: $TC_{J} = 25q_{J}$
+    \item For Anova: $TC_{A} = 35q_{A}$
+\end{itemize}
+
+**Question 1 (a):** If both J\&J enter and compete in a Cournot game (choosing quantities), find the profit for each firm.
+
+\vspace{24pt}
+
+**Question 1 (b):** Instead, executives for J\&J meet in a smoke-filled room and agree not to compete with each other. Owing to Anova's higher costs, they agree that Anova will not enter the market, and J\&J will share 50% of its profit with Anova as a reward for not entering. Find the cartel output and profit for each firm.
+
+\vspace{24pt}
+
+**Question 1 (c):** Are the cartel profits high enough to incentive J\&J and Anova to collude?
+
+\vspace{24pt}
+
+**Question 1 (d):** If Anova observes J\&J following the cartel agreement, what would its cheating profit and output be? Does Anova have the incentive to cheat the cartel? 
+
+
+
+\newpage
+
+# Extra practice questions
+
+# Question A
+
+Greg and Will run concrete businesses in Davis. Normally they compete in Cournot games (choosing quantities).
+
+The inverse demand for concrete in Davis is $P = 1,250 - 5Q$.
+
+Greg and Will's costs are:
+\begin{equation*}\begin{aligned}
+    &TC_{G} = 27q_{G}\\
+    &TC_{W} = 27q_{W}\\
+\end{aligned}\end{equation*}
+
+
+**Question A (a):** Find the Cournot outputs and profits for Greg and Will's concrete businesses.
+
+\vspace{24pt}
+
+**Question A (b):** While taking a walk together in the Arboretum, Greg and Will discuss whether they could both make more money from colluding and splitting their combined outputs and profits 50% each. Is this true? Find the collusion/cartel profit and output.
+
+\vspace{24pt}
+
+**Question A (c):** If Greg produces concrete at their cartel output, does Will have the incentive to cheat?
+
+\vspace{24pt}
+
+**Question A (d):** Greg and Will have been friends for many years. If Will cheats the cartel, Greg will use social pressure to make Will feel bad - which Will thinks is equivalent to losing \$20,000. Will Will stil cheat?
+
+

@@ -1,0 +1,119 @@
+---
+title: ARE100B Week 2 Discussion problems
+output:
+     pdf_document:
+         number_sections: FALSE
+         fig_width: 6
+         fig_height: 3.75
+         toc: false
+         latex_engine: xelatex
+         includes:
+             in_header: ["~/Documents/template_header.tex"]
+---
+
+# Question 1
+
+Johnson and Johnson are aiming to create a brand new ozempic-like drug that they think will take the world by storm. The cost of developing this drug is \$150 million.
+
+The total cost of supplying the drug, once it's developed is $TC = Q + Q^{2}$.
+
+Demand for this drug is $Q_{D} = 20,000 - 0.2P$.
+
+For questions (a) - (d), let J&J operate as a monopolist.
+
+**Question 1 (a):** Write down J&J's profit function in terms of price
+
+\vspace{12pt}
+
+**Question 1 (b):** Find the optimal price J&J would charge as a monopolist; find the quantity that it will sell.
+
+\vspace{12pt}
+
+**Question 1 (c):** Find the consumer surplus and producer surplus.
+
+\vspace{12pt}
+
+**Question 1 (d):** If J&J can operate as a monopolist, will it develop this drug and bring it to market?
+
+\vspace{12pt}
+\vspace{12pt}
+
+Now assume that if J&J develops the new drug, it would sell it in a competitive market and would earn 10\% of  total market profits/
+
+**Question 1 (e):** Find the price and quantity of the drug sold in a competitive market.
+
+\vspace{12pt}
+
+**Question 1 (f):** Find total industry profit (producer surplus) and J&J's profit.
+
+\vspace{12pt}
+
+**Question 1 (g):** Would J&J develop the drug if it new it would have to sell it in a competitive market?
+
+\vspace{12pt}
+
+**Question 1 (h):** If the government could subsidize J&J's drug development, how much would the government have to give J&J so that it would still develop the drug in a competitive market?
+
+\newpage
+
+# Question 2
+
+A monopolist has a marginal cost of $2$.
+
+**Question 2 (a):** Would the monopolist prefer to face consumers with demand $Q_{D} = 8 - P$ or $Q_{D} = 7 - \frac{1}{2}P$. In both cases it will sell the same quantiy of 3 units.
+
+\vspace{12pt}
+
+**Question 2 (b):** Calculate the elasticities of demand when $Q = 3$ for both demand functions. Use this to justify your answer to part (a).
+
+\vspace{12pt}
+\vspace{12pt}
+
+## Question 3
+
+If you know that a monopolist has a marginal cost of \$5, and, at equilibrium, its customers have a price elasticity of -2, find the price the monopolist will charge.
+
+\vspace{12pt}
+\vspace{12pt}
+
+
+
+# Extra practice problems
+
+## Question A
+
+Describe in words, why the monopolist will always charge prices within the elastic portion of demand?
+
+\vspace{12pt}
+\vspace{12pt}
+
+## Question B
+
+Let a monopolists profit function be:
+\begin{equation*}\begin{aligned}
+    \pi = \text{Revenue} - \text{Total cost}\\
+\end{aligned}\end{equation*}
+
+Find the first-order/optimal condition of the monopolist setting prices. Describe the optimal condition in terms of an economic trade-off the monopolist needs to make.
+
+## Question C
+
+
+
+PGE are looking  to build a new power grid that is connecting the new techno-optimist city in Solano county. It will cost \$2 million to build. 
+
+Once built, the demand for electricity will be $Q_{D} = 100,000 - P$.  PGE has a constant marginal cost selling electricity of \$5.
+
+**Question C (a):** If PGE can act like a monopolist in terms of selling electricty, what price would it charge?
+
+\vspace{12pt}
+
+**Question C (b):** If PGE can act like a monopolist, would it make the investment to build the new grid?
+
+\vspace{12pt}
+
+**Question C (c):** Suppose CPUC gets wind of PGE trying to charge too much and sets a price PGE has to charge for electricity of \$30. Would PGE still build the new grid at this price?
+
+\vspace{12pt}
+
+**Question C (d):** What is the minimum price that CPUC should set so that PGE still build the new grid?

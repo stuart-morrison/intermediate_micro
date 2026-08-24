@@ -1,0 +1,88 @@
+---
+title: ARE100B midterm
+output:
+     pdf_document:
+         number_sections: FALSE
+         fig_width: 6
+         fig_height: 3.75
+         toc: false
+         latex_engine: xelatex
+         includes:
+             in_header: ["~/Documents/template_header.tex"]
+---
+
+Name:_____________________________
+
+
+
+# Question 1 
+
+In general, would a monopolist prefer customers that are more or less elastic in terms of their price sensitivity? Explain why. (5 points)
+
+\vspace{100pt}
+
+# Question 2
+
+
+A monopolist with constant marginal costs is producing at an output level where marginal revenue is greater than its marginal cost. Should it increase or decrease its output? Explain why. (5 points)
+
+\vspace{100pt}
+
+
+
+\newpage
+# Question 3
+
+PGE is going to build a new part of the electricity network to connect a new solar farm to the grid. Once the solar farm is connected, PGE will charge the solar farm for transporting electricity to the main grid. CPUC, the Californian utilities regulator, will set the price for which PGE can charge for transporting electricity.
+
+The solar farm's demand for electricity transport is $Q_{D} = 2,000 - 0.2P$.
+
+Once the network has been built, PGE has a total cost curve of supplying electricity transport of $TC = 10Q$.
+
+It will cost PGE \$1 million to construct the new part of the electricity network. If it cannot recover this investment cost from its profits from charging the solar farm for electricity transport, it will not build it.
+
+It will cost the solar farm \$3 million to build its solar panels. If it cannot recover this investment from its consumer surplus (think of this as the solar farm's profits from operating), it will not build it.
+
+\vspace{12pt}
+
+**Question 3 (a):** Find the price and quantity of electricity transported if CPUC set a price that would arise out of a competitive market. (3 points)
+
+\vspace{120pt}
+
+**Question 3 (b):** Find the price and quantity of electricity transported if CPUC allowed PGE to act as a monopoly. (5 points)
+
+\vspace{120pt}
+
+\newpage
+
+**Question 3 (c):** Would PGE build the new part of the network under the competitive price from part (a)? (2 points) Would PGE build the new part of the network under monopoly pricing  from part (b)? (5 points)
+
+\vspace{250pt}
+
+**Question 3 (d):** Would the solar farm build its solar panels under the competitive price from part (a)? (5 points) Would the solar farm build its solar panels under monopoly pricing from part (b)? (5 points)
+
+\vspace{350pt}
+
+**Question 3 (e):** Find the maximum price that the solar farm would pay for electricity transport so that it would still build its solar panels. (5 points)
+
+Note: By virtue of solving this with the quadratic formula, you will get two possible prices. Choose as your final answer the one **less than** \$10,000. Note that prices above \$10,000 give negative demand and so we can ignore them.
+
+\vspace{250pt}
+
+**Question 3 (f):** Find the minimum price that PGE could charge for electricity transport so that it would still build the new part of the network. (5 points)
+
+By virtue of solving this with the quadratic formula, you will get two possible prices. Choose as your final answer the **smaller one**.
+
+\vspace{250pt}
+
+\newpage
+
+**Question 3 (g):** Is there a price that CPUC could set for electricity transport so that both PGE and the solar make their investments? Explain why. (5 points)
+
+
+\vspace{250pt}
+
+**Question 3 (h):** If CPUC wanted to set a price so that social surplus is as big as possible, would it choose the price you found in part (e) or part (f)? (5 points)
+
+
+\vspace{250pt}
